@@ -16,6 +16,20 @@
 
   <!-- <index> <title>Index</title> <index-list/> </index> -->
 
+  <references xml:id="references">
+    <title>References</title>
+
+    <biblio type="bibtex" xml:id="dat">
+      <author>Jean-François Dat</author>
+      <title>Algèbre commutative et introduction à la géométrie algébrique</title>
+      <journal>Sorbonne Université</journal>
+      <year>2026-2027</year>
+      <url href="https://webusers.imj-prg.fr/~jean-francois.dat/enseignement/AlgebreM1/Alg_Com.pdf">Page</url>
+    </biblio>
+
+  </references>
+
+
   <colophon>
     <p> This book was authored in <pretext />. </p>
   </colophon>

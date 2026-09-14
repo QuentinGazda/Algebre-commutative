@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Fragment à insérer dans un chapitre ou un article PreTeXt.
+     Dans docinfo, ajouter :
+     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+-->
+<section xml:id="sec-exercices-factorisation">
+  <title>Factorisation</title>
+
+    <remark>
+      <title>Éléments associés, irréductibles et premiers</title>
+        <ul>
+          <li>
+            <p>
+              Deux éléments <m>a,b\in A</m> sont <term>associés</term> s'il existe <m>u\in A^{\times}</m> tel que <me>a=ub</me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Un élément <m>p\in A</m> est <term>irréductible</term> s'il est non nul, non inversible, et si toute égalité <m>p=ab</m>, avec <m>a,b\in A</m>, entraîne que <m>a</m> ou <m>b</m> est inversible.
+            </p>
+          </li>
+          <li>
+            <p>
+              Un élément <m>p\in A</m> est <term>premier</term> s'il est non nul, non inversible, et si, pour tous <m>a,b\in A</m>,
+          <me>p\mid ab\quad\Longrightarrow\quad p\mid a\ \text{ou}\ p\mid b.</me>
+            </p>
+          </li>
+        </ul>
+    </remark>
+
+    <remark>
+      <title>Propriété de factorisation et anneau factoriel</title>
+        <ul>
+          <li>
+            <p>
+              L'anneau <m>A</m> <term>admet la propriété de factorisation</term> si tout élément non nul et non inversible de <m>A</m> s'écrit comme un produit fini d'éléments irréductibles :
+            </p>
+            <me>a=p_1\cdots p_n,\qquad n\geq 1.</me>
+          </li>
+          <li>
+            <p>
+              L'anneau <m>A</m> est <term>factoriel</term> s'il admet la propriété de factorisation et si cette factorisation est unique à l'ordre des facteurs et à association près. Autrement dit, si
+            </p>
+            <me>p_1\cdots p_n=q_1\cdots q_m</me>
+            <p>
+              avec tous les <m>p_i</m> et <m>q_j</m> irréductibles, alors <m>n=m</m> et il existe une permutation <m>\sigma</m> de <m>\{1,\ldots,n\}</m> telle que <m>p_i</m> et <m>q_{\sigma(i)}</m> soient associés pour tout <m>i</m>.
+            </p>
+          </li>
+        </ul>
+    </remark>
+
+    <remark>
+      <title>Anneau principal</title>
+        <p>
+          L'anneau <m>A</m> est <term>principal</term> si tout idéal <m>I</m> de <m>A</m> est engendré par un seul élément : il existe <m>a\in A</m> tel que
+          <me>I=(a)=aA=\{ax\mid x\in A\}.</me>
+        </p>
+    </remark>
+
+    <remark>
+      <title>Stathme et anneau euclidien</title>
+        <p>
+          Un <term>stathme euclidien</term> sur <m>A</m> est une application <me>\delta:A\setminus\{0\}\longrightarrow\mathbb{N}</me> telle que, pour tous <m>a\in A</m> et <m>b\in A\setminus\{0\}</m>, il existe <m>q,r\in A</m> vérifiant <me>a=bq+r,\qquad r=0\ \text{ou}\ \delta(r)\lt\delta(b).</me>
+        </p>
+        <p>
+          L'anneau <m>A</m> est <term>euclidien</term> s'il admet un tel stathme. Les éléments <m>q</m> et <m>r</m> sont respectivement un quotient et un reste de la division de <m>a</m> par <m>b</m>; leur unicité n'est pas exigée.
+        </p>
+    </remark>
+
+    <remark>
+      <title>Euclidien implique principal, qui implique factoriel, et admet la propriété de factorisation.</title>
+        <figure xml:id="fig-inclusions-anneaux">
+          <caption>Inclusions entre classes d'anneaux intègres.</caption>
+            <image width="100%">
+            <shortdescription>Euclidiens inclus dans principaux, inclus dans factoriels, inclus dans atomiques.</shortdescription>
+            <description>
+              <p>Quatre rectangles emboîtés représentent, du plus petit au plus grand, les anneaux euclidiens, principaux, factoriels, puis les anneaux admettant la propriété de factorisation.</p>
+            </description>
+        <latex-image label="diagramme-inclusions-anneaux"><![CDATA[
+\begin{tikzpicture}[font=\small, rounded corners=5pt]
+  \filldraw[fill=gray!6, draw=gray!65, thick] (0,0) rectangle (12,4.8);
+  \node at (6,4.35) {Anneaux admettant la propri\'et\'e de factorisation};
+  \filldraw[fill=blue!7, draw=blue!55!black, thick] (.5,.35) rectangle (11.5,3.9);
+  \node at (6,3.48) {Anneaux factoriels};
+  \filldraw[fill=teal!10, draw=teal!65!black, thick] (1,.7) rectangle (11,3);
+  \node at (6,2.58) {Anneaux principaux};
+  \filldraw[fill=teal!22, draw=teal!70!black, thick] (1.5,1.05) rectangle (10.5,2.1);
+  \node at (6,1.57) {Anneaux euclidiens};
+\end{tikzpicture}
+        ]]></latex-image>
+            </image>
+        </figure>
+      <p>
+        Ces inclusions sont strictes en général. L'anneau <m>\mathbb{Z}[(1+\sqrt{-19})/2]</m> est principal mais non euclidien ; <m>k[X,Y]</m>, pour <m>k</m> un corps, est factoriel mais non principal ; <m>\mathbb{Z}[\sqrt{-5}]</m> admet la propriété de factorisation mais n'est pas factoriel.
+      </p>
+    </remark>
+
+    <title>Premiers exemples d'anneaux euclidiens</title>
+    <exercise xml:id="ex-euclidien-Z">
+      <title>Mes premiers anneaux euclidiens</title>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Montrer que <m>\mathbb{Z}</m> est euclidien.
+            </p>
+          </li>
+          <li>
+            <p>
+              Soit <m>k</m> un corps. Montrer que <m>k[X]</m> est euclidien.
+            </p>
+          </li>
+          <li>
+            <p>
+              Montrer que l'anneau <m>\mathbb{Z}[i]=\{a+ib\mid a,b\in\mathbb{Z}\}</m> est euclidien de stathme <m>N(a+ib)=a^2+b^2</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Montrer que l'anneau <m>\mathbb{Z}[i\sqrt{2}]=\{a+i\sqrt{2}b\mid a,b\in\mathbb{Z}\}</m> est euclidien.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <solution>
+      </solution>
+    </exercise>
+
+      <exercise>
+        <title>Caractérisation d'Euler-Gauss</title> 
+        <statement>
+          <p>
+            Soit <m>A</m> un anneau (commutatif, unitaire) intègre.
+          </p>
+          <ol>
+            <li>
+              <p>
+                Montrer que tout élément premier est irréductible.
+              </p>
+            </li>
+            <li>
+              <p>
+                Soit <m>A</m> un anneau qui vérifie la propriété de factorisation. Montrer que <m>A</m> est factoriel si et seulement si tout élément irréductible est premier.
+              </p>
+            </li>
+          </ol>
+        </statement>
+        <solution>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <title>Déterminer les irréductibles</title>
+        <statement>
+          <ol>
+            <li>
+              <p>
+                Quels sont les éléments irréductibles de <m>\mathbb{Z}</m> ?  
+              </p>
+            </li>
+            <li>
+              <p>
+                Quels sont les irréductibles de <m>\mathbb{C}[X]</m> ? De <m>\mathbb{R}[X]</m> ?
+              </p>
+            </li>
+            <li>
+              <p>
+                Quels sont les irréductibles de <m>\mathbb{Z}[i]</m> ? De <m>\mathbb{Z}[i\sqrt{2}]</m> ?
+              </p>
+            </li>
+          </ol>
+          </statement>
+        <solution>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="ex-factorisation-non-factorialite-racine-moins-cinq">
+        <title><m>\mathbb{Z}[i\sqrt{5}]</m> n'est pas factoriel</title>
+          <statement>
+            <p>
+              On considère l'anneau <m>A=\mathbb{Z}[i\sqrt{5}]</m> et l'application <me>N:A\longrightarrow\mathbb{N}, \qquad N(a+ib\sqrt{5})=a^2+5b^2.</me>
+            </p>
+            <ol>
+              <li>
+                <p>Montrer que <m>N</m> est multiplicative et déterminer les éléments inversibles de <m>A</m>.</p>
+              </li>
+              <li>
+                <p>Montrer, par récurrence sur la norme, que <m>A</m> admet la propriété de factorisation.</p>
+              </li>
+              <li>
+                <p>
+                  En étudiant les décompositions <me>6=2\times 3=(1-i\sqrt{5})(1+i\sqrt{5}),</me> montrer que <m>A</m> n'est pas factoriel.
+                </p>
+              </li>
+            </ol>
+          </statement>
+          <solution>
+            <!--
+            <p>
+              Pour tout <m>z\in A</m>, on a <m>N(z)=z\overline{z}=|z|^2</m>. Ainsi, <me>N(zw)=N(z)N(w).</me> De plus, <m>N(z)=0</m> si et seulement si <m>z=0</m>. Si <m>z</m> est inversible, l'égalité <m>N(z)N(z^{-1})=1</m> impose <m>N(z)=1</m>. Réciproquement, si <m>N(z)=1</m>, alors <m>z\overline{z}=1</m>, donc <m>z</m> est inversible. L'équation <m>a^2+5b^2=1</m> donne finalement <me>A^{\times}=\{-1,1\}.</me>
+            </p>
+
+            <p>
+              Montrons l'existence d'une factorisation en irréductibles par récurrence forte sur <m>N(z)</m>, pour <m>z</m> non nul et non inversible. Si <m>z</m> est irréductible, il constitue lui-même une factorisation. Sinon, il existe deux éléments non inversibles <m>x,y\in A</m> tels que <m>z=xy</m>. Ils sont non nuls et leurs normes sont au moins égales à <m>2</m>. Par multiplicativité, <me>N(z)=N(x)N(y),\qquad 2\leq N(x),N(y)\lt N(z).</me> L'hypothèse de récurrence fournit des factorisations de <m>x</m> et de <m>y</m> en irréductibles ; leur produit fournit celle de <m>z</m>. Ainsi, <m>A</m> admet la propriété de factorisation.
+            </p>
+
+            <p>
+              Pour étudier l'unicité, remarquons d'abord qu'il n'existe aucun élément de norme <m>2</m> ou <m>3</m>. En effet, si <m>b\neq 0</m>, alors <m>a^2+5b^2\geq 5</m> ; si <m>b=0</m>, cette norme est un carré entier.
+            </p>
+
+            <p>
+              Montrons que les quatre facteurs proposés sont irréductibles.
+            </p>
+          <ul>
+            <li>
+              <p>
+                Comme <m>N(2)=4</m>, une décomposition de <m>2</m> en deux facteurs non inversibles imposerait que leurs normes soient <m>2</m> et <m>2</m>, ce qui est impossible.
+              </p>
+            </li>
+            <li>
+              <p>
+                Comme <m>N(3)=9</m>, une décomposition de <m>3</m> en deux facteurs non inversibles imposerait deux normes égales à <m>3</m>, ce qui est impossible.
+              </p>
+            </li>
+            <li>
+              <p>
+                Comme <m>N(1-i\sqrt{5})=N(1+i\sqrt{5})=6</m>, une décomposition de l'un de ces éléments en deux facteurs non inversibles imposerait des normes <m>2</m> et <m>3</m>, ce qui est encore impossible.
+              </p>
+            </li>
+          </ul>
+
+        <p>
+          On dispose donc de deux factorisations de <m>6</m> en irréductibles : <me>6=2\times 3=(1-i\sqrt{5})(1+i\sqrt{5}).</me> Or deux éléments associés ont la même norme, puisque les inversibles ont norme <m>1</m>. Les normes des facteurs de la première décomposition sont <m>4</m> et <m>9</m>, tandis que celles de la seconde sont <m>6</m> et <m>6</m>. Ces factorisations ne peuvent donc pas se déduire l'une de l'autre par permutation et remplacement des facteurs par des éléments associés. L'anneau <m>A</m> n'est pas factoriel.
+        </p>
+        -->
+      </solution>
+    </exercise>
+
+    <exercise>
+      <title>Résolution d'une équation diophantienne</title>
+      <statement>
+        <p>
+          On se propose de montrer que les seules solutions <m>x,y\in \mathbb{Z}</m> de l'équation <m>y^2=x^3-2</m> sont <m>(x,y)=(3,\pm 5)</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Montrer que <m>x</m> et <m>y</m> sont impairs.
+            </p>
+          </li>
+          <li>
+            <p>
+              Montrer que <m>y+i\sqrt{2}</m> et <m>y-i\sqrt{2}</m> sont premiers entre eux dans <m>\mathbb{Z}[i\sqrt{2}]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              En déduire que <m>y+i\sqrt{2}</m> est un cube dans <m>\mathbb{Z}[i\sqrt{2}]</m> et conclure.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <solution>
+      </solution>
+    </exercise>
+
+
+
+</section>

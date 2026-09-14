@@ -7,24 +7,17 @@
   <bibinfo>
   
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>Quentin Gazda</personname>
+      <department>IMJ-PRG</department>
+      <institution>Sorbonne Université</institution>
     </author>
     <date>
       <today />
     </date>
 
     <website>
-      <url href="https://pretextbook.org">My Website</url>
+      <url href="https://quentin.gazda.fr/">Page personnelle</url>
     </website>
-
-    <copyright>
-      <year>2020<ndash />2024</year>
-      <holder>You</holder>
-      <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
-      </shortlicense>
-    </copyright>
   
   </bibinfo>
 
@@ -32,8 +25,18 @@
     <titlepage-items/>
   </titlepage>
 
-  <colophon xml:id="front-colophon">
-    <colophon-items/>
-  </colophon>
+
+  <preface xml:id="front-preface">
+    <p>
+    Ces notes consistent en les exercices corrigés du cours d'<em> Algèbre commutative et introduction à la géométrie algébrique </em> délivré par Jean-François Dat <xref ref="dat"/>. Elles sont destinées aux étudiant·e·s du module <em>UM4MA303</em> de Sorbonne Université.
+    </p>
+
+    <p>
+      Les travaux dirigés sont dispensés chaque lundi de 13h45 à 15h45 et chaque jeudi de 16h00 à 18h00 au premier semestre de l'année universitaire 2026/2027. 
+    </p>
+  </preface>
+
+  <!-- <colophon xml:id="front-colophon"> <colophon-items/> </colophon> -->
+
 </frontmatter>
 

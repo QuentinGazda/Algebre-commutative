@@ -12,6 +12,15 @@
 <!-- comment above it lists the other values you may use.                 -->
 
 <publication>
+  <!-- Pour que les exercices soient déroulés et les remarques refermées-->
+  <html>
+    <knowl exercise-inline="no"/>
+    <knowl remark="yes"/>
+  </html>
+
+
+
+
   <common>
     <!-- Level at which html output is split into separate pages: 0 gives -->
     <!-- a single page, 1 is chapter, 2 is section, and so on through 6.  -->

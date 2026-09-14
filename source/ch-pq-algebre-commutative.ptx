@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-pq-algebre-commutative" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Pourquoi l'algèbre commutative</title>
+
+  <introduction>
+    
+    <p>
+      Ici, les anneaux sont commutatifs, unitaires et intègres, avec <m>1\neq 0</m>. On note <m>A^{\times}</m> le groupe des éléments inversibles de <m>A</m>.
+    </p>
+
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-exercices-factorisation.ptx" />
+
+
+
+
+
+</chapter>
