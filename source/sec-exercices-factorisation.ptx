@@ -6,7 +6,7 @@
 <section xml:id="sec-exercices-factorisation">
   <title>Factorisation</title>
 
-    <remark>
+    <note>
       <title>Éléments associés, irréductibles et premiers</title>
         <ul>
           <li>
@@ -16,7 +16,7 @@
           </li>
           <li>
             <p>
-              Un élément <m>p\in A</m> est <term>irréductible</term> s'il est non nul, non inversible, et si toute égalité <m>p=ab</m>, avec <m>a,b\in A</m>, entraîne que <m>a</m> ou <m>b</m> est inversible.
+              Un élément <m>\pi\in A</m> est <term>irréductible</term> s'il est non nul, non inversible, et si toute égalité <m>\pi=ab</m>, avec <m>a,b\in A</m>, entraîne que <m>a</m> ou <m>b</m> est inversible.
             </p>
           </li>
           <li>
@@ -26,38 +26,38 @@
             </p>
           </li>
         </ul>
-    </remark>
+    </note>
 
-    <remark>
+    <note>
       <title>Propriété de factorisation et anneau factoriel</title>
         <ul>
           <li>
             <p>
               L'anneau <m>A</m> <term>admet la propriété de factorisation</term> si tout élément non nul et non inversible de <m>A</m> s'écrit comme un produit fini d'éléments irréductibles :
             </p>
-            <me>a=p_1\cdots p_n,\qquad n\geq 1.</me>
+            <me>a=\pi_1\cdots \pi_n,\qquad n\geq 1.</me>
           </li>
           <li>
             <p>
               L'anneau <m>A</m> est <term>factoriel</term> s'il admet la propriété de factorisation et si cette factorisation est unique à l'ordre des facteurs et à association près. Autrement dit, si
             </p>
-            <me>p_1\cdots p_n=q_1\cdots q_m</me>
+            <me>\pi_1\cdots \pi_n=\varpi_1\cdots \varpi_m</me>
             <p>
-              avec tous les <m>p_i</m> et <m>q_j</m> irréductibles, alors <m>n=m</m> et il existe une permutation <m>\sigma</m> de <m>\{1,\ldots,n\}</m> telle que <m>p_i</m> et <m>q_{\sigma(i)}</m> soient associés pour tout <m>i</m>.
+              avec tous les <m>\pi_i</m> et <m>\varpi_j</m> irréductibles, alors <m>n=m</m> et il existe une permutation <m>\sigma</m> de <m>\{1,\ldots,n\}</m> telle que <m>\pi_i</m> et <m>\varpi_{\sigma(i)}</m> soient associés pour tout <m>i</m>.
             </p>
           </li>
         </ul>
-    </remark>
+    </note>
 
-    <remark>
+    <note>
       <title>Anneau principal</title>
         <p>
           L'anneau <m>A</m> est <term>principal</term> si tout idéal <m>I</m> de <m>A</m> est engendré par un seul élément : il existe <m>a\in A</m> tel que
           <me>I=(a)=aA=\{ax\mid x\in A\}.</me>
         </p>
-    </remark>
+    </note>
 
-    <remark>
+    <note>
       <title>Stathme et anneau euclidien</title>
         <p>
           Un <term>stathme euclidien</term> sur <m>A</m> est une application <me>\delta:A\setminus\{0\}\longrightarrow\mathbb{N}</me> telle que, pour tous <m>a\in A</m> et <m>b\in A\setminus\{0\}</m>, il existe <m>q,r\in A</m> vérifiant <me>a=bq+r,\qquad r=0\ \text{ou}\ \delta(r)\lt\delta(b).</me>
@@ -65,9 +65,9 @@
         <p>
           L'anneau <m>A</m> est <term>euclidien</term> s'il admet un tel stathme. Les éléments <m>q</m> et <m>r</m> sont respectivement un quotient et un reste de la division de <m>a</m> par <m>b</m>; leur unicité n'est pas exigée.
         </p>
-    </remark>
+    </note>
 
-    <remark>
+    <note>
       <title>Euclidien implique principal, qui implique factoriel, et admet la propriété de factorisation.</title>
         <figure xml:id="fig-inclusions-anneaux">
           <caption>Inclusions entre classes d'anneaux intègres.</caption>
@@ -93,9 +93,8 @@
       <p>
         Ces inclusions sont strictes en général. L'anneau <m>\mathbb{Z}[(1+\sqrt{-19})/2]</m> est principal mais non euclidien ; <m>k[X,Y]</m>, pour <m>k</m> un corps, est factoriel mais non principal ; <m>\mathbb{Z}[\sqrt{-5}]</m> admet la propriété de factorisation mais n'est pas factoriel.
       </p>
-    </remark>
+    </note>
 
-    <title>Premiers exemples d'anneaux euclidiens</title>
     <exercise xml:id="ex-euclidien-Z">
       <title>Mes premiers anneaux euclidiens</title>
       <statement>
@@ -123,6 +122,31 @@
         </ol>
       </statement>
       <solution>
+        <ol>
+          <li>
+            <p>
+              On montre que la valeur absolue <m>|\cdot|</m> est un stathme pour <m>\mathbb{Z}</m> en utilisant la division euclidienne classique.
+            </p>
+          </li>
+          <li>
+            <p>
+              On montre que le degré <m>\deg(\cdot)</m> est un stathme pour <m>k[X]</m>. Soit <m>B(X)</m> un polynôme non nul de <m>k[X]</m> que l'on suppose unitaire sans perte de généralité. Soit <m>A(X)\in k[X]</m>. On montre par récurrence sur <m>\deg(A)</m> qu'il existe <m>Q(X),R(X)\in k[X]</m> tels que <me>A(X)=B(X)Q(X)+R(X),\qquad R(X)=0\ \text{ou}\ \deg(R)\lt\deg(B).</me> Si <m>\deg(A)=0</m>, alors soit <m>\deg(B)=0</m> et on prend <m>Q=A/B</m> et <m>R=0</m>, soit <m>\deg(B)\gt 0</m> et on prend <m>Q=0</m> et <m>R=A</m>.
+            </p>
+            <p>
+              Si <m>\deg(A)\gt 0</m>, alors soit <m>\deg(A)\lt\deg(B)</m> et on prend <m>Q=0</m> et <m>R=A</m>, soit <m>\deg(A)\geq\deg(B)</m>. Dans ce dernier cas, on écrit <m>A(X)</m> comme <m>a_nX^n+A'(X)</m> où <m>\deg(A')\lt\deg(A)</m> et on applique l'hypothèse de récurrence à <m>A'(X)</m> pour en déduire l'existence de <m>Q'(X),R'(X)</m> tels que <me>A'(X)=B(X)Q'(X)+R'(X),\qquad R'(X)=0\ \text{ou}\ \deg(R')\lt\deg(B).</me> On pose alors <m>Q(X)=a_nX^{n-\deg(B)}+Q'(X)</m> et <m>R(X)=R'(X)+a_nX^n-a_nX^{n-\deg(B)}B(X)</m> pour en déduire <m>A(X)=B(X)Q(X)+R(X)</m> avec <m>R(X)=0</m> ou <m>\deg(R)\lt\deg(B)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Soit <m>b\in \mathbb{Z}[i]</m> non nul et soit <m>a\in \mathbb{Z}[i]</m>. Le quotient <m>z:=a/b</m> est un nombre complexe, et l'on note <m>\alpha</m> et <m>\beta</m> sa partie réelle et sa partie imaginaire. Tout nombre réel <m>r</m> se décompose de manière unique comme la somme d'un entier <m>r_1</m> et d'un nombre réel <m>-1/2\leq r_2\lt 1/2</m>; on applique ce fait à <m>\alpha</m> et <m>\beta</m> pour obtenir <m>z=(\alpha_1+i\beta_1)+(\alpha_2+i\beta_2)</m> avec <m>q:=\alpha_1+i\beta_1\in \mathbb{Z}[i]</m> et <m>w:=\alpha_2+i\beta_2</m> de norme <m>N(w)=\alpha_2^2+\beta_2^2\lt 1/2+1/2=1</m>. On pose <m>r:=bw=a-qb\in \mathbb{Z}[i]</m> et l'on obtient <m>a=bq+r</m> avec <m>N(r)=N(b)N(w)\lt N(b)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              On procède de manière analogue à l'exercice précédent, en utilisant le stathme <m>N(a+i\sqrt{2}b)=a^2+2b^2</m>. Cette fois-ci, on décompose la partie imaginaire <m>\beta</m> de <m>z=a/b</m> comme la somme d'un élément de <m>\sqrt{2}\mathbb{Z}</m> et d'un élément de <m>[-\sqrt{2}/2,\sqrt{2}/2[</m>. 
+            </p>
+          </li>
+        </ol>
       </solution>
     </exercise>
 
@@ -146,6 +170,21 @@
           </ol>
         </statement>
         <solution>
+          <ol>
+          <li>
+            <p>
+              Soit <m>p\in A</m> premier et supposons que <m>p=ab</m> avec <m>a,b\in A</m>. Alors <m>p\mid ab</m>, donc <m>p\mid a</m> ou <m>p\mid b</m>. Supposons que <m>p\mid a</m>, alors il existe <m>c\in A</m> tel que <m>a=pc</m>. On obtient alors par intégrité <me>p=ab=pcb,\qquad 1=cb.</me> Ainsi, <m>b</m> est inversible et <m>p</m> est irréductible.
+            </p>
+          </li>
+          <li>
+            <p>
+              Supposons que <m>A</m> est factoriel et soit <m>\pi\in A</m> irréductible. Soit <m>a,b\in A</m> tels que <m>\pi\mid ab</m> et soit <m>c\in A</m> tel que <m>ab=c\pi</m>. Comme <m>A</m> est factoriel, on peut écrire <m>a=\pi_1\cdots \pi_n</m>, <m>b=\pi_{n+1}\cdots \pi_m</m> et <m>c=\rho_1\cdots \rho_k</m> avec tous les <m>\pi_i,\rho_l</m> irréductibles. On obtient alors <me>\pi_1\cdots \pi_m=\rho_1\cdots \rho_k\pi.</me> Par unicité de la factorisation, il existe un <m>i</m> tel que <m>\pi_i</m> et <m>\pi</m> soient associés. Ainsi, <m>\pi\mid a</m> ou <m>\pi\mid b</m>, et <m>\pi</m> est premier.
+            </p>
+            <p>
+              Réciproquement, supposons que tout élément irréductible est premier. Soit <m>a\in A</m> non nul et non inversible. Comme <m>A</m> admet la propriété de factorisation, on peut écrire <m>a=\pi_1\cdots \pi_n</m> avec tous les <m>\pi_i</m> irréductibles. Si l'on a une autre factorisation <m>a=\varpi_1\cdots \varpi_m</m>, alors <m>\pi_1\mid \varpi_1\cdots \varpi_m</m>. Comme <m>\pi_1</m> est premier, il divise un des <m>\varpi_j</m>, disons <m>\varpi_1</m>. Par irréductibilité, ils sont associés et l'on peut simplifier pour obtenir <me>\pi_2\cdots \pi_n=\varpi_2\cdots \varpi_m.</me> On conclut par récurrence sur le nombre de facteurs.
+            </p>
+          </li>
+        </ol>
         </solution>
       </exercise>
 
@@ -171,6 +210,21 @@
           </ol>
           </statement>
         <solution>
+          <ol>
+            <li>
+              <p>
+                Les éléments irréductibles de <m>\mathbb{Z}</m> sont les nombres premiers et leurs opposés.
+              </p>
+            </li>
+            <li>
+              <p>
+                Les éléments irréductibles de <m>\mathbb{C}[X]</m> sont les polynômes de degré 1. Les éléments irréductibles de <m>\mathbb{R}[X]</m> sont les polynômes de degré 1 et les polynômes quadratiques à discriminant strictement négatif.
+              </p>
+            </li>
+            <li>
+              <p> </p>
+            </li>
+          </ol>
         </solution>
       </exercise>
 
@@ -263,7 +317,4 @@
       <solution>
       </solution>
     </exercise>
-
-
-
 </section>

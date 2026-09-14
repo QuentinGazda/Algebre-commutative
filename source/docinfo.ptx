@@ -12,7 +12,7 @@
   <directories external="../assets" />
 
   <rename element="inlineexercise" xml:lang="fr-FR">Exercice</rename>
-  <rename element="remark" xml:lang="fr-FR">Rappel</rename>
+  <rename element="note" xml:lang="fr-FR">Rappel</rename>
 
   <!-- macros for defining latex math shortcuts. It is good practice -->
   <!-- to define these semantically, so that the macro relates to what-->

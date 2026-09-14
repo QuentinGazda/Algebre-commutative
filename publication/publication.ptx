@@ -18,7 +18,9 @@
     <knowl remark="yes"/>
   </html>
 
-
+  <numbering>
+    <exercises distinct="yes" level="2"/>
+  </numbering>
 
 
   <common>
