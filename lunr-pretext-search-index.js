@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Factorisation",
-  "body": " Factorisation   Éléments associés, irréductibles et premiers    Deux éléments sont associés s'il existe tel que .    Un élément est irréductible s'il est non nul, non inversible, et si toute égalité , avec , entraîne que ou est inversible.    Un élément est premier s'il est non nul, non inversible, et si, pour tous ,       Propriété de factorisation et anneau factoriel    L'anneau  admet la propriété de factorisation si tout élément non nul et non inversible de s'écrit comme un produit fini d'éléments irréductibles :     L'anneau est factoriel s'il admet la propriété de factorisation et si cette factorisation est unique à l'ordre des facteurs et à association près. Autrement dit, si   avec tous les et irréductibles, alors et il existe une permutation de telle que et soient associés pour tout .      Anneau principal  L'anneau est principal si tout idéal de est engendré par un seul élément : il existe tel que     Stathme et anneau euclidien  Un stathme euclidien sur est une application telle que, pour tous et , il existe vérifiant   L'anneau est euclidien s'il admet un tel stathme. Les éléments et sont respectivement un quotient et un reste de la division de par ; leur unicité n'est pas exigée.    Euclidien implique principal, qui implique factoriel, et admet la propriété de factorisation.   Inclusions entre classes d'anneaux intègres.   Euclidiens inclus dans principaux, inclus dans factoriels, inclus dans atomiques.   Quatre rectangles emboîtés représentent, du plus petit au plus grand, les anneaux euclidiens, principaux, factoriels, puis les anneaux admettant la propriété de factorisation.      Ces inclusions sont strictes en général. L'anneau est principal mais non euclidien ; , pour un corps, est factoriel mais non principal ; admet la propriété de factorisation mais n'est pas factoriel.    Mes premiers anneaux euclidiens     Montrer que est euclidien.    Soit un corps. Montrer que est euclidien.    Montrer que l'anneau est euclidien de stathme .    Montrer que l'anneau est euclidien.        On montre que la valeur absolue est un stathme pour en utilisant la division euclidienne classique.    On montre que le degré est un stathme pour . Soit un polynôme non nul de que l'on suppose unitaire sans perte de généralité. Soit . On montre par récurrence sur qu'il existe tels que Si , alors soit et on prend et , soit et on prend et .  Si , alors soit et on prend et , soit . Dans ce dernier cas, on écrit comme où et on applique l'hypothèse de récurrence à pour en déduire l'existence de tels que On pose alors et pour en déduire avec ou .    Soit non nul et soit . Le quotient est un nombre complexe, et l'on note et sa partie réelle et sa partie imaginaire. Tout nombre réel se décompose de manière unique comme la somme d'un entier et d'un nombre réel ; on applique ce fait à et pour obtenir avec et de norme . On pose et l'on obtient avec .    On procède de manière analogue à l'exercice précédent, en utilisant le stathme . Cette fois-ci, on décompose la partie imaginaire de comme la somme d'un élément de et d'un élément de .       Caractérisation d'Euler-Gauss   Soit un anneau (commutatif, unitaire) intègre.    Montrer que tout élément premier est irréductible.    Soit un anneau qui vérifie la propriété de factorisation. Montrer que est factoriel si et seulement si tout élément irréductible est premier.        Soit premier et supposons que avec . Alors , donc ou . Supposons que , alors il existe tel que . On obtient alors par intégrité Ainsi, est inversible et est irréductible.    Supposons que est factoriel et soit irréductible. Soit tels que et soit tel que . Comme est factoriel, on peut écrire , et avec tous les irréductibles. On obtient alors Par unicité de la factorisation, il existe un tel que et soient associés. Ainsi, ou , et est premier.  Réciproquement, supposons que tout élément irréductible est premier. Soit non nul et non inversible. Comme admet la propriété de factorisation, on peut écrire avec tous les irréductibles. Si l'on a une autre factorisation , alors . Comme est premier, il divise un des , disons . Par irréductibilité, ils sont associés et l'on peut simplifier pour obtenir On conclut par récurrence sur le nombre de facteurs.       Déterminer les irréductibles     Quels sont les éléments irréductibles de ?    Quels sont les irréductibles de ? De ?    Quels sont les irréductibles de ? De ?        Les éléments irréductibles de sont les nombres premiers et leurs opposés.    Les éléments irréductibles de sont les polynômes de degré 1. Les éléments irréductibles de sont les polynômes de degré 1 et les polynômes quadratiques à discriminant strictement négatif.           n'est pas factoriel   On considère l'anneau et l'application     Montrer que est multiplicative et déterminer les éléments inversibles de .    Montrer, par récurrence sur la norme, que admet la propriété de factorisation.    En étudiant les décompositions montrer que n'est pas factoriel.          Résolution d'une équation diophantienne   On se propose de montrer que les seules solutions de l'équation sont .    Montrer que et sont impairs.    Montrer que et sont premiers entre eux dans .    En déduire que est un cube dans et conclure.        "
+  "body": " Factorisation   Éléments associés, irréductibles et premiers    Deux éléments sont associés s'il existe tel que .    Un élément est irréductible s'il est non nul, non inversible, et si toute égalité , avec , entraîne que ou est inversible.    Un élément est premier s'il est non nul, non inversible, et si, pour tous ,       Propriété de factorisation et anneau factoriel    L'anneau  admet la propriété de factorisation si tout élément non nul et non inversible de s'écrit comme un produit fini d'éléments irréductibles :     L'anneau est factoriel s'il admet la propriété de factorisation et si cette factorisation est unique à l'ordre des facteurs et à association près. Autrement dit, si   avec tous les et irréductibles, alors et il existe une permutation de telle que et soient associés pour tout .      Anneau principal  L'anneau est principal si tout idéal de est engendré par un seul élément : il existe tel que     Stathme et anneau euclidien  Un stathme euclidien sur est une application telle que, pour tous et , il existe vérifiant   L'anneau est euclidien s'il admet un tel stathme. Les éléments et sont respectivement un quotient et un reste de la division de par ; leur unicité n'est pas exigée.    Euclidien implique principal, qui implique factoriel, et admet la propriété de factorisation.   Inclusions entre classes d'anneaux intègres.   Euclidiens inclus dans principaux, inclus dans factoriels, inclus dans atomiques.   Quatre rectangles emboîtés représentent, du plus petit au plus grand, les anneaux euclidiens, principaux, factoriels, puis les anneaux admettant la propriété de factorisation.      Ces inclusions sont strictes en général. L'anneau est principal mais non euclidien ; , pour un corps, est factoriel mais non principal ; admet la propriété de factorisation mais n'est pas factoriel.    Mes premiers anneaux euclidiens     Montrer que est euclidien.    Soit un corps. Montrer que est euclidien.    Montrer que l'anneau est euclidien de stathme .    Montrer que l'anneau est euclidien.        On montre que la valeur absolue est un stathme pour en utilisant la division euclidienne classique.    On montre que le degré est un stathme pour . Soit un polynôme non nul de que l'on suppose unitaire sans perte de généralité. Soit . On montre par récurrence sur qu'il existe tels que Si , alors soit et on prend et , soit et on prend et .  Si , alors soit et on prend et , soit . Dans ce dernier cas, on écrit comme où et on applique l'hypothèse de récurrence à pour en déduire l'existence de tels que On pose alors et pour en déduire avec ou .    Soit non nul et soit . Le quotient est un nombre complexe, et l'on note et sa partie réelle et sa partie imaginaire. Tout nombre réel se décompose de manière unique comme la somme d'un entier et d'un nombre réel ; on applique ce fait à et pour obtenir avec et de norme . On pose et l'on obtient avec .    On procède de manière analogue à l'exercice précédent, en utilisant le stathme . Cette fois-ci, on décompose la partie imaginaire de comme la somme d'un élément de et d'un élément de .       Caractérisation d'Euler-Gauss   Soit un anneau (commutatif, unitaire) intègre.    Montrer que tout élément premier est irréductible.    Soit un anneau qui vérifie la propriété de factorisation. Montrer que est factoriel si et seulement si tout élément irréductible est premier.        Soit premier et supposons que avec . Alors , donc ou . Supposons que , alors il existe tel que . On obtient alors par intégrité Ainsi, est inversible et est irréductible.    Supposons que est factoriel et soit irréductible. Soit tels que et soit tel que . Comme est factoriel, on peut écrire , et avec tous les irréductibles. On obtient alors Par unicité de la factorisation, il existe un tel que et soient associés. Ainsi, ou , et est premier.  Réciproquement, supposons que tout élément irréductible est premier. Soit non nul et non inversible. Comme admet la propriété de factorisation, on peut écrire avec tous les irréductibles. Si l'on a une autre factorisation , alors . Comme est premier, il divise un des , disons . Par irréductibilité, ils sont associés et l'on peut simplifier pour obtenir On conclut par récurrence sur le nombre de facteurs.       Déterminer les irréductibles     Quels sont les éléments irréductibles de ?    Quels sont les irréductibles de ? De ?        Les éléments irréductibles de sont les nombres premiers et leurs opposés.    Les éléments irréductibles de sont les polynômes de degré 1. Les éléments irréductibles de sont les polynômes de degré 1 et les polynômes quadratiques à discriminant strictement négatif.           Irréducitbles de   On considère l'anneau équippé de l'application .    Montrer que .    Soit un nombre premier.    Si s'écrit sous la forme avec entiers, montrer qu'il existe un irréductible tel que .    Si n'est pas de cette forme, montrer que est irréductible dans .      Soit un irréductible de . Montrer que vérifie soit pour un nombre premier , soit est associé à un nombre premier. En déduire qu'un ensemble de représentants des classes d'associés d'éléments irréductibles de est donné par           Nombres premiers de la forme  Un théorème de Fermat affirme que les nombres premiers de la forme sont exactement et les nombres premiers congrus à modulo .    Les nombres premiers de Gauss  La figure suivante représente la répartition des irréductibles (aka nombres premiers de Gauss) dans le plan complexe.   Répartition des nombres premiers de Gauss. Image de Truejackster, domaine public, Wikimedia Commons .      Irréducitbles de   Déterminer les éléments irréductibles de .        n'est pas factoriel   À partir de la relation montrer que l'anneau n'est pas factoriel.        Résolution d'une équation diophantienne   On se propose de montrer que les seules solutions de l'équation sont .    Montrer que et sont impairs.    Montrer que et sont premiers entre eux dans .    En déduire que est un cube dans et conclure.          Résoudre Fermat  Il y eu des tentatives de résolution de Fermat par ces méthodes. En effet, si avec , alors on a la factorisation où est une racine primitive -ième de l'unité. On peut ainsi espérer comparer les factorisations et tomber sur une contradiction.  Cependant, cette technique ne se généralise pas facilement car les anneaux ne sont pas factoriels en général. Le plus petit entier tel que n'est pas factoriel est .   "
 },
 {
   "id": "sec-exercices-factorisation-2",
@@ -88,25 +88,70 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "1.1.3",
   "title": "Déterminer les irréductibles.",
-  "body": " Déterminer les irréductibles     Quels sont les éléments irréductibles de ?    Quels sont les irréductibles de ? De ?    Quels sont les irréductibles de ? De ?        Les éléments irréductibles de sont les nombres premiers et leurs opposés.    Les éléments irréductibles de sont les polynômes de degré 1. Les éléments irréductibles de sont les polynômes de degré 1 et les polynômes quadratiques à discriminant strictement négatif.         "
+  "body": " Déterminer les irréductibles     Quels sont les éléments irréductibles de ?    Quels sont les irréductibles de ? De ?        Les éléments irréductibles de sont les nombres premiers et leurs opposés.    Les éléments irréductibles de sont les polynômes de degré 1. Les éléments irréductibles de sont les polynômes de degré 1 et les polynômes quadratiques à discriminant strictement négatif.         "
+},
+{
+  "id": "sec-exercices-factorisation-10",
+  "level": "2",
+  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-10",
+  "type": "Exercice",
+  "number": "1.1.4",
+  "title": "Irréducitbles de <span class=\"process-math\">\\(\\mathbb{Z}[i]\\)<\/span>.",
+  "body": " Irréducitbles de   On considère l'anneau équippé de l'application .    Montrer que .    Soit un nombre premier.    Si s'écrit sous la forme avec entiers, montrer qu'il existe un irréductible tel que .    Si n'est pas de cette forme, montrer que est irréductible dans .      Soit un irréductible de . Montrer que vérifie soit pour un nombre premier , soit est associé à un nombre premier. En déduire qu'un ensemble de représentants des classes d'associés d'éléments irréductibles de est donné par         "
+},
+{
+  "id": "sec-exercices-factorisation-11",
+  "level": "2",
+  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-11",
+  "type": "Remarque",
+  "number": "1.1.7",
+  "title": "Nombres premiers de la forme <span class=\"process-math\">\\(a^2+b^2\\)<\/span>.",
+  "body": " Nombres premiers de la forme  Un théorème de Fermat affirme que les nombres premiers de la forme sont exactement et les nombres premiers congrus à modulo .  "
+},
+{
+  "id": "sec-exercices-factorisation-12",
+  "level": "2",
+  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-12",
+  "type": "Remarque",
+  "number": "1.1.8",
+  "title": "Les nombres premiers de Gauss.",
+  "body": " Les nombres premiers de Gauss  La figure suivante représente la répartition des irréductibles (aka nombres premiers de Gauss) dans le plan complexe.   Répartition des nombres premiers de Gauss. Image de Truejackster, domaine public, Wikimedia Commons .    "
+},
+{
+  "id": "sec-exercices-factorisation-13",
+  "level": "2",
+  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-13",
+  "type": "Exercice",
+  "number": "1.1.5",
+  "title": "Irréducitbles de <span class=\"process-math\">\\(\\mathbb{Z}[i\\sqrt{2}]\\)<\/span>.",
+  "body": " Irréducitbles de   Déterminer les éléments irréductibles de .      "
 },
 {
   "id": "ex-factorisation-non-factorialite-racine-moins-cinq",
   "level": "2",
   "url": "sec-exercices-factorisation.html#ex-factorisation-non-factorialite-racine-moins-cinq",
   "type": "Exercice",
-  "number": "1.1.4",
+  "number": "1.1.6",
   "title": "<span class=\"process-math\">\\(\\mathbb{Z}[i\\sqrt{5}]\\)<\/span> n’est pas factoriel.",
-  "body": " n'est pas factoriel   On considère l'anneau et l'application     Montrer que est multiplicative et déterminer les éléments inversibles de .    Montrer, par récurrence sur la norme, que admet la propriété de factorisation.    En étudiant les décompositions montrer que n'est pas factoriel.        "
+  "body": " n'est pas factoriel   À partir de la relation montrer que l'anneau n'est pas factoriel.      "
 },
 {
-  "id": "sec-exercices-factorisation-11",
+  "id": "sec-exercices-factorisation-15",
   "level": "2",
-  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-11",
+  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-15",
   "type": "Exercice",
-  "number": "1.1.5",
+  "number": "1.1.7",
   "title": "Résolution d’une équation diophantienne.",
-  "body": " Résolution d'une équation diophantienne   On se propose de montrer que les seules solutions de l'équation sont .    Montrer que et sont impairs.    Montrer que et sont premiers entre eux dans .    En déduire que est un cube dans et conclure.       "
+  "body": " Résolution d'une équation diophantienne   On se propose de montrer que les seules solutions de l'équation sont .    Montrer que et sont impairs.    Montrer que et sont premiers entre eux dans .    En déduire que est un cube dans et conclure.        "
+},
+{
+  "id": "sec-exercices-factorisation-16",
+  "level": "2",
+  "url": "sec-exercices-factorisation.html#sec-exercices-factorisation-16",
+  "type": "Remarque",
+  "number": "1.1.10",
+  "title": "Résoudre Fermat.",
+  "body": " Résoudre Fermat  Il y eu des tentatives de résolution de Fermat par ces méthodes. En effet, si avec , alors on a la factorisation où est une racine primitive -ième de l'unité. On peut ainsi espérer comparer les factorisations et tomber sur une contradiction.  Cependant, cette technique ne se généralise pas facilement car les anneaux ne sont pas factoriels en général. Le plus petit entier tel que n'est pas factoriel est .  "
 },
 {
   "id": "references",
