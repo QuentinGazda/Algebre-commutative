@@ -202,11 +202,6 @@
                 Quels sont les irréductibles de <m>\mathbb{C}[X]</m> ? De <m>\mathbb{R}[X]</m> ?
               </p>
             </li>
-            <li>
-              <p>
-                Quels sont les irréductibles de <m>\mathbb{Z}[i]</m> ? De <m>\mathbb{Z}[i\sqrt{2}]</m> ?
-              </p>
-            </li>
           </ol>
           </statement>
         <solution>
@@ -228,65 +223,137 @@
         </solution>
       </exercise>
 
+      <exercise>
+        <title>Irréducitbles de <m>\mathbb{Z}[i]</m></title>
+        <statement>
+          <p>
+            On considère l'anneau <m>\mathbb{Z}[i]</m> équippé de l'application <m>N(z)=z\overline{z}</m>.
+          </p>
+          <ol>
+            <li>
+              <p>
+                Montrer que <m>\mathbb{Z}[i]^{\times}=\{z\in \mathbb{Z}[i]~|~N(z)=1\}=\{\pm 1, \pm i\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Soit <m>p</m> un nombre premier. 
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Si <m>p</m> s'écrit sous la forme <m>a^2+b^2</m> avec <m>a,b</m> entiers, montrer qu'il existe un irréductible <m>\pi\in \mathbb{Z}[i]</m> tel que <m>p=\pi \overline{\pi}</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Si <m>p</m> n'est pas de cette forme, montrer que <m>p</m> est irréductible dans <m>\mathbb{Z}[i]</m>.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>
+                Soit <m>\pi</m> un irréductible de <m>\mathbb{Z}[i]</m>. Montrer que <m>\pi</m> vérifie soit <m>\pi\overline{\pi}=p</m> pour un nombre premier <m>p</m>, soit <m>\pi</m> est associé à un nombre premier. En déduire qu'un ensemble de représentants des classes d'associés d'éléments irréductibles de <m>\mathbb{Z}[i]</m> est donné par
+              </p>
+              <me>
+                  \{p\text{ premier pas de la forme }a^2+b^2\}\sqcup\{1+i\}\sqcup\{a\pm ib~|~2\lt a^2+b^2~\text{premier}\}.
+                </me>
+            </li>
+          </ol>
+        </statement>
+        <solution>
+          <!--
+          <ol>
+            <li>
+              <p>
+                Si <m>u\in \mathbb{Z}[i]^{\times}</m>, il existe <m>v\in \mathbb{Z}[i]</m> tel que <m>uv=1</m>. En appliquant <m>N</m>, on obtient <m>N(u)N(v)=1</m>. Comme <m>N(z),N(w)\in \mathbb{N}</m>, on a <m>N(u)=N(v)=1</m>. Réciproquement, si <m>N(u)=1</m>, alors <m>u\overline{u}=1</m> et donc <m>u</m> est inversible d'inverse <m>\overline{u}</m>. Enfin, les éléments <m>a+ib</m> de norme <m>a^2+b^2=1</m> sont <m>\pm 1</m> et <m>\pm i</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si <m>p=a^2+b^2</m>, on pose <m>\pi=a+ib</m>. Alors <m>\pi\overline{\pi}=a^2+b^2=p</m> et il suffit de montrer que <m>\pi</m> est irréductible. Si <m>\pi=\alpha\beta</m> avec <m>\alpha,\beta\in \mathbb{Z}[i]</m>, on a <m>N(\pi)=N(\alpha)N(\beta)</m> et donc <m>p=N(\alpha)N(\beta)</m>. Comme <m>p</m> est premier, on a <m>N(\alpha)=1</m> ou <m>N(\beta)=1</m>, et donc <m>\alpha</m> ou <m>\beta</m> est inversible.
+              </p>
+              <p>
+                Supposons que <m>p</m> n'est pas de cette forme, et qu'il n'est pas irréductible. Alors on peut écrire <m>p=\alpha\beta</m> avec <m>N(\alpha),N(\beta)\gt 1</m>. On a <m>N(p)=p^2=N(\alpha)N(\beta)</m> et donc <m>N(\alpha)=N(\beta)=p</m>. Mais alors <m>p=N(\alpha)=a^2+b^2</m> avec <m>\alpha=a+ib</m>, ce qui contredit l'hypothèse. 
+              </p>    
+            </li>
+            <li>
+              <p>
+                Soit <m>\rho</m> irréductible et factorisons sa norme <m>N(\rho)=p_1^{n_1}\cdots p_g^{n_g}</m> en produit de nombres premiers. Comme <m>\rho\overline{\rho}=N(\rho)</m>, <m>\rho</m> divise sa norme et, puisqu'il est premier (<m>\mathbb{Z}[i]</m> est factoriel), il divise l'un des <m>p_i</m>. La relation de division étant stable par conjugué, on a que <m>\overline{\rho}</m> est irréductible et divise <m>p_i</m>. Or un irréductible ne peut pas diviser deux nombres premiers, car alors il diviserait leur pgcd qui vaut <m>1</m>. La propriété d'unique factorisation donne alors <m>g=1</m>, et l'on note <m>p:=p_1</m>, <<m>n:=n_1</m>. 
+              </p>
+              <p>
+                On a donc montré que <m>N(\rho)=p^n</m>. Enfin, soit <m>p</m> est de la forme <m>a^2+b^2</m> et <m>\rho\overline{\rho}=\pi^n\overline{\pi}^n</m> ce qui implique <m>n=1</m> et, quitte à remplacer <m>\pi</m> par son conjugué à unité près, <m>\rho=\pi</m> par propriété d'unique factorisation. Soit <m>p</m> n'est pas de cette forme et <m>p</m> est irréductible; auquel cas <m>\rho</m> est associé à <m>p</m> par propriété d'unique factorisation.
+              </p>
+              <p>
+                On en déduit ql'ensemble de représentants. On a isolé <m>1+i</m> car c'est le seul irréductible associé à son conjugué : <m>1+i=-i(1+i)</m>.
+              </p>
+            </li>
+          </ol>
+          -->
+        </solution>
+      </exercise>
+
+      <remark>
+        <title>Nombres premiers de la forme <m>a^2+b^2</m></title>
+        <p>
+          Un théorème de Fermat affirme que les nombres premiers de la forme <m>a^2+b^2</m> sont exactement <m>2</m> et les nombres premiers congrus à <m>1</m> modulo <m>4</m>.
+        </p>
+      </remark>
+
+      <remark>
+        <title>Les nombres premiers de Gauss</title>
+        <p>
+          La figure suivante représente la répartition des irréductibles (aka nombres premiers de Gauss) dans le plan complexe.
+        </p>
+        <figure>
+          <caption>
+            Répartition des nombres premiers de Gauss. Image de Truejackster, domaine public, <url href="https://commons.wikimedia.org/wiki/File:Gauss-primes-768x768.png"> Wikimedia Commons</url>.
+          </caption>
+          <image source="images/gaussian-primes.png" width="65%"/>
+        </figure>
+      </remark>
+
+      <exercise>
+        <title>Irréducitbles de <m>\mathbb{Z}[i\sqrt{2}]</m></title>
+        <statement>
+          <p>
+            Déterminer les éléments irréductibles de <m>\mathbb{Z}[i\sqrt{2}]</m>.
+          </p>
+        </statement>
+        <solution>
+          <!--
+          <p>
+            On suit la méthode précédente. On introduit <m>N(a+i\sqrt{2}b)=a^2+2b^2</m> et on commence par montrer que <m>\mathbb{Z}[i\sqrt{2}]^{\times}=\{z~|~N(z)=1\}=\{\pm 1\}</m>. On montre ensuite qu'un irréductible <m>\rho</m> de <m>\mathbb{Z}[i\sqrt{2}]</m> vérifie soit <me>\rho\overline{\rho}=p</me> pour un nombre premier <m>p</m> qui est pas de la forme <m>a^2+2b^2</m>, soit <m>\rho</m> est associé à un nombre premier qui n'est pas de cette forme. On en déduit un ensemble de représentants :
+            <me>
+              \{p\text{ premier pas de la forme }a^2+2b^2\}\sqcup\{a\pm i\sqrt{2}b~|~a^2+2b^2~\text{premier}\}.
+            </me>
+          </p>
+          -->
+        </solution>
+      </exercise>
+
       <exercise xml:id="ex-factorisation-non-factorialite-racine-moins-cinq">
         <title><m>\mathbb{Z}[i\sqrt{5}]</m> n'est pas factoriel</title>
           <statement>
             <p>
-              On considère l'anneau <m>A=\mathbb{Z}[i\sqrt{5}]</m> et l'application <me>N:A\longrightarrow\mathbb{N}, \qquad N(a+ib\sqrt{5})=a^2+5b^2.</me>
+              À partir de la relation
+              <me>2\times 3=(1-i\sqrt{5})(1+i\sqrt{5}),</me>
+              montrer que l'anneau <m>\mathbb{Z}[i\sqrt{5}]</m> n'est pas factoriel.
             </p>
-            <ol>
-              <li>
-                <p>Montrer que <m>N</m> est multiplicative et déterminer les éléments inversibles de <m>A</m>.</p>
-              </li>
-              <li>
-                <p>Montrer, par récurrence sur la norme, que <m>A</m> admet la propriété de factorisation.</p>
-              </li>
-              <li>
-                <p>
-                  En étudiant les décompositions <me>6=2\times 3=(1-i\sqrt{5})(1+i\sqrt{5}),</me> montrer que <m>A</m> n'est pas factoriel.
-                </p>
-              </li>
-            </ol>
           </statement>
           <solution>
             <!--
             <p>
-              Pour tout <m>z\in A</m>, on a <m>N(z)=z\overline{z}=|z|^2</m>. Ainsi, <me>N(zw)=N(z)N(w).</me> De plus, <m>N(z)=0</m> si et seulement si <m>z=0</m>. Si <m>z</m> est inversible, l'égalité <m>N(z)N(z^{-1})=1</m> impose <m>N(z)=1</m>. Réciproquement, si <m>N(z)=1</m>, alors <m>z\overline{z}=1</m>, donc <m>z</m> est inversible. L'équation <m>a^2+5b^2=1</m> donne finalement <me>A^{\times}=\{-1,1\}.</me>
+              On considère l'application multiplicative <m>N:\mathbb{Z}[i\sqrt{5}]\to \mathbb{N}</m> donnée par <m>N(a+i\sqrt{5}b)=a^2+5b^2</m>. On vérifie facilement qu'un élément <m>z</m> est une unité si et seulement si <m>N(z)=1</m>. 
             </p>
-
             <p>
-              Montrons l'existence d'une factorisation en irréductibles par récurrence forte sur <m>N(z)</m>, pour <m>z</m> non nul et non inversible. Si <m>z</m> est irréductible, il constitue lui-même une factorisation. Sinon, il existe deux éléments non inversibles <m>x,y\in A</m> tels que <m>z=xy</m>. Ils sont non nuls et leurs normes sont au moins égales à <m>2</m>. Par multiplicativité, <me>N(z)=N(x)N(y),\qquad 2\leq N(x),N(y)\lt N(z).</me> L'hypothèse de récurrence fournit des factorisations de <m>x</m> et de <m>y</m> en irréductibles ; leur produit fournit celle de <m>z</m>. Ainsi, <m>A</m> admet la propriété de factorisation.
+              De cette observation, on en déduit que <m>2</m> est irréductible : en effet si <m>2=\alpha\beta</m> avec <m>\alpha,\beta\in \mathbb{Z}[i\sqrt{5}]</m>, on a <m>N(2)=4=N(\alpha)N(\beta)</m> et donc <m>N(\alpha),N(\beta)\in \{1,2,4\}</m>. Comme <m>2</m> n'est pas de la forme <m>a^2+5b^2</m> avec <m>a,b\in \mathbb{Z}</m>, on ne peut pas avoir <m>N(\alpha)=N(\beta)=2</m>, et donc l'un des deux facteurs est une unité.
             </p>
-
             <p>
-              Pour étudier l'unicité, remarquons d'abord qu'il n'existe aucun élément de norme <m>2</m> ou <m>3</m>. En effet, si <m>b\neq 0</m>, alors <m>a^2+5b^2\geq 5</m> ; si <m>b=0</m>, cette norme est un carré entier.
+              Si <m>\mathbb{Z}[i\sqrt{5}]</m> était factoriel, alors <m>2</m> en tant qu'irréductible serait aussi premier, et donc <m>2</m> divise soit <m>1+i\sqrt{5}</m> soit <m>1-i\sqrt{5}</m>; mais il ne divise aucun des deux car la relation de divisibilité <m>2|a+i\sqrt{5}b</m> dans <m>\mathbb{Z}[i\sqrt{5}]</m> implique <m>2|a</m> et <m>2|b</m> en comparant parties réelle et imaginaire. 
             </p>
-
-            <p>
-              Montrons que les quatre facteurs proposés sont irréductibles.
-            </p>
-          <ul>
-            <li>
-              <p>
-                Comme <m>N(2)=4</m>, une décomposition de <m>2</m> en deux facteurs non inversibles imposerait que leurs normes soient <m>2</m> et <m>2</m>, ce qui est impossible.
-              </p>
-            </li>
-            <li>
-              <p>
-                Comme <m>N(3)=9</m>, une décomposition de <m>3</m> en deux facteurs non inversibles imposerait deux normes égales à <m>3</m>, ce qui est impossible.
-              </p>
-            </li>
-            <li>
-              <p>
-                Comme <m>N(1-i\sqrt{5})=N(1+i\sqrt{5})=6</m>, une décomposition de l'un de ces éléments en deux facteurs non inversibles imposerait des normes <m>2</m> et <m>3</m>, ce qui est encore impossible.
-              </p>
-            </li>
-          </ul>
-
-        <p>
-          On dispose donc de deux factorisations de <m>6</m> en irréductibles : <me>6=2\times 3=(1-i\sqrt{5})(1+i\sqrt{5}).</me> Or deux éléments associés ont la même norme, puisque les inversibles ont norme <m>1</m>. Les normes des facteurs de la première décomposition sont <m>4</m> et <m>9</m>, tandis que celles de la seconde sont <m>6</m> et <m>6</m>. Ces factorisations ne peuvent donc pas se déduire l'une de l'autre par permutation et remplacement des facteurs par des éléments associés. L'anneau <m>A</m> n'est pas factoriel.
-        </p>
-        -->
+            -->
       </solution>
     </exercise>
 
@@ -315,6 +382,46 @@
         </ol>
       </statement>
       <solution>
+        <!--
+        <ol>
+          <li>
+            <p>
+              En réduisant la relation modulo <m>2</m>, on trouve que <m>x</m> et <m>y</m> ont la même parité. S'ils étaient pairs, alors on aurait <m>2^2|x^3-y^2=2</m> ce qui est absurde.
+            </p>
+          </li>
+          <li>
+            <p>
+              Plus généralement, <m>x</m> et <m>y</m> sont premiers entre eux dans <m>\mathbb{Z}</m> car sinon un nombre premier <m>p</m> vérifierait <m>p^2|x^3-y^2=2</m> ce qui est absurde. En particulier, on peut trouver une relation de Bezout entre <m>x</m> et <m>2y</m>. 
+            </p>
+            <p>
+              Par l'absurde, supposons l'existence d'un élement irréductible <m>\pi</m> qui divise <m>y+i\sqrt{2}</m> et <m>y-i\sqrt{2}</m>. En particulier <m>\pi</m> divise leur somme <m>2y</m> et leur produit <m>(y+i\sqrt{2})(y-i\sqrt{2})=x^3</m>, puis il divise <m>x</m> par primalité. Il divise donc la relation de Bezout choisie, donc est inversible ce qui est absurde.
+            </p>
+          </li>
+          <li>
+            <p>
+              On décompose les éléments <m>y+i\sqrt{2}</m> et <m>y-i\sqrt{2}</m> en produit d'éléments irréductibles; ces irréductibles sont distincts d'après la question précédente. Mais leur produit est <m>x^3</m> dont la décomposition en irréductible ne fait intervenir que des exposants multiples de <m>3</m>. On en déduit que <m>y+i\sqrt{2}</m> vérifie la même propriété et donc que c'est un cube.
+            </p>
+            <p>  
+              On écrit alors <m>y+i\sqrt{2}=(a+i\sqrt{2}b)^3</m> avec <m>a,b\in \mathbb{Z}</m> et on en déduit <m>y=a^3-6ab^2</m> et <m>1=3a^2b-2b^3=b(3a^2-2b^2)</m>. On en déduit que <m>b=\pm 1</m> et <m>3a^2-2b^2=\pm 1</m>. On obtient alors les solutions <m>(a,b)=(\pm 1,1),(\pm 1,-1)</m> qui donnent les solutions <m>(x,y)=(3,\pm 5)</m>.
+            </p>
+          </li>
+        </ol>
+        -->
       </solution>
     </exercise>
+
+    <remark>
+      <title>Résoudre Fermat</title>
+      <p>
+        Il y eu des tentatives de résolution de Fermat par ces méthodes. En effet, si <m>x^n+y^n=z^n</m> avec <m>n\geq 3</m>, alors on a la factorisation
+        <me>
+          x^n=\prod_{i=0}^{n-1}{(z-\zeta^i_n y)}
+        </me>
+        où <m>\zeta_n</m> est une racine primitive <m>n</m>-ième de l'unité. On peut ainsi espérer comparer les factorisations et tomber sur une contradiction. 
+      </p>
+      <p>
+        Cependant, cette technique ne se généralise pas facilement car les anneaux <m>\mathbb{Z}[\zeta_n]</m> ne sont pas factoriels en général. Le plus petit entier <m>n</m> tel que <m>\mathbb{Z}[\zeta_n]</m> n'est pas factoriel est <m>n=23</m>.
+      </p>
+    </remark>
+
 </section>
