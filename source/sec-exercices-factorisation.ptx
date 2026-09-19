@@ -257,13 +257,12 @@
                 Soit <m>\pi</m> un irréductible de <m>\mathbb{Z}[i]</m>. Montrer que <m>\pi</m> vérifie soit <m>\pi\overline{\pi}=p</m> pour un nombre premier <m>p</m>, soit <m>\pi</m> est associé à un nombre premier. En déduire qu'un ensemble de représentants des classes d'associés d'éléments irréductibles de <m>\mathbb{Z}[i]</m> est donné par
               </p>
               <me>
-                  \{p\text{ premier pas de la forme }a^2+b^2\}\sqcup\{1+i\}\sqcup\{a\pm ib~|~2\lt a^2+b^2~\text{premier}\}.
+                  \{p\text{ premier pas de la forme }a^2+b^2\}\sqcup\{1+i\}\sqcup\{a\pm ib~|~2\lt a^2+b^2~\text{premier},~a,b\gt 0\}.
                 </me>
             </li>
           </ol>
         </statement>
         <solution>
-          <!--
           <ol>
             <li>
               <p>
@@ -280,7 +279,7 @@
             </li>
             <li>
               <p>
-                Soit <m>\rho</m> irréductible et factorisons sa norme <m>N(\rho)=p_1^{n_1}\cdots p_g^{n_g}</m> en produit de nombres premiers. Comme <m>\rho\overline{\rho}=N(\rho)</m>, <m>\rho</m> divise sa norme et, puisqu'il est premier (<m>\mathbb{Z}[i]</m> est factoriel), il divise l'un des <m>p_i</m>. La relation de division étant stable par conjugué, on a que <m>\overline{\rho}</m> est irréductible et divise <m>p_i</m>. Or un irréductible ne peut pas diviser deux nombres premiers, car alors il diviserait leur pgcd qui vaut <m>1</m>. La propriété d'unique factorisation donne alors <m>g=1</m>, et l'on note <m>p:=p_1</m>, <<m>n:=n_1</m>. 
+                Soit <m>\rho</m> irréductible et factorisons sa norme <m>N(\rho)=p_1^{n_1}\cdots p_g^{n_g}</m> en produit de nombres premiers. Comme <m>\rho\overline{\rho}=N(\rho)</m>, <m>\rho</m> divise sa norme et, puisqu'il est premier (<m>\mathbb{Z}[i]</m> est factoriel), il divise l'un des <m>p_i</m>. La relation de division étant stable par conjugué, on a que <m>\overline{\rho}</m> est irréductible et divise <m>p_i</m>. Or un irréductible ne peut pas diviser deux nombres premiers, car alors il diviserait leur pgcd qui vaut <m>1</m>. La propriété d'unique factorisation donne alors <m>g=1</m>, et l'on note <m>p:=p_1</m>, <m>n:=n_1</m>. 
               </p>
               <p>
                 On a donc montré que <m>N(\rho)=p^n</m>. Enfin, soit <m>p</m> est de la forme <m>a^2+b^2</m> et <m>\rho\overline{\rho}=\pi^n\overline{\pi}^n</m> ce qui implique <m>n=1</m> et, quitte à remplacer <m>\pi</m> par son conjugué à unité près, <m>\rho=\pi</m> par propriété d'unique factorisation. Soit <m>p</m> n'est pas de cette forme et <m>p</m> est irréductible; auquel cas <m>\rho</m> est associé à <m>p</m> par propriété d'unique factorisation.
@@ -290,7 +289,6 @@
               </p>
             </li>
           </ol>
-          -->
         </solution>
       </exercise>
 
@@ -322,14 +320,12 @@
           </p>
         </statement>
         <solution>
-          <!--
           <p>
             On suit la méthode précédente. On introduit <m>N(a+i\sqrt{2}b)=a^2+2b^2</m> et on commence par montrer que <m>\mathbb{Z}[i\sqrt{2}]^{\times}=\{z~|~N(z)=1\}=\{\pm 1\}</m>. On montre ensuite qu'un irréductible <m>\rho</m> de <m>\mathbb{Z}[i\sqrt{2}]</m> vérifie soit <me>\rho\overline{\rho}=p</me> pour un nombre premier <m>p</m> qui est pas de la forme <m>a^2+2b^2</m>, soit <m>\rho</m> est associé à un nombre premier qui n'est pas de cette forme. On en déduit un ensemble de représentants :
             <me>
-              \{p\text{ premier pas de la forme }a^2+2b^2\}\sqcup\{a\pm i\sqrt{2}b~|~a^2+2b^2~\text{premier}\}.
+              \{p\text{ premier pas de la forme }a^2+2b^2\}\sqcup\{a\pm i\sqrt{2}b~|~a^2+2b^2~\text{premier},~a,b\gt 0\}.
             </me>
           </p>
-          -->
         </solution>
       </exercise>
 
@@ -343,7 +339,6 @@
             </p>
           </statement>
           <solution>
-            <!--
             <p>
               On considère l'application multiplicative <m>N:\mathbb{Z}[i\sqrt{5}]\to \mathbb{N}</m> donnée par <m>N(a+i\sqrt{5}b)=a^2+5b^2</m>. On vérifie facilement qu'un élément <m>z</m> est une unité si et seulement si <m>N(z)=1</m>. 
             </p>
@@ -353,7 +348,6 @@
             <p>
               Si <m>\mathbb{Z}[i\sqrt{5}]</m> était factoriel, alors <m>2</m> en tant qu'irréductible serait aussi premier, et donc <m>2</m> divise soit <m>1+i\sqrt{5}</m> soit <m>1-i\sqrt{5}</m>; mais il ne divise aucun des deux car la relation de divisibilité <m>2|a+i\sqrt{5}b</m> dans <m>\mathbb{Z}[i\sqrt{5}]</m> implique <m>2|a</m> et <m>2|b</m> en comparant parties réelle et imaginaire. 
             </p>
-            -->
       </solution>
     </exercise>
 
@@ -382,7 +376,6 @@
         </ol>
       </statement>
       <solution>
-        <!--
         <ol>
           <li>
             <p>
@@ -406,7 +399,6 @@
             </p>
           </li>
         </ol>
-        -->
       </solution>
     </exercise>
 
