@@ -15,7 +15,8 @@
   <!-- include sections -->
   <xi:include href="sec-exercices-factorisation.ptx" />
 
-
+  <!-- include sections -->
+  <xi:include href="sec-exercices-geo-alg.ptx" />
 
 
 
