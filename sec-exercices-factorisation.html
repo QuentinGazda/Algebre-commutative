@@ -737,9 +737,10 @@ V=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~f_1(z_1,\ldots,z_n)=\cdots=f_r(z_1,\ldots
 <div class="para" id="sec-exercices-factorisation-19">On s’intéresse l’application :<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-19" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec-exercices-factorisation-20">
-\begin{equation*}
-
-\end{equation*}
+\begin{align*}
+V: \{\text{idéaux de }\mathbb{C}[X_1,\ldots,X_n]\} \amp\longrightarrow \{\text{ensembles algébriques }\subseteq \mathbb{C}^n \} \\
+I \amp\longmapsto V(I):=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~\forall f\in I:~f(z_1,\ldots,z_n)=0\}. 
+\end{align*}
 </div>
 <div class="para" id="sec-exercices-factorisation-21">On utilisera que tout idéal de <span class="process-math">\(\mathbb{C}[X_1,\ldots,X_n]\)</span> est de type fini, c-à-d engendré par un nombre fini d’élements.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-21" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
@@ -788,7 +789,7 @@ V=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~f_1(z_1,\ldots,z_n)=\cdots=f_r(z_1,\ldots
 <span class="type">Rappel</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topologie.</span>
 </h2></summary>
 <article class="note remark-like knowl__content">
-<div class="para" id="sec-exercices-factorisation-23-2">Soit <span class="process-math">\(X\)</span> un ensemble et <span class="process-math">\(O\)</span> une famille de sous-ensembles de <span class="process-math">\(X\text{.}\)</span> On rappel que <span class="process-math">\(O\)</span> est appelée <em class="emphasis">topologie sur X</em> et les élements de <span class="process-math">\(O\)</span> les <em class="emphasis">ouverts de X</em> si<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-23-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-factorisation-23-2">Soit <span class="process-math">\(X\)</span> un ensemble et <span class="process-math">\(O\)</span> une famille de sous-ensembles de <span class="process-math">\(X\text{.}\)</span> On rappelle que <span class="process-math">\(O\)</span> est appelée <em class="emphasis">topologie sur X</em> et les élements de <span class="process-math">\(O\)</span> les <em class="emphasis">ouverts de X</em> si<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-23-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <ul class="disc" id="sec-exercices-factorisation-23-3">
 <li id="sec-exercices-factorisation-23-3-1">
@@ -828,9 +829,10 @@ V=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~f_1(z_1,\ldots,z_n)=\cdots=f_r(z_1,\ldots
 <div class="para" id="sec-exercices-factorisation-25">On étudie ensuite la réciproque partielle :<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-25" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec-exercices-factorisation-26">
-\begin{equation*}
-
-\end{equation*}
+\begin{align*}
+I:\{\text{ensembles algébriques }\subset \mathbb{C}^n\} \amp\longrightarrow \{\text{idéaux de }\mathbb{C}[X_1,\ldots,X_n]\} \\
+X \amp\longmapsto I(X):=\{f\in \mathbb{C}[X_1,\ldots,X_n]~|~\forall (z_1,\ldots,z_n)\in X:~f(z_1,\ldots,z_n)=0\}. 
+\end{align*}
 </div>
 <article class="exercise exercise-like" id="sec-exercices-factorisation-27"><h2 class="heading">
 <span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Propriétés de <span class="process-math">\(I\)</span>.</span>
@@ -838,7 +840,7 @@ V=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~f_1(z_1,\ldots,z_n)=\cdots=f_r(z_1,\ldots
 <div class="para logical" id="sec-exercices-factorisation-27-2-1">
 <ol class="decimal" id="sec-exercices-factorisation-27-2-1-1">
 <li id="sec-exercices-factorisation-27-2-1-1-1">
-<div class="para" id="sec-exercices-factorisation-27-2-1-1-1-1">Montrer que <span class="process-math">\(I\)</span> est bien définie; <em class="emphasis">i.e</em> que <span class="process-math">\(I(V)\)</span> est bien un idéal de <span class="process-math">\(\mathbb{C}[X_1,\ldots,X_n]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-27-2-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-factorisation-27-2-1-1-1-1">Montrer que <span class="process-math">\(I\)</span> est bien définie; <em class="emphasis">i.e</em> que <span class="process-math">\(I(V)\)</span> est un idéal de <span class="process-math">\(\mathbb{C}[X_1,\ldots,X_n]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-factorisation-27-2-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Point 1.1.11.1"><a tabindex="-1" href="#sec-exercices-factorisation-27-2-1-1-1" title="Copy heading and permalink for Point 1.1.11.1" aria-label="Copy heading and permalink for Point 1.1.11.1">🔗</a></div>
 </li>
