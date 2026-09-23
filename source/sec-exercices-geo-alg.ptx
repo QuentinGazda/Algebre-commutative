@@ -61,9 +61,9 @@
             <p>
               On sait que <m>I</m> est engendré par un nombre fini de polynômes, mettons <m>f_1,\ldots,f_r</m>. On prétend que 
               <me>V(I)=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~f_1(z_1,\ldots,z_n)=\cdots=f_r(z_1,\ldots,z_r)=0\}.</me>
-              L'inclusion <m>\subset</m> est claire car les <m>f_i</m> sont des éléments de <m>I</m>. Pour l'inclusion réciproque, soit <m>(z_1,\ldots,z_n)</m> dans l'ensemble droite et soit <m>f\in I</m>. Comme <m>I</m> est engendré par les <m>f_i</m>, il existe des polynômes <m>a_i</m> tels que <m>f=a_1f_1+\ldots+a_rf_r</m>. En particulier,
+              L'inclusion <m>\subset</m> est claire car les <m>f_i</m> sont des éléments de <m>I</m>. Pour l'inclusion réciproque, soit <m>z=(z_1,\ldots,z_n)</m> dans l'ensemble droite et soit <m>f\in I</m>. Comme <m>I</m> est engendré par les <m>f_i</m>, il existe des polynômes <m>a_i</m> tels que <m>f=a_1f_1+\ldots+a_rf_r</m>. En particulier,
               <me>
-                f(z_1,\ldots,z_n)=a_1(z_1,\ldots,z_n)f_1(z_1,\ldots,z_n)+\ldots+a_r(z_1,\ldots,z_n)f_1(z_1,\ldots,z_n)=0
+                f(z)=a_1(z)f_1(z)+\ldots+a_r(z)f_r(z)=0
               </me>
               et donc <m>f\in V(I)</m>.
             </p>
@@ -83,8 +83,8 @@
           </li>
           <li>
             <p>
-              Comme <m>I\subset I+J</m> et <m>J\subset I+J</m>, l'inclusion <m>\subset</m> est claire. Réciproquement, si <m>(z_1,\ldots,z_n)\in V(I)\cap V(J)</m>, alors pour tout <m>f\in I</m> et <m>f\in J</m>. Par définition tout élément <m>g\in I+J</m> s'écrit comme <m>g=f_I+f_J</m>, <m>f_I\in I</m> et <m>f_J\in J</m>, et donc 
-              <me>g(z_1,\ldots,z_n)=f_I(z_1,\ldots,z_n)+f_J(z_1,\ldots,z_n)=0.</me>
+              Comme <m>I\subset I+J</m> et <m>J\subset I+J</m>, l'inclusion <m>\subset</m> est claire. Réciproquement, si <m>z=(z_1,\ldots,z_n)\in V(I)\cap V(J)</m>, alors pour tout <m>f\in I</m> et <m>f\in J</m>. Par définition tout élément <m>g\in I+J</m> s'écrit comme <m>g=f_I+f_J</m>, <m>f_I\in I</m> et <m>f_J\in J</m>, et donc 
+              <me>g(z)=f_I(z)+f_J(z)=0.</me>
             </p>
           </li>
           <li>
@@ -95,7 +95,7 @@
               Comme <m>IJ\cap I\cap J</m>, on a aussi <m>V(I\cap J)\subset V(IJ)</m>.
             </p>
             <p>
-              Reste à montrer que <m>V(IJ)\subset V(I)\cup V(J)</m>. Soit donc <m>(z_1,\ldots,z_n)\in V(IJ)</m> et supposons par l'absurde qu'il n'appartient pas à <m>V(I)\cap V(J)</m>. Il existe alors <m>f\in I</m> et <m>g\in J</m> tels que <m>f(z_1,\ldots,z_n)\neq 0</m> et <m>g(z_1,\ldots,z_n)\neq 0</m>. En particulier <m>(fg)(z_1,\ldots,z_n)\neq 0</m>; contradiction.
+              Reste à montrer que <m>V(IJ)\subset V(I)\cup V(J)</m>. Soit donc <m>z\in V(IJ)</m> et supposons par l'absurde qu'il n'appartient pas à <m>V(I)\cap V(J)</m>. Il existe alors <m>f\in I</m> et <m>g\in J</m> tels que <m>f(z)\neq 0</m> et <m>g(z)\neq 0</m>. En particulier <m>(fg)(z)\neq 0</m>; contradiction.
             </p>
           </li>
         </ol>
@@ -155,7 +155,7 @@
     </p>
     <md>
     <mrow> I:\{\text{ensembles algébriques }\subset \mathbb{C}^n\} \amp\longrightarrow \{\text{idéaux de }\mathbb{C}[X_1,\ldots,X_n]\} </mrow>
-    <mrow> X \amp\longmapsto \{f~|~\forall (z_1,\ldots,z_n)\in X:~f(z_1,\ldots,z_n)=0\}. </mrow>
+    <mrow> X \amp\longmapsto \{f\in \mathbb{C}[X_1,\ldots,X_n]~|~\forall z\in X:~f(z)=0\}. </mrow>
     </md> 
 
     <exercise>
@@ -254,7 +254,12 @@
         </li>
         <li>
           <p>
-            Calculer le radical de l'idéal <m>24 \mathbb{Z}</m> de <m>\mathbb{Z}</m> et de <m>(X^2-2X+1)</m> dans <m>\mathbb{Q}[X]</m>.
+            Soit <m>A</m> un anneau factoriel, <m>\pi_1,\ldots,\pi_g</m> des irréductibles de <m>A</m> et <m>n_1,\ldots,n_g</m> des entiers positifs. Calculer le radical de l'idéal principal <m>(\pi_1^{n_1}\cdots \pi_g^{n_g})</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Soit <m>X</m> un sous-ensemble de <m>\mathbb{C}^n</m>. Montrer que <m>I(X)</m> est un idéal radiciel.
           </p>
         </li>
       </ol>
@@ -280,9 +285,18 @@
           </li>
           <li>
             <p>
-              Montrer que <m>V</m> est un singleton si et seulement si <m>I(V)</m> est maximal.
+              Montrer que <m>X</m> est un singleton si et seulement si <m>I(X)</m> est maximal.
             </p>
           </li>
         </ol>
+    </exercise>
+
+    <exercise>
+      <title><m>\mathbb{C}[X,Y]</m> n'est pas principal</title>
+      <statement>
+        <p>
+          Montrer que l'idéal <m>(X,Y)</m> de <m>\mathbb{C}[X,Y]</m> n'est pas principal.
+        </p>
+      </statement>
     </exercise>
 </section>

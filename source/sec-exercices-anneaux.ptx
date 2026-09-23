@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Fragment à insérer dans un chapitre ou un article PreTeXt.
+     Dans docinfo, ajouter :
+     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+-->
+<section xml:id="sec-exercices-anneaux">
+  <title>Généralités sur les anneaux commutatifs</title>
+
+  <exercise>
+    <title>Intégrité et finitude implique corps</title>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Montrer qu'un anneau commutatif fini et intègre est un corps.
+          </p>
+        </li>
+        <li>
+          <p>
+            Soit <m>k</m> un corps. Monter qu'une <m>k</m> algèbre commutative de dimension finie et intègre est un corps.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <solution>
+
+    </solution>
+  </exercise>
+
+  <exercise>
+    <title>Anneau des adèles du pauvre</title>
+    <statement>
+      <p>
+        On considère le groupe
+        <md>
+          \mathcal{A}= \prod_{p~\text{premier}} \mathbb{Z}/p\mathbb{Z} \Bigg/ \bigoplus_{p~\text{premier}} \mathbb{Z}/p\mathbb{Z}
+        </md>
+      </p>
+      <ol>
+        <li>
+          <p>
+            Montrer que <m>\mathcal{A}</m> est un anneau. Est-il intègre ? Est-il réduit ?
+          </p>
+        </li>
+        <li>
+          <p>
+            Soit <m>n</m> un entier non nul. Montrer que la multiplication par <m>n</m> est bijective sur <m>\mathcal{A}</m>. En déduire que <m>\mathcal{A}</m> est une <m>\mathbb{Q}</m>-algèbre.
+          </p>
+        </li>
+        <li>
+          <p>
+            Montrer que <m>2</m> n'admet pas de racine carré dans <m>\mathcal{A}</m>. Montrer toutefois que l'équation <m>x^3-2x</m> admet une racine non nulle dans <m>\mathcal{A}</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <solution>
+    </solution>
+  </exercise>
+
+</section>
