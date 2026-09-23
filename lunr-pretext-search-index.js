@@ -169,7 +169,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Anneaux de la géométrie algébrique classique",
-  "body": " Anneaux de la géométrie algébrique classique   Ensemble algébrique  Un sous-ensemble est dit algébrique s'il existe des polynômes de tels que corresponde à l'ensemble des zéros communs de ; i.e.     On s'intéresse l'application :   On utilisera que tout idéal de est de type fini, c-à-d engendré par un nombre fini d'élements.   Propriétés de     Montrer que l'application est bien définie; i.e. que est un ensemble algébrique pour tout idéal .    Qu'est-ce que et ? Montrer que si alors .    Décrire dans le cas et en déduire que n'est pas bijective en général.    Montrer que .    Montrer que .        On sait que est engendré par un nombre fini de polynômes, mettons . On prétend que L'inclusion est claire car les sont des éléments de . Pour l'inclusion réciproque, soit dans l'ensemble droite et soit . Comme est engendré par les , il existe des polynômes tels que . En particulier, et donc .    Le polynôme nul s'annule partout et donc . Le polynôme constant égal à ne s'annule nul part, et donc . Si , alors un zéro commun à l'ensemble des polynômes de est en particulier un zéro commun aux polynômes de , et donc .    Dans le cas l'anneau est principal. En particulier tout idéal est engendré par un unique polynôme unitaire. devient l'application qui à un polynôme unitaire associe le sous-ensemble fini de ses racines complexes.  On remarque par exemple que , et donc n'est pas bijective.    Comme et , l'inclusion est claire. Réciproquement, si , alors pour tout et . Par définition tout élément s'écrit comme , et , et donc     Comme et , on a et donc .  Comme , on a aussi .  Reste à montrer que . Soit donc et supposons par l'absurde qu'il n'appartient pas à . Il existe alors et tels que et . En particulier ; contradiction.       Topologie  Soit un ensemble et une famille de sous-ensembles de . On rappelle que est appelée topologie sur X et les élements de les ouverts de X si     et appartiennent à ;    Toute union quelconque d'élements de est dans ;    Toute intersection finie d'éléments de est dans .    On appelle alors fermé de un sous-ensemble dont le complémentaire appartient à .    Topologie de Zariski   Montrer qu'il existe une unique topologie sur dont les fermés sont les sous-ensembles algébriques.    Soit le sous-ensemble des parties de dont le complémentaire est un sous-ensemble algébrique; c'est l'unique candidat à une topologie vérifiant le critère de l'énoncé. Comme et sont algébriques, leur complémentaire et sont dans . Soit une famille d'éléments de indexée par un ensemble . Pour , Soit un idéal tel que soit le complémentaire de . Alors le complémentaire est . Soit l'idéal engendré par les . Alors on vérifie que qui, en particulier, est un sous-ensemble algébrique. En effet, pour tout on a , puis d'où l'inclusion . Pour l'inclusion réciproque, soit dans l'intersection des et soit . Il existe un sous-ensemble fini et pour tout tels que . Ainsi et donc .  Enfin, comme les sous-ensembles algébriques sont stables par unions finies, est stable par intersection finie.    On étudie ensuite la réciproque partielle :    Propriétés de     Montrer que est bien définie; i.e que est un idéal de .    Soit un sous-ensemble de . Montrer que avec égalité si et seulement si est un sous-ensemble algébrique.    Soit un idéal de . Montrer que . Est-ce qu'il y a toujours égalité ?    Soient deux sous-ensembles de . Montrer que .    Montrer que .    Montrer que C'est en fait une égalité, mais la réciproque demande le Nullstelensatz.  .          Idéal radical  Soit un anneau (commutatif, unitaire) et un idéal de . On appelle raidcal de l'idéal L'idéal est dit radiciel si l'inclusion est une égalité.    Propriétés du radical    Montrer que est bien un idéal de .    Calculer le radical de l'idéal de et de dans .      Nullstelensatz  L'application induit une bijection d'inverse entre les sous-ensembles algébriques de et les idéaux réduits de .    Variétés irréductibles  Soit un sous-ensemble algébrique.    Montrer que est irréductible si et seulement si est premier.    Montrer que est un singleton si et seulement si est maximal.     "
+  "body": " Anneaux de la géométrie algébrique classique   Ensemble algébrique  Un sous-ensemble est dit algébrique s'il existe des polynômes de tels que corresponde à l'ensemble des zéros communs de ; i.e.     On s'intéresse l'application :   On utilisera que tout idéal de est de type fini, c-à-d engendré par un nombre fini d'élements.   Propriétés de     Montrer que l'application est bien définie; i.e. que est un ensemble algébrique pour tout idéal .    Qu'est-ce que et ? Montrer que si alors .    Décrire dans le cas et en déduire que n'est pas bijective en général.    Montrer que .    Montrer que .        On sait que est engendré par un nombre fini de polynômes, mettons . On prétend que L'inclusion est claire car les sont des éléments de . Pour l'inclusion réciproque, soit dans l'ensemble droite et soit . Comme est engendré par les , il existe des polynômes tels que . En particulier, et donc .    Le polynôme nul s'annule partout et donc . Le polynôme constant égal à ne s'annule nul part, et donc . Si , alors un zéro commun à l'ensemble des polynômes de est en particulier un zéro commun aux polynômes de , et donc .    Dans le cas l'anneau est principal. En particulier tout idéal est engendré par un unique polynôme unitaire. devient l'application qui à un polynôme unitaire associe le sous-ensemble fini de ses racines complexes.  On remarque par exemple que , et donc n'est pas bijective.    Comme et , l'inclusion est claire. Réciproquement, si , alors pour tout et . Par définition tout élément s'écrit comme , et , et donc     Comme et , on a et donc .  Comme , on a aussi .  Reste à montrer que . Soit donc et supposons par l'absurde qu'il n'appartient pas à . Il existe alors et tels que et . En particulier ; contradiction.       Topologie  Soit un ensemble et une famille de sous-ensembles de . On rappelle que est appelée topologie sur X et les élements de les ouverts de X si     et appartiennent à ;    Toute union quelconque d'élements de est dans ;    Toute intersection finie d'éléments de est dans .    On appelle alors fermé de un sous-ensemble dont le complémentaire appartient à .    Topologie de Zariski   Montrer qu'il existe une unique topologie sur dont les fermés sont les sous-ensembles algébriques.    Soit le sous-ensemble des parties de dont le complémentaire est un sous-ensemble algébrique; c'est l'unique candidat à une topologie vérifiant le critère de l'énoncé. Comme et sont algébriques, leur complémentaire et sont dans . Soit une famille d'éléments de indexée par un ensemble . Pour , Soit un idéal tel que soit le complémentaire de . Alors le complémentaire est . Soit l'idéal engendré par les . Alors on vérifie que qui, en particulier, est un sous-ensemble algébrique. En effet, pour tout on a , puis d'où l'inclusion . Pour l'inclusion réciproque, soit dans l'intersection des et soit . Il existe un sous-ensemble fini et pour tout tels que . Ainsi et donc .  Enfin, comme les sous-ensembles algébriques sont stables par unions finies, est stable par intersection finie.    On étudie ensuite la réciproque partielle :    Propriétés de     Montrer que est bien définie; i.e que est un idéal de .    Soit un sous-ensemble de . Montrer que avec égalité si et seulement si est un sous-ensemble algébrique.    Soit un idéal de . Montrer que . Est-ce qu'il y a toujours égalité ?    Soient deux sous-ensembles de . Montrer que .    Montrer que .    Montrer que C'est en fait une égalité, mais la réciproque demande le Nullstelensatz.  .          Idéal radical  Soit un anneau (commutatif, unitaire) et un idéal de . On appelle raidcal de l'idéal L'idéal est dit radiciel si l'inclusion est une égalité.    Propriétés du radical    Montrer que est bien un idéal de .    Soit un anneau factoriel, des irréductibles de et des entiers positifs. Calculer le radical de l'idéal principal .    Soit un sous-ensemble de . Montrer que est un idéal radiciel.      Nullstelensatz  L'application induit une bijection d'inverse entre les sous-ensembles algébriques de et les idéaux réduits de .    Variétés irréductibles  Soit un sous-ensemble algébrique.    Montrer que est irréductible si et seulement si est premier.    Montrer que est un singleton si et seulement si est maximal.      n'est pas principal   Montrer que l'idéal de n'est pas principal.    "
 },
 {
   "id": "sec-exercices-geo-alg-2",
@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "1.2.4",
   "title": "Propriétés du radical.",
-  "body": " Propriétés du radical    Montrer que est bien un idéal de .    Calculer le radical de l'idéal de et de dans .    "
+  "body": " Propriétés du radical    Montrer que est bien un idéal de .    Soit un anneau factoriel, des irréductibles de et des entiers positifs. Calculer le radical de l'idéal principal .    Soit un sous-ensemble de . Montrer que est un idéal radiciel.    "
 },
 {
   "id": "sec-exercices-geo-alg-14",
@@ -251,6 +251,42 @@ var ptx_lunr_docs = [
   "number": "1.2.5",
   "title": "Variétés irréductibles.",
   "body": " Variétés irréductibles  Soit un sous-ensemble algébrique.    Montrer que est irréductible si et seulement si est premier.    Montrer que est un singleton si et seulement si est maximal.    "
+},
+{
+  "id": "sec-exercices-geo-alg-16",
+  "level": "2",
+  "url": "sec-exercices-geo-alg.html#sec-exercices-geo-alg-16",
+  "type": "Exercice",
+  "number": "1.2.6",
+  "title": "<span class=\"process-math\">\\(\\mathbb{C}[X,Y]\\)<\/span> n’est pas principal.",
+  "body": " n'est pas principal   Montrer que l'idéal de n'est pas principal.   "
+},
+{
+  "id": "sec-exercices-anneaux",
+  "level": "1",
+  "url": "sec-exercices-anneaux.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Généralités sur les anneaux commutatifs",
+  "body": " Généralités sur les anneaux commutatifs   Intégrité et finitude implique corps     Montrer qu'un anneau commutatif fini et intègre est un corps.    Soit un corps. Monter qu'une algèbre commutative de dimension finie et intègre est un corps.         Anneau des adèles du pauvre   On considère le groupe     Montrer que est un anneau. Est-il intègre ? Est-il réduit ?    Soit un entier non nul. Montrer que la multiplication par est bijective sur . En déduire que est une -algèbre.    Montrer que n'admet pas de racine carré dans . Montrer toutefois que l'équation admet une racine non nulle dans .        "
+},
+{
+  "id": "sec-exercices-anneaux-2",
+  "level": "2",
+  "url": "sec-exercices-anneaux.html#sec-exercices-anneaux-2",
+  "type": "Exercice",
+  "number": "2.1.1",
+  "title": "Intégrité et finitude implique corps.",
+  "body": " Intégrité et finitude implique corps     Montrer qu'un anneau commutatif fini et intègre est un corps.    Soit un corps. Monter qu'une algèbre commutative de dimension finie et intègre est un corps.       "
+},
+{
+  "id": "sec-exercices-anneaux-3",
+  "level": "2",
+  "url": "sec-exercices-anneaux.html#sec-exercices-anneaux-3",
+  "type": "Exercice",
+  "number": "2.1.2",
+  "title": "Anneau des adèles du pauvre.",
+  "body": " Anneau des adèles du pauvre   On considère le groupe     Montrer que est un anneau. Est-il intègre ? Est-il réduit ?    Soit un entier non nul. Montrer que la multiplication par est bijective sur . En déduire que est une -algèbre.    Montrer que n'admet pas de racine carré dans . Montrer toutefois que l'équation admet une racine non nulle dans .       "
 },
 {
   "id": "references",

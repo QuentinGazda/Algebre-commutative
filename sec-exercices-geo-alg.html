@@ -113,7 +113,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Technologies d'assistance</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Exposer les permaliens</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Options par défaut</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-exercices-factorisation.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-pq-algebre-commutative.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="backmatter.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Options par défaut</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-exercices-factorisation.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-pq-algebre-commutative.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="ch-def-de-base.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -137,6 +137,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exercices-factorisation.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Anneaux d’entiers algébriques</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-exercices-geo-alg.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Anneaux de la géométrie algébrique classique</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-def-de-base.html" class="internal"><span class="codenumber">2</span> <span class="title">Définitions de base, rappels et compléments</span></a></div>
+<ul id="ptx-toc-group-ch-def-de-base" class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exercices-anneaux.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Généralités sur les anneaux commutatifs</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
@@ -222,10 +226,10 @@ I \amp\longmapsto \{(z_1,\ldots,z_n)~|~\forall f\in I:~f(z_1,\ldots,z_n)=0\}.
 V(I)=\{(z_1,\ldots,z_n)\in \mathbb{C}^n~|~f_1(z_1,\ldots,z_n)=\cdots=f_r(z_1,\ldots,z_r)=0\}.
 \end{equation*}
 </div>
-<div class="para">L’inclusion <span class="process-math">\(\subset\)</span> est claire car les <span class="process-math">\(f_i\)</span> sont des éléments de <span class="process-math">\(I\text{.}\)</span> Pour l’inclusion réciproque, soit <span class="process-math">\((z_1,\ldots,z_n)\)</span> dans l’ensemble droite et soit <span class="process-math">\(f\in I\text{.}\)</span> Comme <span class="process-math">\(I\)</span> est engendré par les <span class="process-math">\(f_i\text{,}\)</span> il existe des polynômes <span class="process-math">\(a_i\)</span> tels que <span class="process-math">\(f=a_1f_1+\ldots+a_rf_r\text{.}\)</span> En particulier,</div>
+<div class="para">L’inclusion <span class="process-math">\(\subset\)</span> est claire car les <span class="process-math">\(f_i\)</span> sont des éléments de <span class="process-math">\(I\text{.}\)</span> Pour l’inclusion réciproque, soit <span class="process-math">\(z=(z_1,\ldots,z_n)\)</span> dans l’ensemble droite et soit <span class="process-math">\(f\in I\text{.}\)</span> Comme <span class="process-math">\(I\)</span> est engendré par les <span class="process-math">\(f_i\text{,}\)</span> il existe des polynômes <span class="process-math">\(a_i\)</span> tels que <span class="process-math">\(f=a_1f_1+\ldots+a_rf_r\text{.}\)</span> En particulier,</div>
 <div class="displaymath process-math" id="sec-exercices-geo-alg-6-3-1-1-1-13">
 \begin{equation*}
-f(z_1,\ldots,z_n)=a_1(z_1,\ldots,z_n)f_1(z_1,\ldots,z_n)+\ldots+a_r(z_1,\ldots,z_n)f_1(z_1,\ldots,z_n)=0
+f(z)=a_1(z)f_1(z)+\ldots+a_r(z)f_r(z)=0
 \end{equation*}
 </div>
 <div class="para">et donc <span class="process-math">\(f\in V(I)\text{.}\)</span>
@@ -248,10 +252,10 @@ f(z_1,\ldots,z_n)=a_1(z_1,\ldots,z_n)f_1(z_1,\ldots,z_n)+\ldots+a_r(z_1,\ldots,z
 </li>
 <li id="sec-exercices-geo-alg-6-3-1-4">
 <div class="para logical" id="sec-exercices-geo-alg-6-3-1-4-1">
-<div class="para">Comme <span class="process-math">\(I\subset I+J\)</span> et <span class="process-math">\(J\subset I+J\text{,}\)</span> l’inclusion <span class="process-math">\(\subset\)</span> est claire. Réciproquement, si <span class="process-math">\((z_1,\ldots,z_n)\in V(I)\cap V(J)\text{,}\)</span> alors pour tout <span class="process-math">\(f\in I\)</span> et <span class="process-math">\(f\in J\text{.}\)</span> Par définition tout élément <span class="process-math">\(g\in I+J\)</span> s’écrit comme <span class="process-math">\(g=f_I+f_J\text{,}\)</span> <span class="process-math">\(f_I\in I\)</span> et <span class="process-math">\(f_J\in J\text{,}\)</span> et donc</div>
+<div class="para">Comme <span class="process-math">\(I\subset I+J\)</span> et <span class="process-math">\(J\subset I+J\text{,}\)</span> l’inclusion <span class="process-math">\(\subset\)</span> est claire. Réciproquement, si <span class="process-math">\(z=(z_1,\ldots,z_n)\in V(I)\cap V(J)\text{,}\)</span> alors pour tout <span class="process-math">\(f\in I\)</span> et <span class="process-math">\(f\in J\text{.}\)</span> Par définition tout élément <span class="process-math">\(g\in I+J\)</span> s’écrit comme <span class="process-math">\(g=f_I+f_J\text{,}\)</span> <span class="process-math">\(f_I\in I\)</span> et <span class="process-math">\(f_J\in J\text{,}\)</span> et donc</div>
 <div class="displaymath process-math" id="sec-exercices-geo-alg-6-3-1-4-1-11">
 \begin{equation*}
-g(z_1,\ldots,z_n)=f_I(z_1,\ldots,z_n)+f_J(z_1,\ldots,z_n)=0.
+g(z)=f_I(z)+f_J(z)=0.
 \end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-6-3-1-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
@@ -263,7 +267,7 @@ g(z_1,\ldots,z_n)=f_I(z_1,\ldots,z_n)+f_J(z_1,\ldots,z_n)=0.
 </div>
 <div class="para" id="sec-exercices-geo-alg-6-3-1-5-2">Comme <span class="process-math">\(IJ\cap I\cap J\text{,}\)</span> on a aussi <span class="process-math">\(V(I\cap J)\subset V(IJ)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-6-3-1-5-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="sec-exercices-geo-alg-6-3-1-5-3">Reste à montrer que <span class="process-math">\(V(IJ)\subset V(I)\cup V(J)\text{.}\)</span> Soit donc <span class="process-math">\((z_1,\ldots,z_n)\in V(IJ)\)</span> et supposons par l’absurde qu’il n’appartient pas à <span class="process-math">\(V(I)\cap V(J)\text{.}\)</span> Il existe alors <span class="process-math">\(f\in I\)</span> et <span class="process-math">\(g\in J\)</span> tels que <span class="process-math">\(f(z_1,\ldots,z_n)\neq 0\)</span> et <span class="process-math">\(g(z_1,\ldots,z_n)\neq 0\text{.}\)</span> En particulier <span class="process-math">\((fg)(z_1,\ldots,z_n)\neq 0\text{;}\)</span> contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-6-3-1-5-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-geo-alg-6-3-1-5-3">Reste à montrer que <span class="process-math">\(V(IJ)\subset V(I)\cup V(J)\text{.}\)</span> Soit donc <span class="process-math">\(z\in V(IJ)\)</span> et supposons par l’absurde qu’il n’appartient pas à <span class="process-math">\(V(I)\cap V(J)\text{.}\)</span> Il existe alors <span class="process-math">\(f\in I\)</span> et <span class="process-math">\(g\in J\)</span> tels que <span class="process-math">\(f(z)\neq 0\)</span> et <span class="process-math">\(g(z)\neq 0\text{.}\)</span> En particulier <span class="process-math">\((fg)(z)\neq 0\text{;}\)</span> contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-6-3-1-5-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Point 1.2.1.5"><a tabindex="-1" href="#sec-exercices-geo-alg-6-3-1-5" title="Copy heading and permalink for Point 1.2.1.5" aria-label="Copy heading and permalink for Point 1.2.1.5">🔗</a></div>
 </li>
@@ -332,7 +336,7 @@ V(I)=\bigcap_{i\in S}V(I_i)
 <div class="displaymath process-math" id="sec-exercices-geo-alg-10">
 \begin{align*}
 I:\{\text{ensembles algébriques }\subset \mathbb{C}^n\} \amp\longrightarrow \{\text{idéaux de }\mathbb{C}[X_1,\ldots,X_n]\} \\
-X \amp\longmapsto \{f~|~\forall (z_1,\ldots,z_n)\in X:~f(z_1,\ldots,z_n)=0\}. 
+X \amp\longmapsto \{f\in \mathbb{C}[X_1,\ldots,X_n]~|~\forall z\in X:~f(z)=0\}. 
 \end{align*}
 </div>
 <article class="exercise exercise-like" id="sec-exercices-geo-alg-11"><h2 class="heading">
@@ -410,9 +414,14 @@ X \amp\longmapsto \{f~|~\forall (z_1,\ldots,z_n)\in X:~f(z_1,\ldots,z_n)=0\}.
 <div class="autopermalink" aria-hidden="true" data-description="Point 1.2.4.1"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2-1-1" title="Copy heading and permalink for Point 1.2.4.1" aria-label="Copy heading and permalink for Point 1.2.4.1">🔗</a></div>
 </li>
 <li id="sec-exercices-geo-alg-13-2-1-2">
-<div class="para" id="sec-exercices-geo-alg-13-2-1-2-1">Calculer le radical de l’idéal <span class="process-math">\(24 \mathbb{Z}\)</span> de <span class="process-math">\(\mathbb{Z}\)</span> et de <span class="process-math">\((X^2-2X+1)\)</span> dans <span class="process-math">\(\mathbb{Q}[X]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-geo-alg-13-2-1-2-1">Soit <span class="process-math">\(A\)</span> un anneau factoriel, <span class="process-math">\(\pi_1,\ldots,\pi_g\)</span> des irréductibles de <span class="process-math">\(A\)</span> et <span class="process-math">\(n_1,\ldots,n_g\)</span> des entiers positifs. Calculer le radical de l’idéal principal <span class="process-math">\((\pi_1^{n_1}\cdots \pi_g^{n_g})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Point 1.2.4.2"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2-1-2" title="Copy heading and permalink for Point 1.2.4.2" aria-label="Copy heading and permalink for Point 1.2.4.2">🔗</a></div>
+</li>
+<li id="sec-exercices-geo-alg-13-2-1-3">
+<div class="para" id="sec-exercices-geo-alg-13-2-1-3-1">Soit <span class="process-math">\(X\)</span> un sous-ensemble de <span class="process-math">\(\mathbb{C}^n\text{.}\)</span> Montrer que <span class="process-math">\(I(X)\)</span> est un idéal radiciel.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 1.2.4.3"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2-1-3" title="Copy heading and permalink for Point 1.2.4.3" aria-label="Copy heading and permalink for Point 1.2.4.3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-13-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
@@ -440,7 +449,7 @@ X \amp\longmapsto \{f~|~\forall (z_1,\ldots,z_n)\in X:~f(z_1,\ldots,z_n)=0\}.
 <div class="autopermalink" aria-hidden="true" data-description="Point 1.2.5.1"><a tabindex="-1" href="#sec-exercices-geo-alg-15-3-1-1" title="Copy heading and permalink for Point 1.2.5.1" aria-label="Copy heading and permalink for Point 1.2.5.1">🔗</a></div>
 </li>
 <li id="sec-exercices-geo-alg-15-3-1-2">
-<div class="para" id="sec-exercices-geo-alg-15-3-1-2-1">Montrer que <span class="process-math">\(V\)</span> est un singleton si et seulement si <span class="process-math">\(I(V)\)</span> est maximal.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-15-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-geo-alg-15-3-1-2-1">Montrer que <span class="process-math">\(X\)</span> est un singleton si et seulement si <span class="process-math">\(I(X)\)</span> est maximal.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-15-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Point 1.2.5.2"><a tabindex="-1" href="#sec-exercices-geo-alg-15-3-1-2" title="Copy heading and permalink for Point 1.2.5.2" aria-label="Copy heading and permalink for Point 1.2.5.2">🔗</a></div>
 </li>
@@ -448,11 +457,18 @@ X \amp\longmapsto \{f~|~\forall (z_1,\ldots,z_n)\in X:~f(z_1,\ldots,z_n)=0\}.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-15-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercice 1.2.5: Variétés irréductibles"><a tabindex="-1" href="#sec-exercices-geo-alg-15" title="Copy heading and permalink for Exercice 1.2.5: Variétés irréductibles" aria-label="Copy heading and permalink for Exercice 1.2.5: Variétés irréductibles">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="sec-exercices-geo-alg-16"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\mathbb{C}[X,Y]\)</span> n’est pas principal.</span>
+</h2>
+<div class="para" id="sec-exercices-geo-alg-16-2-1">Montrer que l’idéal <span class="process-math">\((X,Y)\)</span> de <span class="process-math">\(\mathbb{C}[X,Y]\)</span> n’est pas principal.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-geo-alg-16-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 1.2.6: \mathbb{C}[X,Y] n’est pas principal"><a tabindex="-1" href="#sec-exercices-geo-alg-16" title="Copy heading and permalink for Exercice 1.2.6: \mathbb{C}[X,Y] n’est pas principal" aria-label="Copy heading and permalink for Exercice 1.2.6: \mathbb{C}[X,Y] n’est pas principal">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 1.2: Anneaux de la géométrie algébrique classique"><a tabindex="-1" href="#sec-exercices-geo-alg" title="Copy heading and permalink for Section 1.2: Anneaux de la géométrie algébrique classique" aria-label="Copy heading and permalink for Section 1.2: Anneaux de la géométrie algébrique classique">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-exercices-factorisation.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="backmatter.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-exercices-factorisation.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="ch-def-de-base.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
