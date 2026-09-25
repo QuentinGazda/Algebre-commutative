@@ -277,7 +277,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Généralités sur les anneaux commutatifs",
-  "body": " Généralités sur les anneaux commutatifs   Intégrité et finitude implique corps     Montrer qu'un anneau commutatif fini et intègre est un corps.    Soit un corps. Monter qu'une algèbre commutative de dimension finie et intègre est un corps.         Anneau réduit  Un anneau commutatif est dit réduit si, pour tout et , la relation implique .    Propriété universelle de     Soit le sous-ensemble des éléments nilpotents de . Montrer que est un idéal.    Montrer que est un anneau réduit.    Montrer que pour tout anneau réduit, on a une bijection .    Soit un idéal. Montrer que .       Anneau des adèles du pauvre   On considère le groupe     Montrer que est un anneau. Est-il intègre ? Est-il réduit ?    Soit un entier non nul. Montrer que la multiplication par est bijective sur . En déduire que est une -algèbre.    Montrer que n'admet pas de racine carré dans . Montrer toutefois que l'équation admet une racine non nulle dans .        "
+  "body": " Généralités sur les anneaux commutatifs   Intégrité et finitude implique corps     Montrer qu'un anneau commutatif fini et intègre est un corps.    Soit un corps. Monter qu'une algèbre commutative de dimension finie et intègre est un corps.         Anneau réduit  Un anneau commutatif est dit réduit s'il n'a pas d'éléments nilpotents non nuls; c-à-d pour tout et , la relation entraîne .    Propriété universelle de     Soit le sous-ensemble des éléments nilpotents de . Montrer que est un idéal.    Montrer que est un anneau réduit.    Montrer que pour tout anneau réduit, on a une bijection     Soit un idéal. Montrer que .       Premiers somme de deux carrés     Soit un nombre premier. Montrer que   En déduire que est somme de deux carrés si et seulement si est un carré modulo .    En déduire le théorème de Fermat sur les premiers somme de deux carrés.       Anneau des adèles du pauvre   On considère le groupe     Montrer que est un anneau. Est-il intègre ? Est-il réduit ?    Soit un entier non nul. Montrer que la multiplication par est bijective sur . En déduire que est une -algèbre.    Montrer que n'admet pas de racine carré dans . Montrer toutefois que l'équation admet une racine non nulle dans .        "
 },
 {
   "id": "sec-exercices-anneaux-2",
@@ -295,7 +295,7 @@ var ptx_lunr_docs = [
   "type": "Rappel",
   "number": "2.1.1",
   "title": "Anneau réduit.",
-  "body": " Anneau réduit  Un anneau commutatif est dit réduit si, pour tout et , la relation implique .  "
+  "body": " Anneau réduit  Un anneau commutatif est dit réduit s'il n'a pas d'éléments nilpotents non nuls; c-à-d pour tout et , la relation entraîne .  "
 },
 {
   "id": "sec-exercices-anneaux-4",
@@ -304,7 +304,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.1.2",
   "title": "Propriété universelle de <span class=\"process-math\">\\(A_{\\mathrm{red}}\\)<\/span>.",
-  "body": " Propriété universelle de     Soit le sous-ensemble des éléments nilpotents de . Montrer que est un idéal.    Montrer que est un anneau réduit.    Montrer que pour tout anneau réduit, on a une bijection .    Soit un idéal. Montrer que .     "
+  "body": " Propriété universelle de     Soit le sous-ensemble des éléments nilpotents de . Montrer que est un idéal.    Montrer que est un anneau réduit.    Montrer que pour tout anneau réduit, on a une bijection     Soit un idéal. Montrer que .     "
 },
 {
   "id": "sec-exercices-anneaux-5",
@@ -312,6 +312,15 @@ var ptx_lunr_docs = [
   "url": "sec-exercices-anneaux.html#sec-exercices-anneaux-5",
   "type": "Exercice",
   "number": "2.1.3",
+  "title": "Premiers somme de deux carrés.",
+  "body": " Premiers somme de deux carrés     Soit un nombre premier. Montrer que   En déduire que est somme de deux carrés si et seulement si est un carré modulo .    En déduire le théorème de Fermat sur les premiers somme de deux carrés.     "
+},
+{
+  "id": "sec-exercices-anneaux-6",
+  "level": "2",
+  "url": "sec-exercices-anneaux.html#sec-exercices-anneaux-6",
+  "type": "Exercice",
+  "number": "2.1.4",
   "title": "Anneau des adèles du pauvre.",
   "body": " Anneau des adèles du pauvre   On considère le groupe     Montrer que est un anneau. Est-il intègre ? Est-il réduit ?    Soit un entier non nul. Montrer que la multiplication par est bijective sur . En déduire que est une -algèbre.    Montrer que n'admet pas de racine carré dans . Montrer toutefois que l'équation admet une racine non nulle dans .       "
 },
