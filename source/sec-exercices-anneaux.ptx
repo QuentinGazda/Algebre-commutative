@@ -23,7 +23,168 @@
       </ol>
     </statement>
     <solution>
+    <!--
+    <ol>
+	<li>
+		<p>
+		Soit <m>A</m> un anneau commutatif fini et intègre. Soit <m>a\in A</m> non nul; il nous faut montrer que <m>a</m> admet un inverse. Pour cela, on considère l'application linéaire de multiplication par <m>a</m>:
+		<md>
+		<mrow>\varphi_a : A \amp \longrightarrow A </mrow>
+		<mrow> x \amp \longmapsto ax. </mrow>
+		</md>
+		L'application <m>\varphi_a</m> est injective par intégrité. Comme <m>A</m> est fini, elle est aussi surjective. En particulier, il existe <m>b\in A</m> tel que <m>ab=\varphi_a(b)=1</m>. <m>a</m> admet <m>b</m> comme inverse.
+		</p>
+	</li>
+	<li>
+		<p>
+		Avec les mêmes notations, <m>\varphi_a</m> est un endomorphisme <m>k</m>-linéaire injectif de l'espace vectoriel de dimension finie <m>A</m>. Il est donc aussi </m>surjectif</m>.
+		</p>
+	</li>
+</ol>
+    -->
+    </solution>
+  </exercise>
 
+  <note>
+    <title>Anneau réduit</title>
+    <p>
+      Un anneau commutatif <m>A</m> est dit <em>réduit</em> s'il n'a pas d'éléments nilpotents non nuls; c-à-d pour tout <m>a\in A</m> et <m>n\geq 1</m>, la relation <m>a^n=0</m> entraîne <m>a=0</m>.
+    </p>
+  </note>
+
+  <exercise>
+    <title>Propriété universelle de <m>A_{\mathrm{red}}</m></title>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Soit <m>A_{\mathrm{nil}}</m> le sous-ensemble des éléments nilpotents de <m>A</m>. Montrer que <m>A_{\mathrm{nil}}</m> est un idéal.
+          </p>
+        </li>
+        <li>
+          <p>
+            Montrer que <m>A_{\mathrm{red}}:=A/A_{\mathrm{nil}}</m> est un anneau réduit. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Montrer que pour tout anneau <m>B</m> réduit, on a une bijection <md>\mathrm{Hom}(A,B)=\mathrm{Hom}(A_{\mathrm{red}},B).</md>
+          </p>
+        </li>
+        <li>
+          <p>
+            Soit <m>I\subset A </m> un idéal. Montrer que <m>(A/I)_{\mathrm{red}}=A/\sqrt{I}</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <solution>
+      <!--
+    <ol>
+	<li>
+		<p>
+		On a par définition <m>A_{\mathrm{nil}}=</m>\sqrt{(0)}</m> de quoi on en déduit que <m>A_{\mathrm{nil}}</m> est un idéal.
+		</p>
+	</li>
+	<li>
+		<p>
+		Soit <m>a+A_{\mathrm{nil}}</m> une classe de <m>A/A_{\mathrm{nil}}</m>. Pour un entier <m>n\geq 1</m>, supposons que sa puissance <m>n</m>ème est la classe nulle <m>A_{\mathrm{nil}}</m>. Comme <m>(a+A_{\mathrm{nil}})^n=a^n+A_{\mathrm{nil}}</m>, on obtient <m>a^n\in A_{\mathrm{nil}}</m>. Mais alors il existe <m>m\geq 1</m> tel que <m>a^{nm}=(a^{n})^m=0</m>, donc <m>a</m> est nilpotent et <m>a\in A_{\mathrm{nil}}</m>. <m>a+A_{\mathrm{nil}}</m> est donc la classe nulle et l'anneau quotient <m>A/A_{\mathrm{nil}}</m> est réduit.
+		</p>
+	</li>
+	<li>
+		<p>
+		Soit <m>I\subset A</m> un idéal. Rappelons que pour tout anneau <m>C</m>, la propriété universelle du quotient donne que l'application
+		<md>
+		<mrow> \mathrm{Hom}(A/I,C) \amp \longrightarrow \mathrm{\Hom}(A,C) </mrow>
+		<mrow> f \amp \longmapsto f\circ \pi_{I}
+		</md>
+		est injective d'image
+		<md>
+		\{f\in \mathrm{Hom}(A,C)~|~f(I)=0\}.
+		</md>
+		</p>
+		<p>
+		Dans notre situation, prenons <m>C=B</m> réduit et <m>I=A_{\mathrm{nil}}</m> de sorte que l'application ci-dessus nous donne une injection
+		<md>
+		\mathrm{Hom}(A_{\mathrm{red}},B) \hookrightarrow \mathrm{Hom}(A,B).
+		</md>
+		Pour montrer qu'elle est surjective, il reste à montrer que tout morphisms d'anneaux <m>f:A\to B</m> s'annule sur <m>A_{\mathrm{nil}}</m>. Soit donc <m>a\in A_{\mathrm{nil}}</m>. Il existe <m>n\geq 1</m> tel que
+		<md>
+		f(a)^n=f(a^n)=0
+		</md>
+		et donc <m>f(a)\in B_{\mathrm{nil}}=\{0\}</m>. En particulier, <m>f(A_{\mathrm{nil}})=0</m> ce qui conclut.
+		</p>
+	</li>
+	<li>
+		<p>
+		Il nous suffit de montrer que l'idéal <m>(A/I)_{\mathrm{nil}}</m> n'est autre que <m>\sqrt{I}/I</m>, car alors l'isomorphisme du double quotient nous donnera
+		<md>
+		(A/I)_{\mathrm{red}}\cong (A/I)/(A/I)_{\mathrm{nil}} \cong (A/I)/(\sqrt{I}/I)\cong A/\sqrt{I}.
+		</md>
+		</p>
+		<p>
+		Montrons l'inclusion <m>(A/I)_{\mathrm{nil}}\subset \sqrt{I}/I</m>. Soit <m> a+I</m> une classe dans <m>(A/I)_{\mathrm{nil}}</m>. Alors il existe <m>n\geq 1</m> tel que <m>a^n+I=I</m> et donc <m>a^n\in I</m>. Ainsi <m>a\in \sqrt{I}</m> et donc <m>a+I\in \sqrt{I}/I</m>.
+		</p>
+		<p>
+		Réciproquement, considérons la classe <m>a+I</m> avec <m>a\in \sqrt{I}</m>. Soit <m>n\geq 1</m> tel que <m>a^n\in I</m>, de sorte que <m>(a+I)^n=a^n+I=I</m>. Ainsi <m>a+I\in (A/I)_{\mathrm{nil}}</m>.
+		</p>
+	</li>
+</ol>
+      -->
+    </solution>
+  </exercise>
+
+  <exercise>
+    <title>Premiers somme de deux carrés</title>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Soit <m>p</m> un nombre premier. Montrer que
+            <md>
+              \mathbb{Z}[i]/(p) \cong \mathbb{F}_p[X]/(X^2+1).
+            </md>
+          </p>
+          <p>
+            En déduire que <m>p</m> est somme de deux carrés si et seulement si <m>-1</m> est un carré modulo <m>p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            En déduire le théorème de Fermat sur les premiers somme de deux carrés.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <solution>
+    <!--
+      <ol>
+	<li>
+		<p>
+		Rappelons que pour <m>I,J</m> deux idéaux d'un anneau <m>A</m>, on a
+		<md>
+		(A/I)/((I+J)/I) \cong A/(I+J) \cong (A/J)/((I+J)/J)
+		</md>
+		On applique ce fait à <m>A=\mathbb{Z}[X]</m>, <m>I=(X^2+1)<m> et <m>J=(p)</m>. Comme <m>\mathbb{Z}[i]\cong \mathbb{Z[X]/(X^2+1)</m>, on obtient
+		<md>
+		\mathbb{Z}[i]/(p) \cong \mathbb{Z}[X]/(p,X^2+1)\cong \mathbb{F}_p[X]/(X^2+1).
+		</md>
+		Ce sont en particulier des corps si et seulement si <m>p</m> est irréductible dans <m>\mathbb{Z}[i]</m> si et seulement si <m>X^2+1</m> est irréductible dans <m>\mathbb{F}_p</m> si et seulement si <m>-1</m> n'admet pas de carré dans <m>\mathbb{F}_p</m>. 
+		</p>
+	</li>
+	<li>
+		<p>
+		Il suffit de montrer que <m>-1</m> est un carré modulo <m>p</m> si et seulement si <m>p=2</m> ou <m>p\equiv 1\pmod{4}</m>.
+		</p>
+		<p>
+		Si <m>-1</m> est un carré modulo <m>p</m> et <m>p\neq 2</m>, alors il existe <m>x\in \mathbb{F}_p</m> tel que <m>x^2=-1</m>. Comme <m>p\neq 2</m>, l'ordre de <m>x</m> vaut <m>4</m>. Ainsi <m>4||\mathbb{F}_p^{\times}|=p-1</m> et donc <m>p\equiv 1\pmod{4}</m>.
+		</p>
+		<p>
+		Réciproquement, si <m>p\equiv 1\pmod{4}</m>, alors en posant <m>x=(-1)^{\frac{p-1}{2}}</m>, on a <m>x^2=-1</m>. Si <m>p=2</m>, <m>-1=1</m> et donc <m>x=1</m> fonctionne.
+		</p>
+	</li>
+</ol>
+    -->
     </solution>
   </exercise>
 
@@ -49,12 +210,32 @@
         </li>
         <li>
           <p>
-            Montrer que <m>2</m> n'admet pas de racine carré dans <m>\mathcal{A}</m>. Montrer toutefois que l'équation <m>x^3-2x</m> admet une racine non nulle dans <m>\mathcal{A}</m>.
+            Montrer que <m>-1</m> n'admet pas de racine carré dans <m>\mathcal{A}</m>. Montrer toutefois que l'équation <m>x^3+x</m> admet une racine non nulle dans <m>\mathcal{A}</m>.
           </p>
         </li>
       </ol>
     </statement>
     <solution>
+      <!--
+    <ol>
+	<li>
+		<p>
+		Il suffit de montrer que <m>\bigoplus_{p~\text{premier}}\mathbb{Z}/p\mathbb{Z}</m> est un idéal de <m>\prod_{p~\text{premier}}{\mathbb{Z}/p\mathbb{Z}}</m>. Or un élément de la somme directe est formée de l'ensemble des suites dont seulement un nombre fini de termes sont non nuls. C'est clairement stable par somme et multiplication par les éléments du produit.
+		</p>
+		<p>
+		L'anneau n'est pas intègre. Par exemple, numérotons les nombres premiers <m>p_1,p_2,\ldots</m> et considérons l'image de la suite <m>(x_{p_n})_{n}=(1,0,1,0,\ldots)</m> qui vaut <m>1<m> si <m>n</m> est impair, <m>0</m> sinon, et <m>(y_{p_n})_{n}=(0,1,0,1,\ldots)</m> la suite duale <m>y_{p_n}=1-x_{p_n}</m>. Alors ni <m>\underline{x}</m> ni <m>\underline{y}</m> n'appartient à la somme direct, c-à-d est non nulle dans <m>\mathcal{A}</m>, mais pourtant <m>\underline{x}\underline{y}</m> est la suite nulle. 
+		</p>
+		<p>
+		L'anneau est néanmoins réduit. Car <m>(x_p)_{p}</m> nulle dans <m>\mathcal{A}</m> impose <m>x_p^n=0</m> pour tout premier <m>p</m> assez grand, soit <m>x_p=0</m>, et donc <m>(x_p)_p</m> dans la somme directe.
+		</p>
+	</li>
+	<li>
+		<p>
+		Soit <m>n</m> un entier et <m>(n_p)_p</m> la suite de ses réductions modulo <m>p</m>. Pour <m>p</m> assez grand</m>, e.g. <m>p>q</m>, <m>n_p\neq 0</m> et on peut considérer <m>m_p=n_p^{-1}</m> dans <m>\mathbb{Z}/p\mathbb{Z}</m>. Pour <m>p\leq q</m>, posons <m>m_p=0</m>. Alors la multiplication par <m>(m_p)_p</m> définit l'inverse de la multiplication par <m>n</m>. 
+		</p>
+	</li>
+</ol>
+      -->
     </solution>
   </exercise>
 

@@ -184,18 +184,12 @@
           </li>
           <li>
             <p>
-              Montrer que <m>I(X)+I(Y)\subset I(X\cap Y)</m>.
-            </p>
-          </li>
-          <li>
-            <p>
               Montrer que<fn>C'est en fait une égalité, mais la réciproque demande le Nullstelensatz.</fn> <m>I(X)+I(Y)\subset I(X\cap Y)</m>.
             </p>
           </li>
         </ol>
       </statement>
       <solution>
-        <!--
         <ol>
           <li>
             <p>
@@ -229,7 +223,6 @@
             </p>
           </li>
         </ol>
-        -->
       </solution>
     </exercise>
 
@@ -246,6 +239,7 @@
 
     <exercise>
       <title>Propriétés du radical</title>
+      <statement>
       <ol>
         <li>
           <p>
@@ -254,7 +248,7 @@
         </li>
         <li>
           <p>
-            Soit <m>A</m> un anneau factoriel, <m>\pi_1,\ldots,\pi_g</m> des irréductibles de <m>A</m> et <m>n_1,\ldots,n_g</m> des entiers positifs. Calculer le radical de l'idéal principal <m>(\pi_1^{n_1}\cdots \pi_g^{n_g})</m>.
+            Soit <m>A</m> un anneau factoriel, <m>\pi_1,\ldots,\pi_g</m> des irréductibles de <m>A</m> et <m>n_1,\ldots,n_g</m> des entiers strictement positifs. Calculer le radical de l'idéal principal <m>(\pi_1^{n_1}\cdots \pi_g^{n_g})</m>.
           </p>
         </li>
         <li>
@@ -263,6 +257,34 @@
           </p>
         </li>
       </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <p>
+              Soient <m>a,b\in \sqrt{I}</m> et soit <m>n,m</m> deux entiers positifs tels que <m>a^n,b^m\in I</m>. Par le binôme de Newton,
+              <md>
+                (a+b)^r=\sum_{i=0}^r{\binom{i}{r} a^i b^{r-i}}
+              </md>
+              Or <m>b^{r-i}\in I</m> pour <m>i\leq r-m</m> et <m>a^i\in I</m> pour <m>i\geq n</m>. Pour avoir <m>(a+b)^r\in I</m>, il reste donc à choisir <m>r</m> tel que pour tout <m>i</m> soit <m>i\geq n</m> soit <m>r-m\geq i</m>; par exemple <m>r=m+n-1</m> convient.
+            </p>
+          </li>
+          <li>
+            <p>
+              On va montrer que <m>\sqrt{(\pi_1^{n_1}\cdots \pi_g^{n_g})}=(\pi_1\cdots \pi_g)</m>. Pour <m>n=\max\{n_i\}</m> on a <m>(\pi_1\cdots \pi_g)^n\in \sqrt{(\pi_1^{n_1}\cdots \pi_g^{n_g})}</m> ce qui montre l'inclusion <m>\supset</m>. Réciproquement, soit <m>a\in A</m> et <m>n</m> un entier positif tel que <m>a^n\in (\pi_1^{n_1}\cdots \pi_g^{n_g})</m>. Il existe donc <m>b\in A</m> pour lequel
+              <md>
+                a^n=b\pi_1^{n_1}\cdots \pi_g^{n_g}.
+              </md>
+              En particulier <m>\pi_i</m> divise <m>a^n</m> et donc <m>a</m> par la propriété d'unique factorisation. Toujours par cette dernière, <m>\pi_1\cdots \pi_g</m> divise <m>a</m> et donc <m>a\in (\pi_1\cdots\pi_g)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Soit <m>f\in \mathbb{C}[X_1,\ldots,X_n]</m> tel que <m>f^n\in I(X)</m> pour un entier <m>n\geq 1</m>. En particulier, pour tout <m>x\in X</m> on a <m>f(x)^n=0</m> et donc <m>f(x)=0</m>. Ainsi <m>f\in I(X)</m>, et donc <m>\sqrt{I(X)}=I(X)</m>.
+            </p>
+          </li>
+        </ol>
+      </solution>
     </exercise>
 
     <note>
@@ -272,8 +294,16 @@
       </p>
     </note>
 
+    <note>
+      <title>Fermé irréductible</title>
+      <p>
+        Soit <m>X</m> un espace topologique et <m>F</m> un fermé de <m>X</m>. On dit que <m>F</m> est <em>irréductible</em> si, pour toute décomposition <m>F=F_1\cup F_2</m> avec <m>F_1,F_2</m> des fermés de <m>X</m>, alors <m>F_1=F</m> ou <m>F_2=F</m>.
+      </p>
+    </note>
+
     <exercise>
       <title>Variétés irréductibles</title>
+      <statement>
         <p>
           Soit <m>X</m> un sous-ensemble algébrique.
         </p>
@@ -289,6 +319,39 @@
             </p>
           </li>
         </ol>
+        </statement>
+        <solution>
+          <ol>
+            <li>
+              <p>
+                Supposons <m>X</m> irréductible. Soient <m>f,g</m> deux polynômes dont le produit <m>fg</m> s'annule sur <m>X</m>; c-à-d <m>fg\in I(X)</m>. On a alors
+                <md>
+                  X\subset V((fg))=V((f))\cup V((g))
+                </md>
+                et donc <m>X</m> s'écrit que la réunion de <m>X\cap V((f))</m> et <m>X\cap V((g))</m>. Comme <m>X</m> est irréductible, soit <m>X=X\cap V((f))</m> soit <m>X=X\cap V((g))</m> de sorte que soit <m>f</m> soit <m>g</m> s'annule sur <m>X</m>; c-à-d <m>f\in I(X)</m> ou <m>g\in I(X)</m>, et donc <m>I(X)</m> est premier.  
+              </p>
+              <p>  
+                Réciproquement, supposons <m>I(X)</m> premier et écrivons <m>X=X_1\cap X_2</m> comme la réunion de deux sous-ensembles algébriques. Si ces sous-ensembles sont propres, alors on peut trouver <m>f_1</m> qui s'annule sur <m>X_1</m> mais pas sur tout <m>X</m> et <m>f_2</m> qui s'annule sur <m>X_2</m> mais pas sur tout <m>X</m>. Autrement dit <m>f_1f_2\in I(X)</m> mais <m>f_1,f_2\notin I(X)</m>, contredisant la primalité de <m>I(X)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si <m>X=\{a\}</m> est un singleton, alors <m>I(\{a\})</m> est le noyau de l'application <m>\mathbb{C}[X_1,\ldots,X_n]\to \mathbb{C}</m>, <m>f\mapsto f(a)</m> d'évaluation en <m>a</m>. Cette application est surjective, donc d'après le théorème d'isomorphisme
+                <md>
+                  \mathbb{C}[X_1,\ldots,X_n]/I(\{a\})\cong \mathbb{C}
+                </md>
+                est un corps. En particulier, <m>I(\{a\})</m> est maximal.
+              </p>
+              <p>
+                Réciproquement supposons <m>I(X)</m> maximal. En particulier <m>X</m> est non vide car <m>I(X)\neq \mathbb{C}[X_1,\ldots,X_n]</m>. Soit <m>a\in X</m>. De la décroissance de <m>I</m> on déduit que l'idéal <m>(X_1-a_1,\ldots,X_1-a_1)</m> contient <m>I(X)</m>. Cet idéal n'est pas <m>\mathbb{C}[X_1,\ldots,X_n]</m> car autrement le polynôme constant <m>1</m> s'annulerait en <m>a</m>. Comme <m>I(X)</m> est maximal on trouve
+                <md>
+                  I(X)=(X_1-a_1,\ldots,X_1-a_1).
+                </md>
+                Soit <m>b=(b_1,\ldots,b_n)\in X</m>. Les polynômes <m>X_i-a_i</m> s'annulent en <m>b</m> par l'égalité ci-dessus d'où <m>b_i-a_i=0</m> puis <m>b=a</m>. Ainsi <m>X=\{a\}</m>.
+              </p>
+            </li>
+          </ol>
+        </solution>
     </exercise>
 
     <exercise>
@@ -298,5 +361,10 @@
           Montrer que l'idéal <m>(X,Y)</m> de <m>\mathbb{C}[X,Y]</m> n'est pas principal.
         </p>
       </statement>
+      <solution>
+        <p>
+          Supposons <m>(X,Y)</m> principal de générateur <m>f=f(X,Y)</m>. Alors <m>f</m> divise <m>X</m>, d'où <m>\deg_Y f=0</m>, et de même <m>\deg_X f=0</m>. Autrement dit <m>f</m> est une constante non nulle. Mais une relation comme <m>f=aX+bY</m> donnerait que <m>f</m> s'annule en <m>(0,0)</m>, une contradiction.
+        </p>
+      </solution>
     </exercise>
 </section>
