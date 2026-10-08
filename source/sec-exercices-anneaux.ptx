@@ -51,7 +51,7 @@
 	    </li>
       <li>
         <p>
-          Soit <m>a\in A</m> un élément non nul; il nous faut montrer que <m>a</m> est inversible. On considère la famille d'idéaux principaux <m>\{A,(a),(a^2),(a^3),\ldots\}</m> engendrés par les puissances de <m>a</m>. Cet ensemble est fini par hypothèse, donc il existe <m>n\geq 1</m> tel que <m>(a^n)=(a^{n+1})</m>. Il existe donc <m>b\in A</m> tel que <m>a^n=ba^{n+1}</m>. Comme <m>A</m> est intègre, on peut simplifier par <m>a^n</m> et on obtient <m>1=ba</m>. Ainsi <m>a</m> admet un inverse.
+          Soit <m>a\in A</m> un élément non nul; il nous faut montrer que <m>a</m> est inversible. On considère la famille d'idéaux principaux <m>\{A,(a),(a^2),(a^3),\ldots\}</m> engendrés par les puissances de <m>a</m>. Cet ensemble est fini par hypothèse, donc il existe <m>m>n\geq 1</m> tel que <m>(a^n)=(a^{m})</m>. Il existe donc <m>b\in A</m> tel que <m>a^n=ba^{m}</m>. Comme <m>A</m> est intègre, on peut simplifier par <m>a^n</m> et on obtient <m>1=(ba^{m-n-1})a</m>. Ainsi <m>a</m> admet <m>ba^{m-n-1}</m> pour inverse.
         </p>
       </li>
       <li>
