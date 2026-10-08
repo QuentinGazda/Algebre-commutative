@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<section xml:id="sec-exercices-modules">
+    <title>Généralités sur les modules</title>
+
+
+    <exercise>
+        <title>Généraliser Cayley-Hamilton</title>
+        <statement>
+            <p>
+                Soient <m>A</m> un anneau commutatif, <m>M</m> un <m>A</m>-module de type fini et soit <m>f</m> un endomorphisme de <m>M</m>. On cherche à montrer qu'il existe un polynôme unitaire <m>P(X)\in A[X]</m> tel que <m>P(f)=0</m> dans <m>\mathrm{End}_A(M)</m>.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        On suppose que <m>M</m> est un <m>A</m>-module libre et l'on note <m>F</m> la matrice de <m>f</m> dans l'une des bases de <m>M</m>.
+                    </p>
+                    <ol marker="a">
+                        <li>
+                            <p>
+                            On suppose que <m>A=K</m> est un corps. Montrer que le polynôme caractéristique de <m>F</m> annule <m>f</m>. En déduire le résultat lorsque <m>A</m> est un anneau intègre et <m>M</m> est libre sur <m>A</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                            Montrer que l'on peut toujours trouver un morphisme d'anneaux <m>A'\to A</m> depuis un anneau intègre <m>A'</m> dont l'image contient les coefficients de <m>F</m>. En déduire le résultat pour tout anneau <m>A</m> et <m>M</m> libre sur <m>A</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p> 
+                        On revient au cas général où <m>M</m> est de type fini sur <m>A</m>.
+                    </p>
+                    <ol marker="a">
+                        <li>
+                            <p>
+                            Montrer qu'il existe un morphisme surjectif <m>\pi:L\to M</m> depuis un <m>A</m>-module libre de rang fini <m>L</m> ainsi qu'un endomorphisme <m>g</m> de <m>L</m> tel que <m>\pi\circ g=f\circ \pi</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                            Conclure.
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+    
+    <note>
+        <title>Module simple</title>
+        <p>
+            Soit <m>A</m> un anneau commutatif. Un <m>A</m>-module est dit <em>simple</em> s'il est non nul et si ses seuls sous <m>A</m>-modules sont <m>(0)</m> et <m>M</m>. 
+        </p>
+    </note>
+
+    <exercise>
+        <title>Propriétés des modules simples</title>
+        <statement>
+            <ol>
+                <li>
+                    <p>
+                        Montrer que <m>A</m> (en tant que module sur lui-même) est simple si et seulement si <m>A</m> est un corps.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>f:M_1\to M_2</m> un morphisme de <m>A</m>-modules simples. Montrer que <m>f</m> est soit un isomorphisme, soit le morphisme nul.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que tout module simple est isomorphe à <m>A/\mathfrak{m}</m>, où <m>\mathfrak{m}</m> est un idéal maximal de <m>A</m>.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+        <!--
+            <p>
+                <li>
+                    <p>
+                        Rappelons que les sous-modules d'un anneau <m>A</m> sont exactement ses idéaux. On sait de plus que <m>A</m> est un corps si et seulement si ses seuls idéaux sont <m>(0)</m> et <m>A</m>. Donc <m>A</m> est simple si et seulement si <m>A</m> est un corps.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Supposons <m>f</m> non nul. Alors <m>\mathrm{ker}(f)</m> est un sous-module strict de <m>M_1</m>. Comme <m>M_1</m> est simple, on a <m>\mathrm{ker}(f)=(0)</m>. En particulier, <m>f</m> est injectif. Procédons de même pour <m>\mathrm{im}(f)=f(M_1)</m>. C'est un sous-module non nul de <m>M_2</m>, et donc par simplicité de <m>M_2</m>, on a <m>\mathrm{im}(f)=M_2</m>. En particulier, <m>f</m> est surjectif, et <m>f</m> est un isomorphisme.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>M</m> un module simple. Comme <m>M\neq (0)</m>, il existe un élément non nul <m>m\in M</m>. Considérons l'idéal <m>\mathfrak{a}=\{a\in A~|~am=0\}</m>. On considère l'application
+                        <me>
+                            f:A \to M, a \mapsto am.
+                        </me>
+                        <m>f</m> est nécessairement surjective car <m>M</m> est simple. Son noyau est <m>\mathfrak{a}</m> et donc <m>f</m> induit un isomorphisme <m>A/\mathfrak{a} \cong M</m>. Comme <m>A/\mathfrak{a}</m> est un module simple, c'est un corps, donc <m>\mathfrak{a}</m> est un idéal maximal de <m>A</m>.
+                    </p>
+                </li>
+            </ol>
+        -->
+        </solution>
+    </exercise>
+
+    <note>
+        <title>Module projectif</title>
+        <p>
+        Soit <m>A</m> un anneau commutatif. Un <m>A</m>-module est dit <em>projectif</em> si l'un des points suivants est vérifié :
+        <ol marker="i">
+            <li xml:id="note-projectif-1">
+                <p>
+                Pour tout morphisme surjectif <m>s:N\to M</m> et tout morphisme <m>f:P\to M</m>, il existe un morphisme <m>h:P\to N</m> tel que <m>s\circ h=f</m>.
+                </p>
+            </li>
+            <li xml:id="note-projectif-2">
+                <p>
+                Pour tout morphisme surjectif <m>s:M\to P</m>, il existe <m>h:P\to M</m> tel que <m>s\circ h=\mathrm{id}_P</m>.
+                </p>
+            </li>
+            <li xml:id="note-projectif-3">
+                <p>
+                <m>P</m> est facteur direct dans module libre : il existe un <m>A</m> module <m>Q</m> tel que <m>P\oplus Q</m> est libre.
+                </p>
+            </li>
+        </ol>
+        </p>
+    </note>
+
+    <exercise>
+        <title>Propriétés des modules projectifs</title>
+        <statement>
+            <p>
+                Montrer que les points <xref ref="note-projectif-1"/>, <xref ref="note-projectif-2"/> et <xref ref="note-projectif-3"/> sont équivalents.
+            </p>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Un module projectif qui n'est pas libre</title>
+        <statement>
+            <p>
+                On considère l'idéal <m>I=(2,1+i\sqrt{5})</m> de <m>A=\mathbb{Z}[i\sqrt{5}]</m>. Notre but est de montrer que <m>I</m> n'est pas libre mais qu'il est projectif.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Montrer que <m>I</m> est un idéal maximal non principal. En déduire que <m>I</m> n'est pas libre en tant que <m>A</m>-module.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En considérant les morphismes <m>A^2\to I</m>, <m>(u,v)\mapsto 2u+(1+i\sqrt{5})v</m>, et 
+                        <me>
+                            I\longrightarrow A^2,~a\longmapsto \left(-a,\frac{1-i\sqrt{5}}{2}a\right),
+                        </me>
+                        montrer que <m>I</m> est projectif.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Contre-exemples à la projectivité</title>
+        <statement>
+            <p>
+                Montrer que l'idéal <m>(X,Y)</m> de <m>\mathbb{C}[X,Y]</m> n'est pas libre. Montrer qu'il n'est pas non plus projectif.
+            </p>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+    
+</section>
