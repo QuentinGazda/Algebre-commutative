@@ -336,7 +336,63 @@
     </solution>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="exo-anneaux-quotients">
+    <title>Exemples d'anneaux quotients</title>
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Soit <m>A</m> un anneau et <m>I</m> un idéal de <m>A</m> et <m>I\cdot A[X]</m> l'idéal de <m>A[X]</m> engendré par <m>I</m>. Montrer que l'on a un isomorphisme d'anneaux
+              <md>
+                A[X]/I\cdot A[X]\cong (A/I)[X].
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              Montrer que l'on a des isomorphismes <m>\mathbb{Q}[X]/(X^2+1)\cong \mathbb{Q}[i]</m> et <m>\mathbb{Z}[X]/(X^2+1)\cong \mathbb{Z}[i]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Plus généralement, soit <m>\alpha\in \mathbb{C}</m> un nombre algébrique sur <m>\mathbb{Q}</m> de polynôme minimal <m>\Pi(X)\in \mathbb{Q}[X]</m>. Montrer que l'on a un isomorphisme d'anneaux
+              <md>
+                \mathbb{Q}[X]/(\Pi(X))\cong \mathbb{Q}[\alpha].
+              </md>
+              Montrer que si <m>\Pi(X)</m> est à coefficents entiers, alors on peut remplacer <m>\mathbb{Q}</m> par <m>\mathbb{Z}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <ol>
+        <li>
+          <p>
+            On considère l'application <m>A[X]\to (A/I)[X]</m> qui réduit les coefficients des polynômes modulo <m>I</m>. On vérifie aisément que c'est un morphisme surjectif d'anneaux et, par le théorème d'isomorphisme, il reste à vérifier que son noyau est l'idéal engendré par <m>I</m>. Les éléments de <m>I\cdot A[X]</m> s'écrivent comme des sommes finies de produits d'éléments de <m>I</m> et de <m>A[X]</m>. D'une part, il est clair que de tels polynômes sont annulés par cette application, donc dans le noyau. D'autre part, si un polynôme <m>P(X)=\sum_{i=0}^k a_i X^i</m> est dans le noyau, alors tous ses coefficients <m>a_i</m> sont dans <m>I</m>, donc <m>a_iX^i\in I\cdot A[X]</m> et enfin <m>P(X)\in I\cdot A[X]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            On considère l'application <m>\mathbb{Q}[X]\to \mathbb{Q}[i]</m> qui à un polynôme <m>P(X)</m> associe <m>P(i)</m>. On vérifie aisément que c'est un morphisme surjectif d'anneaux et, par le théorème d'isomorphisme, il reste à vérifier que son noyau est l'idéal engendré par <m>X^2+1</m>. D'une part, il est clair qu'un polynôme multiple de <m>X^2+1</m> est annulé par cette application, donc dans le noyau. D'autre part, si un polynôme <m>P(X)</m> est dans le noyau, alors on peut effectuer la division euclidienne de <m>P(X)</m> par <m>X^2+1</m> pour obtenir
+            <md>
+              P(X)=(X^2+1)Q(X)+R(X)
+            </md>
+            avec <m>R(X)=aX+b</m> de degré au plus 1. Comme <m>P(i)=0</m>, on obtient <m>0=P(i)=R(i)=ai+b</m>, ce qui implique que <m>a=b=0</m>. Ainsi <m>P(X)=(X^2+1)Q(X)</m> et donc <m>P(X)\in (X^2+1)</m>.
+          </p>
+          <p>
+            Le même argument fonctionne sur <m>\mathbb{Z}</m> car la division euclidienne par les polynômes unitaires (tel que <m>X^2+1</m>) est encore possible dans <m>\mathbb{Z}[X]</m> (pour s'en convaincre, il suffit de réitérer la preuve de la division euclidienne dans <m>k[X]</m> !).
+          </p>
+        </li>
+        <li>
+          On pourra reprendre le même argument, en remplaçant <m>i</m> par <m>\alpha</m> et <m>X^2+1</m> par <m>\Pi(X)</m>.
+        </li>
+      </ol>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="exo-premiers-somme-deux-carres">
     <title>Premiers somme de deux carrés</title>
     <statement>
       <ol>
@@ -366,7 +422,7 @@
 		      <md>
 		      (A/I)/((I+J)/I) \cong A/(I+J) \cong (A/J)/((I+J)/J)
 		      </md>
-		      On applique ce fait à <m>A=\mathbb{Z}[X]</m>, <m>I=(X^2+1)</m> et <m>J=(p)</m>. Comme <m>A/I=\mathbb{Z}[X]/(X^2+1)\cong \mathbb{Z}[i]</m> et <m>A/J=\mathbb{Z}[X]/(p)\cong \mathbb{F}_p[X]</m>, on obtient
+		      On applique ce fait à <m>A=\mathbb{Z}[X]</m>, <m>I=(X^2+1)</m> et <m>J=(p)</m>. Comme <m>A/I=\mathbb{Z}[X]/(X^2+1)\cong \mathbb{Z}[i]</m> et <m>A/J=\mathbb{Z}[X]/(p)\cong \mathbb{F}_p[X]</m> (voir l'<xref ref="exo-anneaux-quotients"/>), on obtient
 		      <md>
 		      \mathbb{Z}[i]/(p) \cong \mathbb{Z}[X]/(p,X^2+1)\cong \mathbb{F}_p[X]/(X^2+1).
 		      </md>
