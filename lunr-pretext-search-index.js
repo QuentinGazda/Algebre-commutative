@@ -385,43 +385,43 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Généralités sur les modules",
-  "body": " Généralités sur les modules   Généraliser Cayley-Hamilton   Soient un anneau commutatif, un -module de type fini et soit un endomorphisme de . On cherche à montrer qu'il existe un polynôme unitaire tel que dans .    On suppose que est un -module libre et l'on note la matrice de dans l'une des bases de .    On suppose que est un corps. Montrer que le polynôme caractéristique de annule . En déduire le résultat lorsque est un anneau intègre et est libre sur .    Montrer que l'on peut toujours trouver un morphisme d'anneaux depuis un anneau intègre dont l'image contient les coefficients de . En déduire le résultat pour tout anneau et libre sur .      On revient au cas général où est de type fini sur .    Montrer qu'il existe un morphisme surjectif depuis un -module libre de rang fini ainsi qu'un endomorphisme de tel que .    Conclure.           Module simple  Soit un anneau commutatif. Un -module est dit simple s'il est non nul et si ses seuls sous -modules sont et .    Propriétés des modules simples     Montrer que (en tant que module sur lui-même) est simple si et seulement si est un corps.    Soit un morphisme de -modules simples. Montrer que est soit un isomorphisme, soit le morphisme nul.    Montrer que tout module simple est isomorphe à , où est un idéal maximal de .          Module projectif  Soit un anneau commutatif. Un -module est dit projectif si l'un des points suivants est vérifié :   Pour tout morphisme surjectif et tout morphisme , il existe un morphisme tel que .    Pour tout morphisme surjectif , il existe tel que .     est facteur direct dans module libre : il existe un module tel que est libre.       Propriétés des modules projectifs   Montrer que les points , et sont équivalents.       Un module projectif qui n'est pas libre   On considère l'idéal de . Notre but est de montrer que n'est pas libre mais qu'il est projectif.    Montrer que est un idéal maximal non principal. En déduire que n'est pas libre en tant que -module.    En considérant les morphismes , , et montrer que est projectif.         Contre-exemples à la projectivité   Montrer que l'idéal de n'est pas libre. Montrer qu'il n'est pas non plus projectif.      "
+  "body": " Généralités sur les modules   Module libre  Un module sur anneau commutatif est dit libre s'il existe une famille d'éléments de telle que tout élément s'écrive de manière unique comme combinaison linéaire finie des .  De manière équivalente, est libre s'il existe un isomorphisme de -modules , où est le module des familles d'éléments de indexées par et à support fini.    Généraliser Cayley-Hamilton   Soient un anneau commutatif, un -module de type fini et soit un endomorphisme de . On cherche à montrer qu'il existe un polynôme unitaire tel que dans .    On suppose que est un -module libre et l'on note la matrice de dans l'une des bases de .    On suppose que est un corps. Montrer que le polynôme caractéristique de annule . En déduire le résultat lorsque est un anneau intègre et est libre sur .    Montrer que l'on peut toujours trouver un morphisme d'anneaux depuis un anneau intègre dont l'image contient les coefficients de . En déduire le résultat pour tout anneau et libre sur .      On revient au cas général où est de type fini sur .    Montrer qu'il existe un morphisme surjectif depuis un -module libre de rang fini ainsi qu'un endomorphisme de tel que .    Conclure.            C'est le théorème de Cayley-Hamilton : soit le polynôme caractéristique de . On choisit une extension de pour laquelle est trigonalisable : il existe telle que est triangulaire supérieure. coincide au polynôme charactéristique de et correspond au produit des polynômes où sont les coefficients diagonaux de . On a donc et donc .  Si est un anneau intègre et est isomorphe au -module libre , on peut considérer son corps des fractions et appliquer le résultat précédent à .    On note les coefficients de . On considère l'anneau des polynômes en variables et le morphisme d'anneaux défini par . On étend immédiatement en des morphismes d'anneaux et coefficients par coefficients. On applique le résultat précédent à l'endomorphisme de , et on vérifie que si est annulateur de , alors est annulateur de et donc de .  Après le choix d'une base (où de manière équivalente d'un isomorphisme ) faisant correspondre à , on peut étendre en un morphisme de groupes que l'on note toujours . La matrice correspond à via .                 Module simple  Soit un anneau commutatif. Un -module est dit simple s'il est non nul et si ses seuls sous -modules sont et .    Propriétés des modules simples     Montrer que (en tant que module sur lui-même) est simple si et seulement si est un corps.    Soit un morphisme de -modules simples. Montrer que est soit un isomorphisme, soit le morphisme nul.    Montrer que tout module simple est isomorphe à , où est un idéal maximal de .        Rappelons que les sous-modules d'un anneau sont exactement ses idéaux. On sait de plus que est un corps si et seulement si ses seuls idéaux sont et . Donc est simple si et seulement si est un corps.    Supposons non nul. Alors est un sous-module strict de . Comme est simple, on a . En particulier, est injectif. Procédons de même pour . C'est un sous-module non nul de , et donc par simplicité de , on a . En particulier, est surjectif, et est un isomorphisme.    Soit un module simple. Comme , il existe un élément non nul . Considérons l'idéal . On considère l'application  est nécessairement surjective car est simple. Son noyau est et donc induit un isomorphisme . Comme est un module simple, c'est un corps, donc est un idéal maximal de .       Tout module sans torsion est inclus dans un module libre   Soit un anneau intègre et un -module de type fini sans torsion. Montrer qu'il existe un -module libre et un morphisme injectif .        Module projectif  Soit un anneau commutatif. Un -module est dit projectif si l'un des points suivants est vérifié :   Pour tout morphisme surjectif et tout morphisme , il existe un morphisme tel que .    Pour tout morphisme surjectif , il existe tel que .     est facteur direct dans module libre : il existe un module tel que est libre.       Propriétés des modules projectifs   Montrer que les points , et sont équivalents.       Un module projectif qui n'est pas libre   On considère l'idéal de . Notre but est de montrer que n'est pas libre mais qu'il est projectif.    Montrer que est un idéal maximal non principal. En déduire que n'est pas libre en tant que -module.    En considérant les morphismes , , et montrer que est projectif.         Contre-exemples à la projectivité   Montrer que l'idéal de n'est pas libre. Montrer qu'il n'est pas non plus projectif.      "
 },
 {
   "id": "sec-exercices-modules-2",
   "level": "2",
   "url": "sec-exercices-modules.html#sec-exercices-modules-2",
-  "type": "Exercice",
+  "type": "Rappel",
   "number": "2.2.1",
-  "title": "Généraliser Cayley-Hamilton.",
-  "body": " Généraliser Cayley-Hamilton   Soient un anneau commutatif, un -module de type fini et soit un endomorphisme de . On cherche à montrer qu'il existe un polynôme unitaire tel que dans .    On suppose que est un -module libre et l'on note la matrice de dans l'une des bases de .    On suppose que est un corps. Montrer que le polynôme caractéristique de annule . En déduire le résultat lorsque est un anneau intègre et est libre sur .    Montrer que l'on peut toujours trouver un morphisme d'anneaux depuis un anneau intègre dont l'image contient les coefficients de . En déduire le résultat pour tout anneau et libre sur .      On revient au cas général où est de type fini sur .    Montrer qu'il existe un morphisme surjectif depuis un -module libre de rang fini ainsi qu'un endomorphisme de tel que .    Conclure.         "
+  "title": "Module libre.",
+  "body": " Module libre  Un module sur anneau commutatif est dit libre s'il existe une famille d'éléments de telle que tout élément s'écrive de manière unique comme combinaison linéaire finie des .  De manière équivalente, est libre s'il existe un isomorphisme de -modules , où est le module des familles d'éléments de indexées par et à support fini.  "
 },
 {
   "id": "sec-exercices-modules-3",
   "level": "2",
   "url": "sec-exercices-modules.html#sec-exercices-modules-3",
-  "type": "Rappel",
+  "type": "Exercice",
   "number": "2.2.1",
-  "title": "Module simple.",
-  "body": " Module simple  Soit un anneau commutatif. Un -module est dit simple s'il est non nul et si ses seuls sous -modules sont et .  "
+  "title": "Généraliser Cayley-Hamilton.",
+  "body": " Généraliser Cayley-Hamilton   Soient un anneau commutatif, un -module de type fini et soit un endomorphisme de . On cherche à montrer qu'il existe un polynôme unitaire tel que dans .    On suppose que est un -module libre et l'on note la matrice de dans l'une des bases de .    On suppose que est un corps. Montrer que le polynôme caractéristique de annule . En déduire le résultat lorsque est un anneau intègre et est libre sur .    Montrer que l'on peut toujours trouver un morphisme d'anneaux depuis un anneau intègre dont l'image contient les coefficients de . En déduire le résultat pour tout anneau et libre sur .      On revient au cas général où est de type fini sur .    Montrer qu'il existe un morphisme surjectif depuis un -module libre de rang fini ainsi qu'un endomorphisme de tel que .    Conclure.            C'est le théorème de Cayley-Hamilton : soit le polynôme caractéristique de . On choisit une extension de pour laquelle est trigonalisable : il existe telle que est triangulaire supérieure. coincide au polynôme charactéristique de et correspond au produit des polynômes où sont les coefficients diagonaux de . On a donc et donc .  Si est un anneau intègre et est isomorphe au -module libre , on peut considérer son corps des fractions et appliquer le résultat précédent à .    On note les coefficients de . On considère l'anneau des polynômes en variables et le morphisme d'anneaux défini par . On étend immédiatement en des morphismes d'anneaux et coefficients par coefficients. On applique le résultat précédent à l'endomorphisme de , et on vérifie que si est annulateur de , alors est annulateur de et donc de .  Après le choix d'une base (où de manière équivalente d'un isomorphisme ) faisant correspondre à , on peut étendre en un morphisme de groupes que l'on note toujours . La matrice correspond à via .               "
 },
 {
   "id": "sec-exercices-modules-4",
   "level": "2",
   "url": "sec-exercices-modules.html#sec-exercices-modules-4",
-  "type": "Exercice",
+  "type": "Rappel",
   "number": "2.2.2",
-  "title": "Propriétés des modules simples.",
-  "body": " Propriétés des modules simples     Montrer que (en tant que module sur lui-même) est simple si et seulement si est un corps.    Soit un morphisme de -modules simples. Montrer que est soit un isomorphisme, soit le morphisme nul.    Montrer que tout module simple est isomorphe à , où est un idéal maximal de .        "
+  "title": "Module simple.",
+  "body": " Module simple  Soit un anneau commutatif. Un -module est dit simple s'il est non nul et si ses seuls sous -modules sont et .  "
 },
 {
   "id": "sec-exercices-modules-5",
   "level": "2",
   "url": "sec-exercices-modules.html#sec-exercices-modules-5",
-  "type": "Rappel",
+  "type": "Exercice",
   "number": "2.2.2",
-  "title": "Module projectif.",
-  "body": " Module projectif  Soit un anneau commutatif. Un -module est dit projectif si l'un des points suivants est vérifié :   Pour tout morphisme surjectif et tout morphisme , il existe un morphisme tel que .    Pour tout morphisme surjectif , il existe tel que .     est facteur direct dans module libre : il existe un module tel que est libre.     "
+  "title": "Propriétés des modules simples.",
+  "body": " Propriétés des modules simples     Montrer que (en tant que module sur lui-même) est simple si et seulement si est un corps.    Soit un morphisme de -modules simples. Montrer que est soit un isomorphisme, soit le morphisme nul.    Montrer que tout module simple est isomorphe à , où est un idéal maximal de .        Rappelons que les sous-modules d'un anneau sont exactement ses idéaux. On sait de plus que est un corps si et seulement si ses seuls idéaux sont et . Donc est simple si et seulement si est un corps.    Supposons non nul. Alors est un sous-module strict de . Comme est simple, on a . En particulier, est injectif. Procédons de même pour . C'est un sous-module non nul de , et donc par simplicité de , on a . En particulier, est surjectif, et est un isomorphisme.    Soit un module simple. Comme , il existe un élément non nul . Considérons l'idéal . On considère l'application  est nécessairement surjective car est simple. Son noyau est et donc induit un isomorphisme . Comme est un module simple, c'est un corps, donc est un idéal maximal de .     "
 },
 {
   "id": "sec-exercices-modules-6",
@@ -429,24 +429,42 @@ var ptx_lunr_docs = [
   "url": "sec-exercices-modules.html#sec-exercices-modules-6",
   "type": "Exercice",
   "number": "2.2.3",
-  "title": "Propriétés des modules projectifs.",
-  "body": " Propriétés des modules projectifs   Montrer que les points , et sont équivalents.     "
+  "title": "Tout module sans torsion est inclus dans un module libre.",
+  "body": " Tout module sans torsion est inclus dans un module libre   Soit un anneau intègre et un -module de type fini sans torsion. Montrer qu'il existe un -module libre et un morphisme injectif .      "
 },
 {
   "id": "sec-exercices-modules-7",
   "level": "2",
   "url": "sec-exercices-modules.html#sec-exercices-modules-7",
-  "type": "Exercice",
-  "number": "2.2.4",
-  "title": "Un module projectif qui n’est pas libre.",
-  "body": " Un module projectif qui n'est pas libre   On considère l'idéal de . Notre but est de montrer que n'est pas libre mais qu'il est projectif.    Montrer que est un idéal maximal non principal. En déduire que n'est pas libre en tant que -module.    En considérant les morphismes , , et montrer que est projectif.       "
+  "type": "Rappel",
+  "number": "2.2.3",
+  "title": "Module projectif.",
+  "body": " Module projectif  Soit un anneau commutatif. Un -module est dit projectif si l'un des points suivants est vérifié :   Pour tout morphisme surjectif et tout morphisme , il existe un morphisme tel que .    Pour tout morphisme surjectif , il existe tel que .     est facteur direct dans module libre : il existe un module tel que est libre.     "
 },
 {
   "id": "sec-exercices-modules-8",
   "level": "2",
   "url": "sec-exercices-modules.html#sec-exercices-modules-8",
   "type": "Exercice",
+  "number": "2.2.4",
+  "title": "Propriétés des modules projectifs.",
+  "body": " Propriétés des modules projectifs   Montrer que les points , et sont équivalents.     "
+},
+{
+  "id": "sec-exercices-modules-9",
+  "level": "2",
+  "url": "sec-exercices-modules.html#sec-exercices-modules-9",
+  "type": "Exercice",
   "number": "2.2.5",
+  "title": "Un module projectif qui n’est pas libre.",
+  "body": " Un module projectif qui n'est pas libre   On considère l'idéal de . Notre but est de montrer que n'est pas libre mais qu'il est projectif.    Montrer que est un idéal maximal non principal. En déduire que n'est pas libre en tant que -module.    En considérant les morphismes , , et montrer que est projectif.       "
+},
+{
+  "id": "sec-exercices-modules-10",
+  "level": "2",
+  "url": "sec-exercices-modules.html#sec-exercices-modules-10",
+  "type": "Exercice",
+  "number": "2.2.6",
   "title": "Contre-exemples à la projectivité.",
   "body": " Contre-exemples à la projectivité   Montrer que l'idéal de n'est pas libre. Montrer qu'il n'est pas non plus projectif.     "
 },

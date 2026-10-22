@@ -22,6 +22,7 @@
 <style>
 @counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
 @counter-style ptx-marker-2 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
 </style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -162,104 +163,188 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Généralités sur les modules</span>
 </h1>
-<article class="exercise exercise-like" id="sec-exercices-modules-2"><h2 class="heading">
+<details id="sec-exercices-modules-2" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Rappel</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module libre.</span>
+</h2></summary>
+<article class="note remark-like knowl__content">
+<div class="para" id="sec-exercices-modules-2-2">Un module <span class="process-math">\(M\)</span> sur anneau commutatif <span class="process-math">\(A\)</span> est dit <em class="emphasis">libre</em> s’il existe une famille <span class="process-math">\((e_i)_{i\in I}\)</span> d’éléments de <span class="process-math">\(M\)</span> telle que tout élément <span class="process-math">\(m\in M\)</span> s’écrive de manière unique comme combinaison linéaire finie des <span class="process-math">\(e_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="sec-exercices-modules-2-3">De manière équivalente, <span class="process-math">\(M\)</span> est libre s’il existe un isomorphisme de <span class="process-math">\(A\)</span>-modules <span class="process-math">\(M\cong A^{(I)}\text{,}\)</span> où <span class="process-math">\(A^{(I)}\)</span> est le module des familles d’éléments de <span class="process-math">\(A\)</span> indexées par <span class="process-math">\(I\)</span> et à support fini.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Rappel 2.2.1: Module libre"><a tabindex="-1" href="#sec-exercices-modules-2" title="Copy heading and permalink for Rappel 2.2.1: Module libre" aria-label="Copy heading and permalink for Rappel 2.2.1: Module libre">🔗</a></div>
+</article></details>
+<article class="exercise exercise-like" id="sec-exercices-modules-3"><h2 class="heading">
 <span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Généraliser Cayley-Hamilton.</span>
 </h2>
-<div class="para" id="sec-exercices-modules-2-2-1">Soient <span class="process-math">\(A\)</span> un anneau commutatif, <span class="process-math">\(M\)</span> un <span class="process-math">\(A\)</span>-module de type fini et soit <span class="process-math">\(f\)</span> un endomorphisme de <span class="process-math">\(M\text{.}\)</span> On cherche à montrer qu’il existe un polynôme unitaire <span class="process-math">\(P(X)\in A[X]\)</span> tel que <span class="process-math">\(P(f)=0\)</span> dans <span class="process-math">\(\mathrm{End}_A(M)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-modules-3-2-1">Soient <span class="process-math">\(A\)</span> un anneau commutatif, <span class="process-math">\(M\)</span> un <span class="process-math">\(A\)</span>-module de type fini et soit <span class="process-math">\(f\)</span> un endomorphisme de <span class="process-math">\(M\text{.}\)</span> On cherche à montrer qu’il existe un polynôme unitaire <span class="process-math">\(P(X)\in A[X]\)</span> tel que <span class="process-math">\(P(f)=0\)</span> dans <span class="process-math">\(\mathrm{End}_A(M)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div> 
-<div class="para logical" id="sec-exercices-modules-2-2-2">
-<ol class="decimal" id="sec-exercices-modules-2-2-2-1">
-<li id="sec-exercices-modules-2-2-2-1-1">
-<div class="para" id="sec-exercices-modules-2-2-2-1-1-1">On suppose que <span class="process-math">\(M\)</span> est un <span class="process-math">\(A\)</span>-module libre et l’on note <span class="process-math">\(F\)</span> la matrice de <span class="process-math">\(f\)</span> dans l’une des bases de <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para logical" id="sec-exercices-modules-3-2-2">
+<ol class="decimal" id="sec-exercices-modules-3-2-2-1">
+<li id="sec-exercices-modules-3-2-2-1-1">
+<div class="para" id="sec-exercices-modules-3-2-2-1-1-1">On suppose que <span class="process-math">\(M\)</span> est un <span class="process-math">\(A\)</span>-module libre et l’on note <span class="process-math">\(F\)</span> la matrice de <span class="process-math">\(f\)</span> dans l’une des bases de <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sec-exercices-modules-2-2-2-1-1-2">
-<li id="sec-exercices-modules-2-2-2-1-1-2-1">
-<div class="para" id="sec-exercices-modules-2-2-2-1-1-2-1-1">On suppose que <span class="process-math">\(A=K\)</span> est un corps. Montrer que le polynôme caractéristique de <span class="process-math">\(F\)</span> annule <span class="process-math">\(f\text{.}\)</span> En déduire le résultat lorsque <span class="process-math">\(A\)</span> est un anneau intègre et <span class="process-math">\(M\)</span> est libre sur <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-1-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sec-exercices-modules-3-2-2-1-1-2">
+<li id="sec-exercices-modules-3-2-2-1-1-2-1">
+<div class="para" id="sec-exercices-modules-3-2-2-1-1-2-1-1">On suppose que <span class="process-math">\(A=K\)</span> est un corps. Montrer que le polynôme caractéristique de <span class="process-math">\(F\)</span> annule <span class="process-math">\(f\text{.}\)</span> En déduire le résultat lorsque <span class="process-math">\(A\)</span> est un anneau intègre et <span class="process-math">\(M\)</span> est libre sur <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-1-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1.a"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-1-2-1" title="Copy heading and permalink for Point 2.2.1.1.a" aria-label="Copy heading and permalink for Point 2.2.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1.a"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-1-2-1" title="Copy heading and permalink for Point 2.2.1.1.a" aria-label="Copy heading and permalink for Point 2.2.1.1.a">🔗</a></div>
 </li>
-<li id="sec-exercices-modules-2-2-2-1-1-2-2">
-<div class="para" id="sec-exercices-modules-2-2-2-1-1-2-2-1">Montrer que l’on peut toujours trouver un morphisme d’anneaux <span class="process-math">\(A'\to A\)</span> depuis un anneau intègre <span class="process-math">\(A'\)</span> dont l’image contient les coefficients de <span class="process-math">\(F\text{.}\)</span> En déduire le résultat pour tout anneau <span class="process-math">\(A\)</span> et <span class="process-math">\(M\)</span> libre sur <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-1-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="sec-exercices-modules-3-2-2-1-1-2-2">
+<div class="para" id="sec-exercices-modules-3-2-2-1-1-2-2-1">Montrer que l’on peut toujours trouver un morphisme d’anneaux <span class="process-math">\(A'\to A\)</span> depuis un anneau intègre <span class="process-math">\(A'\)</span> dont l’image contient les coefficients de <span class="process-math">\(F\text{.}\)</span> En déduire le résultat pour tout anneau <span class="process-math">\(A\)</span> et <span class="process-math">\(M\)</span> libre sur <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-1-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1.b"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-1-2-2" title="Copy heading and permalink for Point 2.2.1.1.b" aria-label="Copy heading and permalink for Point 2.2.1.1.b">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-1" title="Copy heading and permalink for Point 2.2.1.1" aria-label="Copy heading and permalink for Point 2.2.1.1">🔗</a></div>
-</li>
-<li id="sec-exercices-modules-2-2-2-1-2">
-<div class="para" id="sec-exercices-modules-2-2-2-1-2-1">On revient au cas général où <span class="process-math">\(M\)</span> est de type fini sur <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sec-exercices-modules-2-2-2-1-2-2">
-<li id="sec-exercices-modules-2-2-2-1-2-2-1">
-<div class="para" id="sec-exercices-modules-2-2-2-1-2-2-1-1">Montrer qu’il existe un morphisme surjectif <span class="process-math">\(\pi:L\to M\)</span> depuis un <span class="process-math">\(A\)</span>-module libre de rang fini <span class="process-math">\(L\)</span> ainsi qu’un endomorphisme <span class="process-math">\(g\)</span> de <span class="process-math">\(L\)</span> tel que <span class="process-math">\(\pi\circ g=f\circ \pi\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-2-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2.a"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-2-2-1" title="Copy heading and permalink for Point 2.2.1.2.a" aria-label="Copy heading and permalink for Point 2.2.1.2.a">🔗</a></div>
-</li>
-<li id="sec-exercices-modules-2-2-2-1-2-2-2">
-<div class="para" id="sec-exercices-modules-2-2-2-1-2-2-2-1">Conclure.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-2-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2.b"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-2-2-2" title="Copy heading and permalink for Point 2.2.1.2.b" aria-label="Copy heading and permalink for Point 2.2.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1.b"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-1-2-2" title="Copy heading and permalink for Point 2.2.1.1.b" aria-label="Copy heading and permalink for Point 2.2.1.1.b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2"><a tabindex="-1" href="#sec-exercices-modules-2-2-2-1-2" title="Copy heading and permalink for Point 2.2.1.2" aria-label="Copy heading and permalink for Point 2.2.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-1" title="Copy heading and permalink for Point 2.2.1.1" aria-label="Copy heading and permalink for Point 2.2.1.1">🔗</a></div>
+</li>
+<li id="sec-exercices-modules-3-2-2-1-2">
+<div class="para" id="sec-exercices-modules-3-2-2-1-2-1">On revient au cas général où <span class="process-math">\(M\)</span> est de type fini sur <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sec-exercices-modules-3-2-2-1-2-2">
+<li id="sec-exercices-modules-3-2-2-1-2-2-1">
+<div class="para" id="sec-exercices-modules-3-2-2-1-2-2-1-1">Montrer qu’il existe un morphisme surjectif <span class="process-math">\(\pi:L\to M\)</span> depuis un <span class="process-math">\(A\)</span>-module libre de rang fini <span class="process-math">\(L\)</span> ainsi qu’un endomorphisme <span class="process-math">\(g\)</span> de <span class="process-math">\(L\)</span> tel que <span class="process-math">\(\pi\circ g=f\circ \pi\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-2-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2.a"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-2-2-1" title="Copy heading and permalink for Point 2.2.1.2.a" aria-label="Copy heading and permalink for Point 2.2.1.2.a">🔗</a></div>
+</li>
+<li id="sec-exercices-modules-3-2-2-1-2-2-2">
+<div class="para" id="sec-exercices-modules-3-2-2-1-2-2-2-1">Conclure.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-2-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2.b"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-2-2-2" title="Copy heading and permalink for Point 2.2.1.2.b" aria-label="Copy heading and permalink for Point 2.2.1.2.b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-2-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2"><a tabindex="-1" href="#sec-exercices-modules-3-2-2-1-2" title="Copy heading and permalink for Point 2.2.1.2" aria-label="Copy heading and permalink for Point 2.2.1.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-exercices-modules-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-exercices-modules-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.1.1"><a tabindex="-1" href="#sec-exercices-modules-2-3" title="Copy heading and permalink for Solution 2.2.1.1" aria-label="Copy heading and permalink for Solution 2.2.1.1">🔗</a></div>
+<ol class="decimal" id="sec-exercices-modules-3-3-1">
+<li id="sec-exercices-modules-3-3-1-1">
+<div class="para" id="p-derived-sec-exercices-modules-3-3-1-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-0;" id="sec-exercices-modules-3-3-1-1-1">
+<li id="sec-exercices-modules-3-3-1-1-1-1">
+<div class="para" id="sec-exercices-modules-3-3-1-1-1-1-1">C’est le théorème de Cayley-Hamilton : soit <span class="process-math">\(\chi(X)=\det(X\mathrm{Id}-F)\)</span> le polynôme caractéristique de <span class="process-math">\(F\text{.}\)</span> On choisit une extension <span class="process-math">\(K'\)</span> de <span class="process-math">\(K\)</span> pour laquelle <span class="process-math">\(F\)</span> est trigonalisable : il existe <span class="process-math">\(P\in \mathrm{GL}_n(K')\)</span> telle que <span class="process-math">\(T:=P^{-1}FP\)</span> est triangulaire supérieure. <span class="process-math">\(\chi(X)\)</span> coincide au polynôme charactéristique de <span class="process-math">\(T\)</span> et correspond au produit des polynômes <span class="process-math">\((X-t_{ii})\)</span> où <span class="process-math">\(t_{ii}\)</span> sont les coefficients diagonaux de <span class="process-math">\(T\text{.}\)</span> On a donc <span class="process-math">\(\chi(T)=0\)</span> et donc <span class="process-math">\(\chi(F)=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="sec-exercices-modules-3-3-1-1-1-1-2">Si <span class="process-math">\(A\)</span> est un anneau intègre et <span class="process-math">\(M\)</span> est isomorphe au <span class="process-math">\(A\)</span>-module libre <span class="process-math">\(A^r\text{,}\)</span> on peut considérer son corps des fractions <span class="process-math">\(K=\mathrm{Frac}(A)\)</span> et appliquer le résultat précédent à <span class="process-math">\(K^r\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1-1-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1.a"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1-1-1" title="Copy heading and permalink for Point 2.2.1.1.a" aria-label="Copy heading and permalink for Point 2.2.1.1.a">🔗</a></div>
+</li>
+<li id="sec-exercices-modules-3-3-1-1-1-2">
+<div class="para" id="sec-exercices-modules-3-3-1-1-1-2-1">On note <span class="process-math">\((f_{ij})_{i,j}\)</span> les coefficients de <span class="process-math">\(F\text{.}\)</span> On considère l’anneau des polynômes <span class="process-math">\(A'=\mathbb{Z}[X_{ij}~|~i,j]\)</span> en <span class="process-math">\(r\times r\)</span> variables et le morphisme d’anneaux <span class="process-math">\(\varphi:A'\to A\)</span> défini par <span class="process-math">\(X_{ij}\mapsto f_{ij}\text{.}\)</span> On étend immédiatement <span class="process-math">\(\varphi\)</span> en des morphismes d’anneaux <span class="process-math">\(\mathrm{Mat}_r(A')\to \mathrm{Mat}_r(A)\)</span> et <span class="process-math">\(A'[X]\to A[X]\)</span> coefficients par coefficients. On applique le résultat précédent à l’endomorphisme <span class="process-math">\(F'\)</span>de <span class="process-math">\(A'^r\text{,}\)</span> et on vérifie que si <span class="process-math">\(P(X)\in A'[X]\)</span> est annulateur de <span class="process-math">\(F'\text{,}\)</span> alors <span class="process-math">\(\varphi(P)(X)\in A[X]\)</span> est annulateur de <span class="process-math">\(F\)</span> et donc de <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="sec-exercices-modules-3-3-1-1-1-2-2">Après le choix d’une base (où de manière équivalente d’un isomorphisme <span class="process-math">\(M\cong A^r\)</span>) faisant correspondre <span class="process-math">\(f\)</span> à <span class="process-math">\(F\text{,}\)</span> on peut étendre <span class="process-math">\(\varphi\)</span> en un morphisme de groupes <span class="process-math">\((A')^r\to M\)</span> que l’on note toujours <span class="process-math">\(\varphi\text{.}\)</span> La matrice <span class="process-math">\(F'\)</span> correspond à <span class="process-math">\(F\)</span> via <span class="process-math">\(\varphi\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1-1-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1.b"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1-1-2" title="Copy heading and permalink for Point 2.2.1.1.b" aria-label="Copy heading and permalink for Point 2.2.1.1.b">🔗</a></div>
+</li>
+</ol>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.1"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-1" title="Copy heading and permalink for Point 2.2.1.1" aria-label="Copy heading and permalink for Point 2.2.1.1">🔗</a></div>
+</li>
+<li id="sec-exercices-modules-3-3-1-2">
+<div class="para" id="p-derived-sec-exercices-modules-3-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-0;" id="sec-exercices-modules-3-3-1-2-1">
+<li id="sec-exercices-modules-3-3-1-2-1-1">
+<div class="para" id="sec-exercices-modules-3-3-1-2-1-1-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2.a"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-2-1-1" title="Copy heading and permalink for Point 2.2.1.2.a" aria-label="Copy heading and permalink for Point 2.2.1.2.a">🔗</a></div>
+</li>
+</ol>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.1.2"><a tabindex="-1" href="#sec-exercices-modules-3-3-1-2" title="Copy heading and permalink for Point 2.2.1.2" aria-label="Copy heading and permalink for Point 2.2.1.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.1.1"><a tabindex="-1" href="#sec-exercices-modules-3-3" title="Copy heading and permalink for Solution 2.2.1.1" aria-label="Copy heading and permalink for Solution 2.2.1.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.1: Généraliser Cayley-Hamilton"><a tabindex="-1" href="#sec-exercices-modules-2" title="Copy heading and permalink for Exercice 2.2.1: Généraliser Cayley-Hamilton" aria-label="Copy heading and permalink for Exercice 2.2.1: Généraliser Cayley-Hamilton">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.1: Généraliser Cayley-Hamilton"><a tabindex="-1" href="#sec-exercices-modules-3" title="Copy heading and permalink for Exercice 2.2.1: Généraliser Cayley-Hamilton" aria-label="Copy heading and permalink for Exercice 2.2.1: Généraliser Cayley-Hamilton">🔗</a></div>
 </article>
-<details id="sec-exercices-modules-3" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Rappel</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module simple.</span>
+<details id="sec-exercices-modules-4" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Rappel</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module simple.</span>
 </h2></summary>
 <article class="note remark-like knowl__content">
-<div class="para" id="sec-exercices-modules-3-2">Soit <span class="process-math">\(A\)</span> un anneau commutatif. Un <span class="process-math">\(A\)</span>-module est dit <em class="emphasis">simple</em> s’il est non nul et si ses seuls sous <span class="process-math">\(A\)</span>-modules sont <span class="process-math">\((0)\)</span> et <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-3-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-modules-4-2">Soit <span class="process-math">\(A\)</span> un anneau commutatif. Un <span class="process-math">\(A\)</span>-module est dit <em class="emphasis">simple</em> s’il est non nul et si ses seuls sous <span class="process-math">\(A\)</span>-modules sont <span class="process-math">\((0)\)</span> et <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-4-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Rappel 2.2.1: Module simple"><a tabindex="-1" href="#sec-exercices-modules-3" title="Copy heading and permalink for Rappel 2.2.1: Module simple" aria-label="Copy heading and permalink for Rappel 2.2.1: Module simple">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Rappel 2.2.2: Module simple"><a tabindex="-1" href="#sec-exercices-modules-4" title="Copy heading and permalink for Rappel 2.2.2: Module simple" aria-label="Copy heading and permalink for Rappel 2.2.2: Module simple">🔗</a></div>
 </article></details>
-<article class="exercise exercise-like" id="sec-exercices-modules-4"><h2 class="heading">
+<article class="exercise exercise-like" id="sec-exercices-modules-5"><h2 class="heading">
 <span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Propriétés des modules simples.</span>
 </h2>
-<div class="para logical" id="sec-exercices-modules-4-2-1">
-<ol class="decimal" id="sec-exercices-modules-4-2-1-1">
-<li id="sec-exercices-modules-4-2-1-1-1">
-<div class="para" id="sec-exercices-modules-4-2-1-1-1-1">Montrer que <span class="process-math">\(A\)</span> (en tant que module sur lui-même) est simple si et seulement si <span class="process-math">\(A\)</span> est un corps.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-4-2-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para logical" id="sec-exercices-modules-5-2-1">
+<ol class="decimal" id="sec-exercices-modules-5-2-1-1">
+<li id="sec-exercices-modules-5-2-1-1-1">
+<div class="para" id="sec-exercices-modules-5-2-1-1-1-1">Montrer que <span class="process-math">\(A\)</span> (en tant que module sur lui-même) est simple si et seulement si <span class="process-math">\(A\)</span> est un corps.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-2-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.1"><a tabindex="-1" href="#sec-exercices-modules-4-2-1-1-1" title="Copy heading and permalink for Point 2.2.2.1" aria-label="Copy heading and permalink for Point 2.2.2.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.1"><a tabindex="-1" href="#sec-exercices-modules-5-2-1-1-1" title="Copy heading and permalink for Point 2.2.2.1" aria-label="Copy heading and permalink for Point 2.2.2.1">🔗</a></div>
 </li>
-<li id="sec-exercices-modules-4-2-1-1-2">
-<div class="para" id="sec-exercices-modules-4-2-1-1-2-1">Soit <span class="process-math">\(f:M_1\to M_2\)</span> un morphisme de <span class="process-math">\(A\)</span>-modules simples. Montrer que <span class="process-math">\(f\)</span> est soit un isomorphisme, soit le morphisme nul.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-4-2-1-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="sec-exercices-modules-5-2-1-1-2">
+<div class="para" id="sec-exercices-modules-5-2-1-1-2-1">Soit <span class="process-math">\(f:M_1\to M_2\)</span> un morphisme de <span class="process-math">\(A\)</span>-modules simples. Montrer que <span class="process-math">\(f\)</span> est soit un isomorphisme, soit le morphisme nul.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-2-1-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.2"><a tabindex="-1" href="#sec-exercices-modules-4-2-1-1-2" title="Copy heading and permalink for Point 2.2.2.2" aria-label="Copy heading and permalink for Point 2.2.2.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.2"><a tabindex="-1" href="#sec-exercices-modules-5-2-1-1-2" title="Copy heading and permalink for Point 2.2.2.2" aria-label="Copy heading and permalink for Point 2.2.2.2">🔗</a></div>
 </li>
-<li id="sec-exercices-modules-4-2-1-1-3">
-<div class="para" id="sec-exercices-modules-4-2-1-1-3-1">Montrer que tout module simple est isomorphe à <span class="process-math">\(A/\mathfrak{m}\text{,}\)</span> où <span class="process-math">\(\mathfrak{m}\)</span> est un idéal maximal de <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-4-2-1-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="sec-exercices-modules-5-2-1-1-3">
+<div class="para" id="sec-exercices-modules-5-2-1-1-3-1">Montrer que tout module simple est isomorphe à <span class="process-math">\(A/\mathfrak{m}\text{,}\)</span> où <span class="process-math">\(\mathfrak{m}\)</span> est un idéal maximal de <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-2-1-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.3"><a tabindex="-1" href="#sec-exercices-modules-4-2-1-1-3" title="Copy heading and permalink for Point 2.2.2.3" aria-label="Copy heading and permalink for Point 2.2.2.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.3"><a tabindex="-1" href="#sec-exercices-modules-5-2-1-1-3" title="Copy heading and permalink for Point 2.2.2.3" aria-label="Copy heading and permalink for Point 2.2.2.3">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-4-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-exercices-modules-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-exercices-modules-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.2.1"><a tabindex="-1" href="#sec-exercices-modules-4-3" title="Copy heading and permalink for Solution 2.2.2.1" aria-label="Copy heading and permalink for Solution 2.2.2.1">🔗</a></div>
+<ol class="decimal" id="sec-exercices-modules-5-3-1">
+<li id="sec-exercices-modules-5-3-1-1">
+<div class="para" id="sec-exercices-modules-5-3-1-1-1">Rappelons que les sous-modules d’un anneau <span class="process-math">\(A\)</span> sont exactement ses idéaux. On sait de plus que <span class="process-math">\(A\)</span> est un corps si et seulement si ses seuls idéaux sont <span class="process-math">\((0)\)</span> et <span class="process-math">\(A\text{.}\)</span> Donc <span class="process-math">\(A\)</span> est simple si et seulement si <span class="process-math">\(A\)</span> est un corps.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.1"><a tabindex="-1" href="#sec-exercices-modules-5-3-1-1" title="Copy heading and permalink for Point 2.2.2.1" aria-label="Copy heading and permalink for Point 2.2.2.1">🔗</a></div>
+</li>
+<li id="sec-exercices-modules-5-3-1-2">
+<div class="para" id="sec-exercices-modules-5-3-1-2-1">Supposons <span class="process-math">\(f\)</span> non nul. Alors <span class="process-math">\(\mathrm{ker}(f)\)</span> est un sous-module strict de <span class="process-math">\(M_1\text{.}\)</span> Comme <span class="process-math">\(M_1\)</span> est simple, on a <span class="process-math">\(\mathrm{ker}(f)=(0)\text{.}\)</span> En particulier, <span class="process-math">\(f\)</span> est injectif. Procédons de même pour <span class="process-math">\(\mathrm{im}(f)=f(M_1)\text{.}\)</span> C’est un sous-module non nul de <span class="process-math">\(M_2\text{,}\)</span> et donc par simplicité de <span class="process-math">\(M_2\text{,}\)</span> on a <span class="process-math">\(\mathrm{im}(f)=M_2\text{.}\)</span> En particulier, <span class="process-math">\(f\)</span> est surjectif, et <span class="process-math">\(f\)</span> est un isomorphisme.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.2"><a tabindex="-1" href="#sec-exercices-modules-5-3-1-2" title="Copy heading and permalink for Point 2.2.2.2" aria-label="Copy heading and permalink for Point 2.2.2.2">🔗</a></div>
+</li>
+<li id="sec-exercices-modules-5-3-1-3">
+<div class="para logical" id="sec-exercices-modules-5-3-1-3-1">
+<div class="para">Soit <span class="process-math">\(M\)</span> un module simple. Comme <span class="process-math">\(M\neq (0)\text{,}\)</span> il existe un élément non nul <span class="process-math">\(m\in M\text{.}\)</span> Considérons l’idéal <span class="process-math">\(\mathfrak{a}=\{a\in A~|~am=0\}\text{.}\)</span> On considère l’application</div>
+<div class="displaymath process-math" id="sec-exercices-modules-5-3-1-3-1-5">
+\begin{equation*}
+f:A \to M, a \mapsto am.
+\end{equation*}
+</div>
+<div class="para">
+<span class="process-math">\(f\)</span> est nécessairement surjective car <span class="process-math">\(M\)</span> est simple. Son noyau est <span class="process-math">\(\mathfrak{a}\)</span> et donc <span class="process-math">\(f\)</span> induit un isomorphisme <span class="process-math">\(A/\mathfrak{a} \cong M\text{.}\)</span> Comme <span class="process-math">\(A/\mathfrak{a}\)</span> est un module simple, c’est un corps, donc <span class="process-math">\(\mathfrak{a}\)</span> est un idéal maximal de <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-3-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.2.3"><a tabindex="-1" href="#sec-exercices-modules-5-3-1-3" title="Copy heading and permalink for Point 2.2.2.3" aria-label="Copy heading and permalink for Point 2.2.2.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.2.1"><a tabindex="-1" href="#sec-exercices-modules-5-3" title="Copy heading and permalink for Solution 2.2.2.1" aria-label="Copy heading and permalink for Solution 2.2.2.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.2: Propriétés des modules simples"><a tabindex="-1" href="#sec-exercices-modules-4" title="Copy heading and permalink for Exercice 2.2.2: Propriétés des modules simples" aria-label="Copy heading and permalink for Exercice 2.2.2: Propriétés des modules simples">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.2: Propriétés des modules simples"><a tabindex="-1" href="#sec-exercices-modules-5" title="Copy heading and permalink for Exercice 2.2.2: Propriétés des modules simples" aria-label="Copy heading and permalink for Exercice 2.2.2: Propriétés des modules simples">🔗</a></div>
 </article>
-<details id="sec-exercices-modules-5" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Rappel</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module projectif.</span>
+<article class="exercise exercise-like" id="sec-exercices-modules-6"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tout module sans torsion est inclus dans un module libre.</span>
+</h2>
+<div class="para" id="sec-exercices-modules-6-2-1">Soit <span class="process-math">\(A\)</span> un anneau intègre et <span class="process-math">\(M\)</span> un <span class="process-math">\(A\)</span>-module de type fini sans torsion. Montrer qu’il existe un <span class="process-math">\(A\)</span>-module libre <span class="process-math">\(L\)</span> et un morphisme injectif <span class="process-math">\(M\to L\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-6-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-exercices-modules-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.3.1"><a tabindex="-1" href="#sec-exercices-modules-6-3" title="Copy heading and permalink for Solution 2.2.3.1" aria-label="Copy heading and permalink for Solution 2.2.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.3: Tout module sans torsion est inclus dans un module libre"><a tabindex="-1" href="#sec-exercices-modules-6" title="Copy heading and permalink for Exercice 2.2.3: Tout module sans torsion est inclus dans un module libre" aria-label="Copy heading and permalink for Exercice 2.2.3: Tout module sans torsion est inclus dans un module libre">🔗</a></div>
+</article>
+<details id="sec-exercices-modules-7" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Rappel</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module projectif.</span>
 </h2></summary>
 <article class="note remark-like knowl__content">
-<div class="para logical" id="sec-exercices-modules-5-2">
-<div class="para">Soit <span class="process-math">\(A\)</span> un anneau commutatif. Un <span class="process-math">\(A\)</span>-module est dit <em class="emphasis">projectif</em> si l’un des points suivants est vérifié :</div>
-<ol class="lower-roman" style="list-style: ptx-marker-2;" id="sec-exercices-modules-5-2-4">
+<div class="para logical" id="sec-exercices-modules-7-2">
+<div class="para">Soit <span class="process-math">\(A\)</span> un anneau commutatif. Un <span class="process-math">\(A\)</span>-module <span class="process-math">\(P\)</span>est dit <em class="emphasis">projectif</em> si l’un des points suivants est vérifié :</div>
+<ol class="lower-roman" style="list-style: ptx-marker-2;" id="sec-exercices-modules-7-2-5">
 <li id="note-projectif-1">
 <div class="para" id="note-projectif-1-1">Pour tout morphisme surjectif <span class="process-math">\(s:N\to M\)</span> et tout morphisme <span class="process-math">\(f:P\to M\text{,}\)</span> il existe un morphisme <span class="process-math">\(h:P\to N\)</span> tel que <span class="process-math">\(s\circ h=f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#note-projectif-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
@@ -277,71 +362,71 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Point iii"><a tabindex="-1" href="#note-projectif-3" title="Copy heading and permalink for Point iii" aria-label="Copy heading and permalink for Point iii">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-5-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-7-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Rappel 2.2.2: Module projectif"><a tabindex="-1" href="#sec-exercices-modules-5" title="Copy heading and permalink for Rappel 2.2.2: Module projectif" aria-label="Copy heading and permalink for Rappel 2.2.2: Module projectif">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Rappel 2.2.3: Module projectif"><a tabindex="-1" href="#sec-exercices-modules-7" title="Copy heading and permalink for Rappel 2.2.3: Module projectif" aria-label="Copy heading and permalink for Rappel 2.2.3: Module projectif">🔗</a></div>
 </article></details>
-<article class="exercise exercise-like" id="sec-exercices-modules-6"><h2 class="heading">
-<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Propriétés des modules projectifs.</span>
+<article class="exercise exercise-like" id="sec-exercices-modules-8"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Propriétés des modules projectifs.</span>
 </h2>
-<div class="para" id="sec-exercices-modules-6-2-1">Montrer que les points <a href="sec-exercices-modules.html#note-projectif-1" class="xref" data-knowl="./knowl/xref/note-projectif-1.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point i">Point i</a>, <a href="sec-exercices-modules.html#note-projectif-2" class="xref" data-knowl="./knowl/xref/note-projectif-2.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point ii">Point ii</a> et <a href="sec-exercices-modules.html#note-projectif-3" class="xref" data-knowl="./knowl/xref/note-projectif-3.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point iii">Point iii</a> sont équivalents.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-6-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-modules-8-2-1">Montrer que les points <a href="sec-exercices-modules.html#note-projectif-1" class="xref" data-knowl="./knowl/xref/note-projectif-1.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point i">Point i</a>, <a href="sec-exercices-modules.html#note-projectif-2" class="xref" data-knowl="./knowl/xref/note-projectif-2.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point ii">Point ii</a> et <a href="sec-exercices-modules.html#note-projectif-3" class="xref" data-knowl="./knowl/xref/note-projectif-3.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point iii">Point iii</a> sont équivalents.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-8-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-exercices-modules-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-exercices-modules-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.3.1"><a tabindex="-1" href="#sec-exercices-modules-6-3" title="Copy heading and permalink for Solution 2.2.3.1" aria-label="Copy heading and permalink for Solution 2.2.3.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.4.1"><a tabindex="-1" href="#sec-exercices-modules-8-3" title="Copy heading and permalink for Solution 2.2.4.1" aria-label="Copy heading and permalink for Solution 2.2.4.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.3: Propriétés des modules projectifs"><a tabindex="-1" href="#sec-exercices-modules-6" title="Copy heading and permalink for Exercice 2.2.3: Propriétés des modules projectifs" aria-label="Copy heading and permalink for Exercice 2.2.3: Propriétés des modules projectifs">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.4: Propriétés des modules projectifs"><a tabindex="-1" href="#sec-exercices-modules-8" title="Copy heading and permalink for Exercice 2.2.4: Propriétés des modules projectifs" aria-label="Copy heading and permalink for Exercice 2.2.4: Propriétés des modules projectifs">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sec-exercices-modules-7"><h2 class="heading">
-<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Un module projectif qui n’est pas libre.</span>
+<article class="exercise exercise-like" id="sec-exercices-modules-9"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Un module projectif qui n’est pas libre.</span>
 </h2>
-<div class="para" id="sec-exercices-modules-7-2-1">On considère l’idéal <span class="process-math">\(I=(2,1+i\sqrt{5})\)</span> de <span class="process-math">\(A=\mathbb{Z}[i\sqrt{5}]\text{.}\)</span> Notre but est de montrer que <span class="process-math">\(I\)</span> n’est pas libre mais qu’il est projectif.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-7-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-modules-9-2-1">On considère l’idéal <span class="process-math">\(I=(2,1+i\sqrt{5})\)</span> de <span class="process-math">\(A=\mathbb{Z}[i\sqrt{5}]\text{.}\)</span> Notre but est de montrer que <span class="process-math">\(I\)</span> n’est pas libre mais qu’il est projectif.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-9-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div> 
-<div class="para logical" id="sec-exercices-modules-7-2-2">
-<ol class="decimal" id="sec-exercices-modules-7-2-2-1">
-<li id="sec-exercices-modules-7-2-2-1-1">
-<div class="para" id="sec-exercices-modules-7-2-2-1-1-1">Montrer que <span class="process-math">\(I\)</span> est un idéal maximal non principal. En déduire que <span class="process-math">\(I\)</span> n’est pas libre en tant que <span class="process-math">\(A\)</span>-module.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-7-2-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para logical" id="sec-exercices-modules-9-2-2">
+<ol class="decimal" id="sec-exercices-modules-9-2-2-1">
+<li id="sec-exercices-modules-9-2-2-1-1">
+<div class="para" id="sec-exercices-modules-9-2-2-1-1-1">Montrer que <span class="process-math">\(I\)</span> est un idéal maximal non principal. En déduire que <span class="process-math">\(I\)</span> n’est pas libre en tant que <span class="process-math">\(A\)</span>-module.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-9-2-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.4.1"><a tabindex="-1" href="#sec-exercices-modules-7-2-2-1-1" title="Copy heading and permalink for Point 2.2.4.1" aria-label="Copy heading and permalink for Point 2.2.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.5.1"><a tabindex="-1" href="#sec-exercices-modules-9-2-2-1-1" title="Copy heading and permalink for Point 2.2.5.1" aria-label="Copy heading and permalink for Point 2.2.5.1">🔗</a></div>
 </li>
-<li id="sec-exercices-modules-7-2-2-1-2">
-<div class="para logical" id="sec-exercices-modules-7-2-2-1-2-1">
+<li id="sec-exercices-modules-9-2-2-1-2">
+<div class="para logical" id="sec-exercices-modules-9-2-2-1-2-1">
 <div class="para">En considérant les morphismes <span class="process-math">\(A^2\to I\text{,}\)</span> <span class="process-math">\((u,v)\mapsto 2u+(1+i\sqrt{5})v\text{,}\)</span> et</div>
-<div class="displaymath process-math" id="sec-exercices-modules-7-2-2-1-2-1-3">
+<div class="displaymath process-math" id="sec-exercices-modules-9-2-2-1-2-1-3">
 \begin{equation*}
 I\longrightarrow A^2,~a\longmapsto \left(-a,\frac{1-i\sqrt{5}}{2}a\right),
 \end{equation*}
 </div>
 <div class="para">montrer que <span class="process-math">\(I\)</span> est projectif.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-7-2-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-9-2-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.4.2"><a tabindex="-1" href="#sec-exercices-modules-7-2-2-1-2" title="Copy heading and permalink for Point 2.2.4.2" aria-label="Copy heading and permalink for Point 2.2.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.5.2"><a tabindex="-1" href="#sec-exercices-modules-9-2-2-1-2" title="Copy heading and permalink for Point 2.2.5.2" aria-label="Copy heading and permalink for Point 2.2.5.2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-7-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-9-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-exercices-modules-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-exercices-modules-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.4.1"><a tabindex="-1" href="#sec-exercices-modules-7-3" title="Copy heading and permalink for Solution 2.2.4.1" aria-label="Copy heading and permalink for Solution 2.2.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.5.1"><a tabindex="-1" href="#sec-exercices-modules-9-3" title="Copy heading and permalink for Solution 2.2.5.1" aria-label="Copy heading and permalink for Solution 2.2.5.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.4: Un module projectif qui n’est pas libre"><a tabindex="-1" href="#sec-exercices-modules-7" title="Copy heading and permalink for Exercice 2.2.4: Un module projectif qui n’est pas libre" aria-label="Copy heading and permalink for Exercice 2.2.4: Un module projectif qui n’est pas libre">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.5: Un module projectif qui n’est pas libre"><a tabindex="-1" href="#sec-exercices-modules-9" title="Copy heading and permalink for Exercice 2.2.5: Un module projectif qui n’est pas libre" aria-label="Copy heading and permalink for Exercice 2.2.5: Un module projectif qui n’est pas libre">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sec-exercices-modules-8"><h2 class="heading">
-<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Contre-exemples à la projectivité.</span>
+<article class="exercise exercise-like" id="sec-exercices-modules-10"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Contre-exemples à la projectivité.</span>
 </h2>
-<div class="para" id="sec-exercices-modules-8-2-1">Montrer que l’idéal <span class="process-math">\((X,Y)\)</span> de <span class="process-math">\(\mathbb{C}[X,Y]\)</span> n’est pas libre. Montrer qu’il n’est pas non plus projectif.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-8-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-modules-10-2-1">Montrer que l’idéal <span class="process-math">\((X,Y)\)</span> de <span class="process-math">\(\mathbb{C}[X,Y]\)</span> n’est pas libre. Montrer qu’il n’est pas non plus projectif.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-10-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-exercices-modules-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-exercices-modules-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.5.1"><a tabindex="-1" href="#sec-exercices-modules-8-3" title="Copy heading and permalink for Solution 2.2.5.1" aria-label="Copy heading and permalink for Solution 2.2.5.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.6.1"><a tabindex="-1" href="#sec-exercices-modules-10-3" title="Copy heading and permalink for Solution 2.2.6.1" aria-label="Copy heading and permalink for Solution 2.2.6.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.5: Contre-exemples à la projectivité"><a tabindex="-1" href="#sec-exercices-modules-8" title="Copy heading and permalink for Exercice 2.2.5: Contre-exemples à la projectivité" aria-label="Copy heading and permalink for Exercice 2.2.5: Contre-exemples à la projectivité">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.2.6: Contre-exemples à la projectivité"><a tabindex="-1" href="#sec-exercices-modules-10" title="Copy heading and permalink for Exercice 2.2.6: Contre-exemples à la projectivité" aria-label="Copy heading and permalink for Exercice 2.2.6: Contre-exemples à la projectivité">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 2.2: Généralités sur les modules"><a tabindex="-1" href="#sec-exercices-modules" title="Copy heading and permalink for Section 2.2: Généralités sur les modules" aria-label="Copy heading and permalink for Section 2.2: Généralités sur les modules">🔗</a></div>
 </section>
 </div>
