@@ -3,6 +3,15 @@
 <section xml:id="sec-exercices-modules">
     <title>Généralités sur les modules</title>
 
+    <note>
+        <title>Module libre</title>
+        <p>
+            Un module <m>M</m> sur anneau commutatif <m>A</m> est dit <em>libre</em> s'il existe une famille <m>(e_i)_{i\in I}</m> d'éléments de <m>M</m> telle que tout élément <m>m\in M</m> s'écrive de manière unique comme combinaison linéaire finie des <m>e_i</m>. 
+        </p>
+        <p>
+            De manière équivalente, <m>M</m> est libre s'il existe un isomorphisme de <m>A</m>-modules <m>M\cong A^{(I)}</m>, où <m>A^{(I)}</m> est le module des familles d'éléments de <m>A</m> indexées par <m>I</m> et à support fini.
+        </p>
+    </note>
 
     <exercise>
         <title>Généraliser Cayley-Hamilton</title>
@@ -48,6 +57,37 @@
             </ol>
         </statement>
         <solution>
+            <ol>
+                <li>
+                    <ol>
+                        <li>
+                            <p>
+                                C'est le théorème de Cayley-Hamilton : soit <m>\chi(X)=\det(X\mathrm{Id}-F)</m> le polynôme caractéristique de <m>F</m>. On choisit une extension <m>K'</m> de <m>K</m> pour laquelle <m>F</m> est trigonalisable : il existe <m>P\in \mathrm{GL}_n(K')</m> telle que <m>T:=P^{-1}FP</m> est triangulaire supérieure. <m>\chi(X)</m> coincide au polynôme charactéristique de <m>T</m> et correspond au produit des polynômes <m>(X-t_{ii})</m> où <m>t_{ii}</m> sont les coefficients diagonaux de <m>T</m>. On a donc <m>\chi(T)=0</m> et donc <m>\chi(F)=0</m>.
+                            </p>
+                            <p>
+                                Si <m>A</m> est un anneau intègre et <m>M</m> est isomorphe au <m>A</m>-module libre <m>A^r</m>, on peut considérer son corps des fractions <m>K=\mathrm{Frac}(A)</m> et appliquer le résultat précédent à <m>K^r</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                On note <m>(f_{ij})_{i,j}</m> les coefficients de <m>F</m>. On considère l'anneau des polynômes <m>A'=\mathbb{Z}[X_{ij}~|~i,j]</m> en <m>r\times r</m> variables et le morphisme d'anneaux <m>\varphi:A'\to A</m> défini par <m>X_{ij}\mapsto f_{ij}</m>. On étend immédiatement <m>\varphi</m> en des morphismes d'anneaux <m>\mathrm{Mat}_r(A')\to \mathrm{Mat}_r(A)</m> et <m>A'[X]\to A[X]</m> coefficients par coefficients. On applique le résultat précédent à l'endomorphisme <m>F'</m>de <m>A'^r</m>, et on vérifie que si <m>P(X)\in A'[X]</m> est annulateur de <m>F'</m>, alors <m>\varphi(P)(X)\in A[X]</m> est annulateur de <m>F</m> et donc de <m>f</m>.
+                            </p>
+                            <p>
+                                Après le choix d'une base (où de manière équivalente d'un isomorphisme <m>M\cong A^r</m>) faisant correspondre <m>f</m> à <m>F</m>, on peut étendre <m>\varphi</m> en un morphisme de groupes <m>(A')^r\to M</m> que l'on note toujours <m>\varphi</m>. La matrice <m>F'</m> correspond à <m>F</m> via <m>\varphi</m>. 
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li>
+                            <p>
+                            
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
         </solution>
     </exercise>
     
@@ -80,8 +120,7 @@
             </ol>
         </statement>
         <solution>
-        <!--
-            <p>
+            <ol>
                 <li>
                     <p>
                         Rappelons que les sous-modules d'un anneau <m>A</m> sont exactement ses idéaux. On sait de plus que <m>A</m> est un corps si et seulement si ses seuls idéaux sont <m>(0)</m> et <m>A</m>. Donc <m>A</m> est simple si et seulement si <m>A</m> est un corps.
@@ -102,14 +141,29 @@
                     </p>
                 </li>
             </ol>
-        -->
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Tout module sans torsion est inclus dans un module libre</title>
+        <statement>
+            <p>
+                Soit <m>A</m> un anneau intègre et <m>M</m> un <m>A</m>-module de type fini sans torsion. Montrer qu'il existe un <m>A</m>-module libre <m>L</m> et un morphisme injectif <m>M\to L</m>.
+            </p>
+        </statement>
+        <solution>
+            <!--
+            <p>
+                Voir le lemme 1.2 dans https://kconrad.math.uconn.edu/blurbs/linmultialg/modulesoverPID.pdf
+            </p>
+            -->
         </solution>
     </exercise>
 
     <note>
         <title>Module projectif</title>
         <p>
-        Soit <m>A</m> un anneau commutatif. Un <m>A</m>-module est dit <em>projectif</em> si l'un des points suivants est vérifié :
+        Soit <m>A</m> un anneau commutatif. Un <m>A</m>-module <m>P</m>est dit <em>projectif</em> si l'un des points suivants est vérifié :
         <ol marker="i">
             <li xml:id="note-projectif-1">
                 <p>
@@ -165,6 +219,16 @@
             </ol>
         </statement>
         <solution>
+            <ol>
+                <li>
+                    <p>
+                        Pour montrer que <m>I</m> est maximal, on peut montrer que <m>A/I\cong \mathbb{Z}/2\mathbb{Z}</m>. En effet, on a <m>A/I\cong \mathbb{Z}[X]/(X^2+5,2,X-1)\cong \mathbb{Z}[X]/(2,X-1)\cong \mathbb{Z}_2</m>. Donc <m>I</m> est maximal. Pour montrer que <m>I</m> n'est pas principal, on peut raisonner par l'absurde : supposons qu'il existe <m>a\in A</m> tel que <m>I=(a)</m>. Alors <m>a</m> divise <m>2</m> et <m>1+i\sqrt{5}</m>. Sa norme <m>N(a)</m> divise alors <m>N(2)=4</m> et <m>N(1+i\sqrt{5})=6</m>; il divise donc leur pgcd qui vaut <m>2</m>. Mais il n'existe pas d'élément de <m>A</m> de norme <m>2</m> (l'équation <m>a^2+5b^2=2</m> force <m>b=0</m> et donc que <m>2</m> soit un carré). La seule possibilité est que <m>a</m> soit un élément de norme <m>1</m>, donc une unité, ce qui est impossible car <m>I\neq A</m>. 
+                    </p>
+                    <p>
+                        Comme <m>I</m> n'est pas principal, il n'est pas libre en tant que <m>A</m>-module.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </exercise>
 
@@ -176,6 +240,22 @@
             </p>
         </statement>
         <solution>
+            <p>
+                Il suffit de montrer qu'il n'est pas projectif. On considère la surjection <m>\mathbb{C}[X,Y]^2\to (X,Y)</m> donnée par <m>(P,Q)\mapsto XP+YQ</m>. Si <m>(X,Y)</m> était projectif, il existerait un morphisme <m>s:(X,Y)\to \mathbb{C}[X,Y]^2</m> qui serait section de la surjection précédente. On note <m>s(X)=(a_X,b_X)</m> et <m>s(Y)=(a_Y,b_Y)</m>. On a alors la relation
+            </p>
+            <md>
+                0=s(XY-YX)=Xs(Y)-Ys(X)=Ys(X)-Xs(Y).
+            </md>
+            <p>
+                On obtient les relations suivantes en comparant les coordonnées:
+            </p>
+            <md>
+            <mrow> Xa_Y-Ya_X=0, & Xb_Y-Yb_X=0, </mrow>
+            <mrow> X=f(s(X))=Xa_X+Yb_X, & Y=f(s(Y))=Xa_Y+Yb_Y. </mrow>
+            </md>
+            <p>
+                On obtient <m>X=Xa_X+Yb_X=X(a_X+b_Y)</m> et <m>Y=Xa_Y+Yb_Y=Y(a_Y+b_X)</m>. Comme <m>\mathbb{C}[X,Y]</m> est intègre, on en déduit que <m>a_X+b_Y=1</m> et <m>a_Y+b_X=1</m>. La première suffit à conclure : on déduit des relations précédentes que <m>a_X,b_Y</m> s'annulent en <m>(0,0)</m>. C'est en contradiction avec <m>a_X+b_Y=1</m>.
+            </p>
         </solution>
     </exercise>
 
