@@ -22,71 +22,86 @@
             <ol>
                 <li>
                     <p>
-                        On suppose que <m>M</m> est un <m>A</m>-module libre et l'on note <m>F</m> la matrice de <m>f</m> dans l'une des bases de <m>M</m>.
+                       Montrer que l'on peut se ramener au cas où <m>M</m> est un <m>A</m>-module libre.
                     </p>
-                    <ol marker="a">
-                        <li>
-                            <p>
-                            On suppose que <m>A=K</m> est un corps. Montrer que le polynôme caractéristique de <m>F</m> annule <m>f</m>. En déduire le résultat lorsque <m>A</m> est un anneau intègre et <m>M</m> est libre sur <m>A</m>.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                            Montrer que l'on peut toujours trouver un morphisme d'anneaux <m>A'\to A</m> depuis un anneau intègre <m>A'</m> dont l'image contient les coefficients de <m>F</m>. En déduire le résultat pour tout anneau <m>A</m> et <m>M</m> libre sur <m>A</m>.
-                            </p>
-                        </li>
-                    </ol>
                 </li>
                 <li>
                     <p> 
-                        On revient au cas général où <m>M</m> est de type fini sur <m>A</m>.
+                        Montrer que l'on peut se ramener au cas où <m>A</m> est intègre. 
                     </p>
-                    <ol marker="a">
-                        <li>
-                            <p>
-                            Montrer qu'il existe un morphisme surjectif <m>\pi:L\to M</m> depuis un <m>A</m>-module libre de rang fini <m>L</m> ainsi qu'un endomorphisme <m>g</m> de <m>L</m> tel que <m>\pi\circ g=f\circ \pi</m>.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                            Conclure.
-                            </p>
-                        </li>
-                    </ol>
+                </li>
+                <li>
+                    <p>
+                        Montrer que l'on peut se ramener au cas où <m>A</m> est un corps, puis conclure.
+                    </p>
                 </li>
             </ol>
         </statement>
         <solution>
             <ol>
                 <li>
-                    <ol>
-                        <li>
-                            <p>
-                                C'est le théorème de Cayley-Hamilton : soit <m>\chi(X)=\det(X\mathrm{Id}-F)</m> le polynôme caractéristique de <m>F</m>. On choisit une extension <m>K'</m> de <m>K</m> pour laquelle <m>F</m> est trigonalisable : il existe <m>P\in \mathrm{GL}_n(K')</m> telle que <m>T:=P^{-1}FP</m> est triangulaire supérieure. <m>\chi(X)</m> coincide au polynôme charactéristique de <m>T</m> et correspond au produit des polynômes <m>(X-t_{ii})</m> où <m>t_{ii}</m> sont les coefficients diagonaux de <m>T</m>. On a donc <m>\chi(T)=0</m> et donc <m>\chi(F)=0</m>.
-                            </p>
-                            <p>
-                                Si <m>A</m> est un anneau intègre et <m>M</m> est isomorphe au <m>A</m>-module libre <m>A^r</m>, on peut considérer son corps des fractions <m>K=\mathrm{Frac}(A)</m> et appliquer le résultat précédent à <m>K^r</m>.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                On note <m>(f_{ij})_{i,j}</m> les coefficients de <m>F</m>. On considère l'anneau des polynômes <m>A'=\mathbb{Z}[X_{ij}~|~i,j]</m> en <m>r\times r</m> variables et le morphisme d'anneaux <m>\varphi:A'\to A</m> défini par <m>X_{ij}\mapsto f_{ij}</m>. On étend immédiatement <m>\varphi</m> en des morphismes d'anneaux <m>\mathrm{Mat}_r(A')\to \mathrm{Mat}_r(A)</m> et <m>A'[X]\to A[X]</m> coefficients par coefficients. On applique le résultat précédent à l'endomorphisme <m>F'</m>de <m>A'^r</m>, et on vérifie que si <m>P(X)\in A'[X]</m> est annulateur de <m>F'</m>, alors <m>\varphi(P)(X)\in A[X]</m> est annulateur de <m>F</m> et donc de <m>f</m>.
-                            </p>
-                            <p>
-                                Après le choix d'une base (où de manière équivalente d'un isomorphisme <m>M\cong A^r</m>) faisant correspondre <m>f</m> à <m>F</m>, on peut étendre <m>\varphi</m> en un morphisme de groupes <m>(A')^r\to M</m> que l'on note toujours <m>\varphi</m>. La matrice <m>F'</m> correspond à <m>F</m> via <m>\varphi</m>. 
-                            </p>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <ol>
-                        <li>
-                            <p>
-                            
-                            </p>
-                        </li>
-                    </ol>
-                </li>
+                <p>
+                Puisque <m>M</m> est de type fini, il existe pour un certain entier <m>r\geq 0</m> un morphisme surjectif <m>\pi:A^r\to M</m> : il suffit de choisir une famille génératrice finie <m>(m_1,\ldots,m_r)</m> de <m>M</m> et de choisir pour <m>\pi</m> l'application <m>A</m>-linéaire qui envoie la base canonique de <m>A^r</m> sur la famille <m>(m_1,\ldots,m_r)</m>.
+                </p>
+            <p>
+                Étant donné <m>j\in \{1,\ldots,r\}</m>, on écrit <m>f(m_j)=\sum_{i}{f_{ij} m_i}</m> pour des coefficients <m>f_{ij}\in A</m> (non nécessairement uniques, car <m>(m_i)_{i}</m> n'est pas nécessairement une base de <m>M</m>). On considère alors la matrice <m>F=(f_{ij})_{i,j}</m> et l'endomorphisme de <m>A^r</m> qui en résulte (que l'on notera encore <m>F</m>). On a alors le diagramme commutatif suivant :
+            </p>
+            <image width="40%">
+                <description>
+                    Relation <m>\pi\circ F=f\circ \pi</m>.
+                </description>
+                <latex-image><![CDATA[
+                    \begin{tikzcd}
+                    A^r \arrow[r, "\pi"] \arrow[d, "F"'] \amp M \arrow[d, "f"] \\
+                    A^r \arrow[r, "\pi"'] \amp M
+                \end{tikzcd}
+                ]]></latex-image>
+            </image>
+            <p>
+                Si l'on connaît l'existence d'un polynôme annulateur <m>P(X)\in A[X]</m> de <m>F</m>, alors
+                <md>
+                    0=\pi\circ P(F)=P(f)\circ \pi
+                </md>
+                et puisque <m>\pi</m> est surjectif, donc simplifiable à droite, on obtient <m>P(f)=0</m> dans <m>\mathrm{End}_A(M)</m>.
+            </p>
+            <p>
+                On peut donc se ramener au cas où <m>M=A^r</m> est un <m>A</m>-module libre et <m>f=F</m>.
+            </p>
+            </li>
+            <li>
+                <p>
+                    Comme ci-dessus, on suppose que <m>M=A^r</m> est un <m>A</m>-module libre et <m>f=F=(f_{ij})_{i,j}</m>. Soit <m>B</m> l'anneau de polynômes <m>\mathbb{Z}[X_{ij}~|~i,j]</m> en <m>r\times r</m> indéterminées et considéronsle morphisme d'anneaux <m>\varphi:B\to A</m> défini par <m>X_{ij}\mapsto f_{ij}</m>. On étend immédiatement <m>\varphi</m> en des morphismes d'anneaux <m>\mathrm{Mat}_r(B)\to \mathrm{Mat}_r(A)</m> et <m>B[X]\to A[X]</m> coefficients par coefficients. Soit aussi <m>G</m> l'endomorphisme de <m>B^r</m> représenté par la matrice <m>G=(X_{ij})_{i,j}</m>. On a alors le diagramme commutatif suivant :
+                </p>
+                    <image width="40%">
+                <description>
+                    Relation <m>\varphi\circ G=F\circ \varphi</m>.
+                </description>
+                <latex-image><![CDATA[
+                    \begin{tikzcd}
+                    B^r \arrow[d, "G"'] \arrow[r, "\varphi"] \amp A^r \arrow[d, "F"] \\
+                    B^r \arrow[r, "\varphi"'] \amp A^r
+                \end{tikzcd}
+                ]]></latex-image>
+            </image>
+            <p>
+                Si l'on connaît l'existence d'un polynôme annulateur <m>P(X)\in B[X]</m> de <m>G</m>, alors
+                <md>
+                    0=\varphi\circ P(G)=\varphi(P)(F)\circ \varphi.
+                </md>
+                Le morphisme <m>\varphi</m> n'est pas surjectif, mais en évaluant cette relation en les éléments de la base canonique de <m>B^r</m>, on obtient <m>\varphi(P)(F)=0</m> et donc le polynôme <m>\varphi(P)(X)\in A[X]</m> est annulateur de <m>F</m>.
+            </p>
+            <p>
+                Comme l'anneau <m>B</m> est intègre, cela conclut.
+            </p>
+            </li>
+            <li>
+            <p>
+                Soit <m>K</m> le corps des fractions de <m>A</m>; par exemple, dans le cas où <m>A=\mathbb{Z}[X_{ij}~|~i,j]</m> comme ci-dessus, on peut prendre <m>K=\mathbb{Q}(X_{ij}~|~i,j)</m>. On peut alors considérer le <m>K</m>-module libre <m>K^r</m> et l'endomorphisme <m>G</m> de <m>K^r</m> représenté par la matrice <m>G</m>. Pour un polynôme <m>P(X)\in A[X]</m>, que <m>P(G)</m> soit nul dans <m>\mathrm{End}_K(K^r)</m> implique que <m>P(G)</m> est nul dans <m>\mathrm{End}_A(A^r)</m>. Cela permet de se ramener au cas où <m>A</m> est un corps.
+            </p>
+            <p>
+                L'énoncé est alors connu, c'est par exemple le théorème de Cayley-Hamilton (valable sur un corps quelconque) : le polynôme caractéristique de <m>G</m> est bien unitaire à coefficient dans <m>A</m>.
+            </p>
+        </li>
             </ol>
         </solution>
     </exercise>
@@ -207,7 +222,7 @@
         				qui à une suite presque nulle <m>(a_p)_{p\in P}</m> d'éléments de <m>A</m> indexée par <m>P</m> associe la somme finie <m>\sum_{p\in P}{a_p}</m>. Soit <m>Q</m> le noyau de <m>s</m>.
         			</p>
         			<p>
-        				Par hypothèse, il existe <m>h:P\to \bigoplus_{p\in P}A</m> tel que <m>s\circ h =\mathrm{id}_P</m>, et considérons le morphisme
+        				Par hypothèse, il existe <m>h:P\to \bigoplus_{p\in P}A</m> tel que <m>s\circ h =\mathrm{id}_P</m>. On considère alors le morphisme
         				<md>
         					P\oplus Q \longrightarrow \bigoplus_{p\in P} A
         				</md>
@@ -221,16 +236,15 @@
         				donc <m>p=0</m> puis <m>q=0</m>.
         			</p>
         			<p>
-        				<alert>Surjectivité.</alert> Soit <m>z\in \bigoplus_{p\in P}A</m> et posons <m>p=s(z)</m> et <m>q=z-h(p)</m>. Il suffit de montrer que <m>q\in Q</m>. Mais 
+        				<alert>Surjectivité.</alert> Soit <m>z\in \bigoplus_{p\in P}A</m>, posons <m>p=s(z)</m> et <m>q=z-h(p)</m>. Il suffit de montrer que <m>q\in Q</m>. Mais cela découle de 
         				<md>
-        					s(q)=s(z)-s(h(p))=p-p=0
+        					s(q)=s(z)-s(h(p))=p-p=0.
         				</md>
-        				ce qui conclut.
         			</p>
         		</li>
         		<li>
         			<p>
-        				Montrons enfin que <xref ref="note-projectif-3"/> implique <xref ref="note-projectif-1"/>. Soit <m>s:N\to M</m> une surjection de <m>A</m>-modules et <m>f:P\to M</m>. Soit <m>Q</m> tel que <m>L=P\oplus Q</m> soit libre et soit <m>(e_i)_{i\in I}</m> une base de <m>L</m>. Considérons le morphisme induit <m>f':L\to M</m> composée de <m>L\to P</m> et <m>f</m>. Un morphisme de source un module libre est déterminée par l'image des éléments de sa base : soit donc <m>h':L\to M</m> le morphisme qui envoie les éléments <m>e_i</m>, <m>i\in I</m>, vers l'un de leurs antécédants par <m>s</m> dans <m>N</m>; on a alors <m>s\circ h'=f'</m>.
+        				Montrons enfin que <xref ref="note-projectif-3"/> implique <xref ref="note-projectif-1"/>. Soit <m>s:N\to M</m> une surjection de <m>A</m>-modules et <m>f:P\to M</m>. Soit <m>Q</m> tel que <m>L=P\oplus Q</m> est libre et soit <m>(e_i)_{i\in I}</m> une base de <m>L</m>. Considérons le morphisme induit <m>f':L\to M</m> composée de <m>L\to P</m> et <m>f</m>. Un morphisme de source un module libre est déterminé par l'image des éléments de sa base : soit donc <m>h':L\to M</m> le morphisme qui envoie les éléments <m>e_i</m>, <m>i\in I</m>, vers l'un de leurs antécédants par <m>s</m> dans <m>N</m>; on a alors <m>s\circ h'=f'</m>.
         			</p>
         			<p>
         				Enfin, soit <m>h:P\to N</m> donné par la composée de l'inclusion <m>\iota:P\to L=P\oplus Q</m> et de <m>h'</m>. Notons aussi <m>\pi:L=P\oplus Q\to P</m> la projection. Reste à vérifier que <m>s\circ h=f</m> :
@@ -322,8 +336,8 @@
                 On obtient les relations suivantes en comparant les coordonnées:
             </p>
             <md>
-            <mrow> Xa_Y-Ya_X=0, & Xb_Y-Yb_X=0, </mrow>
-            <mrow> X=f(s(X))=Xa_X+Yb_X, & Y=f(s(Y))=Xa_Y+Yb_Y. </mrow>
+                <mrow>Xa_Y-Ya_X=0 \amp Xb_Y-Yb_X=0,</mrow>
+                <mrow>X=f(s(X))=Xa_X+Yb_X \amp Y=f(s(Y))=Xa_Y+Yb_Y</mrow>
             </md>
             <p>
                 On obtient <m>X=Xa_X+Yb_X=X(a_X+b_Y)</m> et <m>Y=Xa_Y+Yb_Y=Y(a_Y+b_X)</m>. Comme <m>\mathbb{C}[X,Y]</m> est intègre, on en déduit que <m>a_X+b_Y=1</m> et <m>a_Y+b_X=1</m>. La première suffit à conclure : on déduit des relations précédentes que <m>a_X,b_Y</m> s'annulent en <m>(0,0)</m>. C'est en contradiction avec <m>a_X+b_Y=1</m>.
