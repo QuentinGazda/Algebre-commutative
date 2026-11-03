@@ -163,7 +163,7 @@
     <note>
         <title>Module projectif</title>
         <p>
-        Soit <m>A</m> un anneau commutatif. Un <m>A</m>-module <m>P</m>est dit <em>projectif</em> si l'un des points suivants est vérifié :
+        Soit <m>A</m> un anneau commutatif. Un <m>A</m>-module <m>P</m> est dit <em>projectif</em> si l'un des points suivants est vérifié :
         <ol marker="i">
             <li xml:id="note-projectif-1">
                 <p>
@@ -192,6 +192,58 @@
             </p>
         </statement>
         <solution>
+        	<ul>
+        		<li>
+        			<p>
+        				Pour montrer que <xref ref="note-projectif-1"/> implique <xref ref="note-projectif-2"/>, il suffit de l'appliquer à <m>f=\mathrm{id}_P</m>.
+        			</p>
+        		</li>
+        		<li>
+        			<p>
+        				Montrons que <xref ref="note-projectif-2"/> implique <xref ref="note-projectif-3"/>. Pour cela on considère une surjection d'un <m>A</m>-module libre vers <m>P</m>, par exemple :
+        				<md>
+        					s:\bigoplus_{p\in P} A \longrightarrow P
+        				</md>
+        				qui à une suite presque nulle <m>(a_p)_{p\in P}</m> d'éléments de <m>A</m> indexée par <m>P</m> associe la somme finie <m>\sum_{p\in P}{a_p}</m>. Soit <m>Q</m> le noyau de <m>s</m>.
+        			</p>
+        			<p>
+        				Par hypothèse, il existe <m>h:P\to \bigoplus_{p\in P}A</m> tel que <m>s\circ h =\mathrm{id}_P</m>, et considérons le morphisme
+        				<md>
+        					P\oplus Q \longrightarrow \bigoplus_{p\in P} A
+        				</md>
+        				qui envoie <m>(p,q)</m> sur <m>h(p)+q</m>; montrons que c'est un isomorphisme.
+        			</p>
+        			<p>
+        				<alert>Injectivité.</alert> Soit <m>(p,q)</m> tel que <m>h(p)+q=0</m>. Alors
+        				<md>
+        					0=s(h(p)+q)=s(h(p))=p
+        				</md>
+        				donc <m>p=0</m> puis <m>q=0</m>.
+        			</p>
+        			<p>
+        				<alert>Surjectivité.</alert> Soit <m>z\in \bigoplus_{p\in P}A</m> et posons <m>p=s(z)</m> et <m>q=z-h(p)</m>. Il suffit de montrer que <m>q\in Q</m>. Mais 
+        				<md>
+        					s(q)=s(z)-s(h(p))=p-p=0
+        				</md>
+        				ce qui conclut.
+        			</p>
+        		</li>
+        		<li>
+        			<p>
+        				Montrons enfin que <xref ref="note-projectif-3"/> implique <xref ref="note-projectif-1"/>. Soit <m>s:N\to M</m> une surjection de <m>A</m>-modules et <m>f:P\to M</m>. Soit <m>Q</m> tel que <m>L=P\oplus Q</m> soit libre et soit <m>(e_i)_{i\in I}</m> une base de <m>L</m>. Considérons le morphisme induit <m>f':L\to M</m> composée de <m>L\to P</m> et <m>f</m>. Un morphisme de source un module libre est déterminée par l'image des éléments de sa base : soit donc <m>h':L\to M</m> le morphisme qui envoie les éléments <m>e_i</m>, <m>i\in I</m>, vers l'un de leurs antécédants par <m>s</m> dans <m>N</m>; on a alors <m>s\circ h'=f'</m>.
+        			</p>
+        			<p>
+        				Enfin, soit <m>h:P\to N</m> donné par la composée de l'inclusion <m>\iota:P\to L=P\oplus Q</m> et de <m>h'</m>. Notons aussi <m>\pi:L=P\oplus Q\to P</m> la projection. Reste à vérifier que <m>s\circ h=f</m> :
+        				<md>
+        				<mrow> s\circ h \amp = s\circ h'\circ \iota </mrow>
+        				<mrow> \amp = f'\circ \iota </mrow>
+        				<mrow> \amp = f\circ \pi \circ \iota </mrow>
+        				<mrow> \amp = f\circ \mathrm{id}_P </mrow>
+        				<mrow> \amp = f.</mrow>
+        				</md>
+        			</p> 
+        		</li>
+        	</ul>
         </solution>
     </exercise>
 
@@ -222,10 +274,27 @@
             <ol>
                 <li>
                     <p>
-                        Pour montrer que <m>I</m> est maximal, on peut montrer que <m>A/I\cong \mathbb{Z}/2\mathbb{Z}</m>. En effet, on a <m>A/I\cong \mathbb{Z}[X]/(X^2+5,2,X-1)\cong \mathbb{Z}[X]/(2,X-1)\cong \mathbb{Z}_2</m>. Donc <m>I</m> est maximal. Pour montrer que <m>I</m> n'est pas principal, on peut raisonner par l'absurde : supposons qu'il existe <m>a\in A</m> tel que <m>I=(a)</m>. Alors <m>a</m> divise <m>2</m> et <m>1+i\sqrt{5}</m>. Sa norme <m>N(a)</m> divise alors <m>N(2)=4</m> et <m>N(1+i\sqrt{5})=6</m>; il divise donc leur pgcd qui vaut <m>2</m>. Mais il n'existe pas d'élément de <m>A</m> de norme <m>2</m> (l'équation <m>a^2+5b^2=2</m> force <m>b=0</m> et donc que <m>2</m> soit un carré). La seule possibilité est que <m>a</m> soit un élément de norme <m>1</m>, donc une unité, ce qui est impossible car <m>I\neq A</m>. 
+                        Pour montrer que <m>I</m> est maximal, on peut montrer que <m>A/I\cong \mathbb{Z}/2\mathbb{Z}</m>. Pour cela on considère le morphisme d'anneaux surjectif
+                        <md>
+                        	f:\mathbb{Z}[X] \longrightarrow A/I
+                        </md>
+                    	qui envoie <m>X</m> sur <m>i\sqrt{5}</m>. On prétend que son noyau est l'idéal <m>(2,1+X)</m>. Comme <m>2,1+i\sqrt{5}</m> sont dans <m>I</m>, il est clair que <m>2,1+X</m> sont dans <m>\mathrm{ker}(f)</m> ce qui montre une inclusion. Pour démontrer l'inclusion réciproque, soit <m>P(X)\in \mathrm{ker}(f)</m>. Par hypothèse, on peut trouver deux polynômes <m>C(X),D(X)\in \mathbb{Z}[X]</m> tels que 
+                    	<md>
+                    		P(i\sqrt{5})=2C(i\sqrt{5})+(1+i\sqrt{5})D(i\sqrt{5}).
+                    	</md>
+                    	En particulier, le polynôme <m>P(X)-2C(X)-(1+X)D(X)</m> s'annule en <m>i\sqrt{5}</m> donc est divisible par son polynôme minimal <m>X^2+5</m>. Comme <m>X^2+5=(X-1)(X+1)+2\cdot 3</m>, on obtient <m>P(X)\in (2,1+X)</m> puis l'inclusion convoîtée <m>\mathrm{ker}(f)\subset (2,1+X)</m>.
                     </p>
                     <p>
-                        Comme <m>I</m> n'est pas principal, il n'est pas libre en tant que <m>A</m>-module.
+                    	Ainsi,
+                    	<md>
+                    		A/I\cong \mathbb{Z}[X]/(2,1+X)\cong \mathbb{Z}/2\mathbb{Z}.
+                    	</md>    
+                    </p>
+                    <p>  
+                        Pour montrer que <m>I</m> n'est pas principal, on peut raisonner par l'absurde : supposons qu'il existe <m>a\in A</m> tel que <m>I=(a)</m>. Alors puisque <m>a</m> divise <m>2</m> et <m>1+i\sqrt{5}</m>, sa norme <m>N(a)</m> divise <m>N(2)=4</m> et <m>N(1+i\sqrt{5})=6</m>; il divise donc leur pgcd, <m>2</m>. Mais il n'existe pas d'élément de <m>A</m> de norme <m>2</m> (l'équation <m>a^2+5b^2=2</m> n'admet pas de solution entière). La seule possibilité est que <m>a</m> soit un élément de norme <m>1</m>, une unité donc, ce qui est impossible car cela contredirait la maximalité de <m>I</m>. 
+                    </p>
+                    <p>
+                        Notons que si <m>i,j</m> sont deux éléments de <m>I</m>, alors ils sont linéairement dépendants sur <m>A</m> : on a la relation <m>ij-ji=0</m>. En particulier, si <m>I</m> est libre, il est nécessairement de rang <m>\leq 1</m>. Mais les idéaux libres de rang <m>\leq 1</m> sur <m>A</m> sont exactement les idéaux principaux de <m>A</m>. Donc <m>I</m> n'est pas libre comme <m>A</m>-module.
                     </p>
                 </li>
             </ol>
@@ -240,8 +309,11 @@
             </p>
         </statement>
         <solution>
+        	<p>
+        		Comme vu plus haut, un idéal est libre comme module si et seulement si il est principal. Ce n'est pas la cas ici, comme on l'a démontré dans un exercice précédent.
+        	</p>
             <p>
-                Il suffit de montrer qu'il n'est pas projectif. On considère la surjection <m>\mathbb{C}[X,Y]^2\to (X,Y)</m> donnée par <m>(P,Q)\mapsto XP+YQ</m>. Si <m>(X,Y)</m> était projectif, il existerait un morphisme <m>s:(X,Y)\to \mathbb{C}[X,Y]^2</m> qui serait section de la surjection précédente. On note <m>s(X)=(a_X,b_X)</m> et <m>s(Y)=(a_Y,b_Y)</m>. On a alors la relation
+                Montrons qu'il n'est pas projectif. On considère la surjection <m>\mathbb{C}[X,Y]^2\to (X,Y)</m> donnée par <m>(P,Q)\mapsto XP+YQ</m>. Si <m>(X,Y)</m> était projectif, il existerait un morphisme <m>s:(X,Y)\to \mathbb{C}[X,Y]^2</m> qui serait section de la surjection précédente. On note <m>s(X)=(a_X,b_X)</m> et <m>s(Y)=(a_Y,b_Y)</m>. On a alors la relation
             </p>
             <md>
                 0=s(XY-YX)=Xs(Y)-Ys(X)=Ys(X)-Xs(Y).
