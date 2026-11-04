@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Préface",
   "number": "",
   "title": "Préface",
-  "body": " Ces notes consistent en les exercices corrigés du cours d' Algèbre commutative et introduction à la géométrie algébrique délivré par Jean-François Dat . Elles sont destinées aux étudiant·e·s du module UM4MA303 de Sorbonne Université.  Les travaux dirigés sont dispensés chaque lundi de 13h45 à 15h45 et chaque jeudi de 16h00 à 18h00 au premier semestre de l'année universitaire 2026\/2027.  "
+  "body": " Ces notes consistent en les exercices corrigés du cours d' Algèbre commutative et introduction à la géométrie algébrique délivré par Jean-François Dat . Elles sont destinées aux étudiant·e·s du module UM4MA303 de Sorbonne Université.  Je remercie vivement les étudiant·e·s qui m'ont signalé des erreurs dans ces notes, et particulièrement Sacha Le Bot-Bernard, Jules Renaud et Jin Man.  Les travaux dirigés sont dispensés chaque lundi de 13h45 à 15h45 et chaque jeudi de 16h00 à 18h00 au premier semestre de l'année universitaire 2026\/2027.  "
 },
 {
   "id": "sec-exercices-factorisation",
