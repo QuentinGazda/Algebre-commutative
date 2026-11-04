@@ -331,7 +331,7 @@
                 et donc <m>X</m> s'écrit que la réunion de <m>X\cap V((f))</m> et <m>X\cap V((g))</m>. Comme <m>X</m> est irréductible, soit <m>X=X\cap V((f))</m> soit <m>X=X\cap V((g))</m> de sorte que soit <m>f</m> soit <m>g</m> s'annule sur <m>X</m>; c-à-d <m>f\in I(X)</m> ou <m>g\in I(X)</m>, et donc <m>I(X)</m> est premier.  
               </p>
               <p>  
-                Réciproquement, supposons <m>I(X)</m> premier et écrivons <m>X=X_1\cap X_2</m> comme la réunion de deux sous-ensembles algébriques. Si ces sous-ensembles sont propres, alors on peut trouver <m>f_1</m> qui s'annule sur <m>X_1</m> mais pas sur tout <m>X</m> et <m>f_2</m> qui s'annule sur <m>X_2</m> mais pas sur tout <m>X</m>. Autrement dit <m>f_1f_2\in I(X)</m> mais <m>f_1,f_2\notin I(X)</m>, contredisant la primalité de <m>I(X)</m>.
+                Réciproquement, supposons <m>I(X)</m> premier et écrivons <m>X=X_1\cup X_2</m> comme la réunion de deux sous-ensembles algébriques. Si ces sous-ensembles sont propres, alors on peut trouver <m>f_1</m> qui s'annule sur <m>X_1</m> mais pas sur tout <m>X</m> et <m>f_2</m> qui s'annule sur <m>X_2</m> mais pas sur tout <m>X</m>. Autrement dit <m>f_1f_2\in I(X)</m> mais <m>f_1,f_2\notin I(X)</m>, contredisant la primalité de <m>I(X)</m>.
               </p>
             </li>
             <li>
