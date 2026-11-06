@@ -330,17 +330,25 @@
                 Montrons qu'il n'est pas projectif. On considère la surjection <m>\mathbb{C}[X,Y]^2\to (X,Y)</m> donnée par <m>(P,Q)\mapsto XP+YQ</m>. Si <m>(X,Y)</m> était projectif, il existerait un morphisme <m>s:(X,Y)\to \mathbb{C}[X,Y]^2</m> qui serait section de la surjection précédente. On note <m>s(X)=(a_X,b_X)</m> et <m>s(Y)=(a_Y,b_Y)</m>. On a alors la relation
             </p>
             <md>
-                0=s(XY-YX)=Xs(Y)-Ys(X)=Ys(X)-Xs(Y).
+                0=s(XY-YX)=Xs(Y)-Ys(X).
             </md>
             <p>
                 On obtient les relations suivantes en comparant les coordonnées:
             </p>
-            <md>
-                <mrow>Xa_Y-Ya_X=0 \amp Xb_Y-Yb_X=0,</mrow>
-                <mrow>X=f(s(X))=Xa_X+Yb_X \amp Y=f(s(Y))=Xa_Y+Yb_Y</mrow>
+            <md alignment="align">
+                <mrow>Xa_Y-Ya_X \amp =0 \amp Xb_Y-Yb_X \amp = 0,</mrow>
+                <mrow>X =f(s(X)) \amp =Xa_X+Yb_X \amp Y =f(s(Y)) \amp= Xa_Y+Yb_Y</mrow>
             </md>
             <p>
-                On obtient <m>X=Xa_X+Yb_X=X(a_X+b_Y)</m> et <m>Y=Xa_Y+Yb_Y=Y(a_Y+b_X)</m>. Comme <m>\mathbb{C}[X,Y]</m> est intègre, on en déduit que <m>a_X+b_Y=1</m> et <m>a_Y+b_X=1</m>. La première suffit à conclure : on déduit des relations précédentes que <m>a_X,b_Y</m> s'annulent en <m>(0,0)</m>. C'est en contradiction avec <m>a_X+b_Y=1</m>.
+                Les premières relations nous donnent <m>Y a_X=X a_Y</m> et <m>Y b_X=X b_Y</m>. Comme l'anneau <m>\mathbb{C}[X,Y]</m> est factoriel et que <m>X,Y</m> sont premiers entre eux, on en déduit que <m>a_X</m> et <m>b_X</m> sont des multiples de <m>X</m> et <m>a_Y</m> et <m>b_Y</m> sont des multiples de <m>Y</m>.
+            </p>
+            <p>
+                Les secondes relations combinées aux premières donnent
+                <md alignment="align">
+                <mrow> X\amp =Xa_X+Yb_X=X(a_X+b_Y),</mrow>
+                <mrow> Y\amp =Xa_Y+Yb_Y=Y(a_Y+b_X).</mrow>
+                </md>
+                Comme <m>\mathbb{C}[X,Y]</m> est intègre, on en déduit que <m>a_X+b_Y=1</m> et <m>a_Y+b_X=1</m>. La première suffit à conclure : on déduit des divisibilités précédentes que <m>a_X,b_Y</m> s'annulent en <m>(0,0)</m>. C'est en contradiction avec <m>a_X+b_Y=1</m>.
             </p>
         </solution>
     </exercise>
