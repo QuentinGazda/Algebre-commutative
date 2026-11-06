@@ -301,7 +301,7 @@
                     <p>
                     	Ainsi,
                     	<md>
-                    		A/I\cong \mathbb{Z}[X]/(2,1+X)\cong \mathbb{Z}/2\mathbb{Z}.
+                    		A/I\cong \mathbb{Z}[X]/(2,1+X)\cong (\mathbb{Z}[X]/(1+X))/(2) \cong \mathbb{Z}/2\mathbb{Z}.
                     	</md>    
                     </p>
                     <p>  
