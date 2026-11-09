@@ -159,19 +159,164 @@
         </solution>
     </exercise>
 
-    <exercise>
+<note>
+    <title>Corps des fractions d'un anneau intègre</title>
+    <p>
+        Soit <m>A</m> un anneau intègre. Le corps des fractions <m>K</m> de <m>A</m> est l'ensemble des couples <m>(a,b)\in A\times A\setminus \{0\}</m> modulo la relation d'équivalence
+        <md>(a,b)\sim (c,d)</md>
+        si et seulement si <m>ad=bc</m>. On note <m>a/b</m> la classe de <m>(a,b)</m>.
+     </p>
+     <p>
+        On munit <m>K</m> d'une structure de corps en définissant l'addition et la multiplication par
+        <md>\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd} \quad \text{et} \quad \frac{a}{b}\cdot \frac{c}{d}=\frac{ac}{bd}</md>
+        et on vérifie que ces opérations sont bien définies. Alors <m>A</m> s'identifie à un sous-anneau de <m>K</m> par l'application <m>a\mapsto a/1</m>.
+     </p>
+     <p>
+        Le corps des fractions vérifie la propriété universelle suivante : pour tout morphisme d'anneaux <m>A\to B</m> avec <m>B</m> un corps, il existe un unique morphisme de corps <m>K\to B</m> qui prolonge <m>A\to B</m>.
+    </p>
+</note>
+
+    <exercise xml:id="exercice-sans-torsion-inclus-dans-libre">
         <title>Tout module sans torsion est inclus dans un module libre</title>
         <statement>
             <p>
-                Soit <m>A</m> un anneau intègre et <m>M</m> un <m>A</m>-module de type fini sans torsion. Montrer qu'il existe un <m>A</m>-module libre <m>L</m> et un morphisme injectif <m>M\to L</m>.
+                Soit <m>A</m> un anneau intègre et <m>M</m> un <m>A</m>-module de type fini sans torsion. On se propose de montrer qu'il existe un <m>A</m>-module libre <m>L</m> de rang fini et un morphisme injectif <m>M\to L</m>.
             </p>
+            <ol>
+                <li>
+                    <p>
+                        Montrer que, parmi les familles finies linéairement indépendantes de <m>M</m>, il en existe une maximale <m>(n_1,\ldots,n_r)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>K</m> le corps des fractions de <m>A</m>. Montrer qu'il existe un morphisme de <m>A</m>-modules injectif <m>\iota:M\to K^g</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que l'image de <m>\iota</m> est incluse dans <m>\delta^{-1}\cdot A^{g}</m> pour un certain <m>\delta\in A</m> non nul. Conclure.
+                    </p>
+                </li>
+            </ol>
         </statement>
         <solution>
             <!--
-            <p>
-                Voir le lemme 1.2 dans https://kconrad.math.uconn.edu/blurbs/linmultialg/modulesoverPID.pdf
-            </p>
+            <ol>
+                <li>
+                    <p>
+                        Soit <m>(m_1,\ldots,m_r)</m> une famille génératrice de <m>M</m>. Supposons qu'il n'existe pas de famille finie maximale linéairement indépendante; alors il existe une famille linéairement indépendante infinite et en particulier une de cardinal <m>r+1</m>. Soit <m>(n_1,\ldots,n_{r+1})</m> une telle famille. Alors il existe une matrice <m>A\in \mathrm{Mat}_{r+1,r}(A)</m> exprimant <m>(n_1,\ldots,n_{r+1})</m> comme combinaison linéaire de <m>(m_1,\ldots,m_r)</m>.
+                    </p>
+                    <p>
+                        La matrice <m>A</m>, de par sa taille, admet un noyau non nul à gauche. On peut le voir par exemple en passant au corps des fractions de <m>A</m> et en appliquant le résultat bien connu pour les matrices sur des corps (même si ce résultat reste valable sans l'hypothèse d'intégrité). Si <m>(b_1,\ldots,b_{r+1})</m> désigne un élement non nul du noyau à gauche dans <m>A</m>, on en déduit que
+                        <md> b_1 n_1 + \cdots + b_r n_r + b_{r+1} n_{r+1} = 0. </md>
+                        Cela contredit l'indépendance linéaire de <m>(n_1,\ldots,n_{r+1})</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>(m_1,\ldots,m_g)</m> une famille maximale linéairement indépendante de <m>M</m>. Soit <m>m\in M</m>. Par maximalité, la famille <m>(m,m_1,\ldots,m_g)</m> est liée et donc il existe <m>a\in A</m> non nul ainsi que <m>(a_1,\ldots,a_g)\in A^g</m> tels que
+                        <md> am = a_1 m_1 + \cdots + a_g m_g. </md>
+                        On peut alors considérer le morphisme de <m>A</m>-modules
+                        <md>
+                            \iota:M \to K^g, m \mapsto (a_1/a, \ldots, a_g/a).
+                        </md>
+                        Pour montrer que cette application est bien définie, il suffit de vérifier que si <m>bm=b_1m_1+\ldots+b_gm_g</m>, alors <m>b_i/b=a_i/a</m> pour <m>i=1,\ldots,g</m>. Mais cela découle de 
+                        <md alignment="align">
+                        <mrow>0 \amp = bam-abm </mrow>
+                        <mrow> \amp = (ba_1-ab_1)m_1+\ldots+(ba_g-ab_g)m_g </mrow>
+                        </md>
+                        qui donne <m>b_i/b=a_i/a</m> pour <m>i=1,\ldots,g</m>.
+                    </p>
+                    <p>
+                        Pour montrer son injectivité, soit <m>m\in M</m> tel que <m>\iota(m)=0</m>. Alors <m>am=0</m> pour <m>a\in A</m> non nul et donc <m>m=0</m> d'après l'hypothèse de sans torsion.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Écrivons <m>\iota(m_1)=(a_1/d_1,\ldots,a_g/d_g)</m> pour <m>a_i,d_j\in A</m>, <m>d_j\neq 0</m>. Alors on a 
+                        <md>
+                            \iota(m_1)=(d_1\cdots d_g)^{-1}\cdot (d_2\cdots d_g \cdot a_1,\ldots, d_1\cdots d_{g-1} \cdot a_g)
+                        </md>
+                        et donc <m>\iota(m_1)</m> est bien dans <m>\delta_1^{-1}\cdot A^g</m> où l'on a posé <m>\delta_1:=d_1\cdots d_g\in A\setminus \{0\}</m>. Par le même argument, il existe <m>\delta_i\in A\setminus \{0\}</m> tel que <m>\iota(m_i)\in \delta_i^{-1}\cdot A^g</m> pour <m>i=1,\ldots,g</m>.
+                    </p>
+                    <p>
+                        Le même argument donne encore <m>\iota(m_1),\ldots,\iota(m_g)\in (\delta_1\cdots\delta_g)^{-1}\cdot A^g</m>, puis <m>\iota(M)\subset (\delta_1\cdots\delta_g)^{-1}\cdot A^g</m>.
+                    </p>
+                    <p>
+                        Le morphisme <m>\iota</m> se factorise alors par un morphisme injectif <m>M\to \delta^{-1}\cdot A^g</m> où <m>\delta=\delta_1\cdots\delta_g</m>. Mais <m>\delta^{-1}\cdot A^g</m> est un <m>A</m>-module libre de base <m>(\delta^{-1}\cdot e_1,\ldots,\delta^{-1}\cdot e_g)</m> où <m>(e_1,\ldots,e_g)</m> est la base canonique de <m>A^g</m>.
+                    </p>
+                </li>
+            </ol>
             -->
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Tout module de type fini sans torsion sur un anneau principal est libre</title>
+        <statement>
+            <p>
+                Soit <m>A</m> un anneau principal et <m>M</m> un <m>A</m>-module de type fini sans torsion. On se propose de montrer que <m>M</m> est libre de rang fini. 
+            </p>
+            <p>
+                D'après l'exercice <xref ref="exercice-sans-torsion-inclus-dans-libre"/>, on suppose que <m>M</m> est un sous-module de <m>A^n</m> et l'on démontre le résultat par récurrence sur <m>n</m>.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Démontrer le cas où <m>n=1</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        On suppose <m>n \gt 1</m> et le résultat vrai pour les rangs strictement inférieurs à <m>n</m>. Soit <m>p:A^r\to A</m> la projection sur la dernière coordonnée. Montrer que <m>p(M)</m> et <m>M\cap \ker p</m> sont libres. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Considérons la concaténation d'une base de <m>M\cap \ker p</m> et du relevé à <m>M</m> d'une base de <m>p(M)</m>. Montrer que c'est une base de <m>M</m> et conclure.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+        <!--
+            <ol>
+                <li>
+                    <p>
+                        Dans le cas <m>n=1</m>, <m>M</m> est un sous-module de <m>A</m>, c-à-d un idéal. Comme <m>A</m> est principal, <m>M</m> est de la forme <m>aA</m> pour un certain <m>a\in A</m>. Si <m>a=0</m>, alors <m>M=0</m>. Si <m>a\neq 0</m>, alors comme <m>A</m> est intègre, <m>M</m> est libre de rang 1 (de base <m>(a)</m>).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Comme <m>\ker p \cong A^{r-1}</m>, <m>M\cap \ker p</m> s'identifie à un sous-module de <m>A^{r-1}</m>. Par hypothèse de récurrence, il est libre de rang fini et donc <m>M\cap \ker p</m> est libre. De même, <m>p(M)</m> est un sous-module de <m>A</m> et donc est libre de rang <m>\leq 1</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>(m_1,\ldots,m_s)</m> une base de <m>M\cap \ker p</m> et <m>(m_{s+1},\ldots,m_t)</m> un relevé à <m>M</m> d'une base de <m>p(M)</m>. Considérons la concaténation <m>(m_1,\ldots,m_s,m_{s+1},\ldots,m_t)</m>.
+                    </p>
+                    <p>
+                        Montrons qu'elle est libre. Soit <m>(a_1,\ldots,a_t)\in A^t</m> tel que
+                        <md>
+                            a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} + \cdots + a_t m_t = 0.
+                        </md>
+                        En appliquant <m>p</m> on trouve <m>a_{s+1}p(m_{s+1})+\ldots+a_t p(m_t)=0</m>; mais comme <m>(p(m_{s+1}),\ldots,p(m_t))</m> est une base de <m>p(M)</m>, on en déduit que <m>a_{s+1}=\ldots=a_t=0</m>. Puis 
+                        <md>
+                            a_1 m_1 + \cdots + a_s m_s = 0.
+                        </md>
+                        et comme <m>(m_1,\ldots,m_s)</m> est libre, on en déduit que <m>a_1=\ldots=a_s=0</m>.
+                    </p>
+                    <p>
+                        Montrons qu'elle est génératrice. Soit <m>m\in M</m> et <m>p(m)=a_{s+1}p(m_{s+1})+\ldots+a_t p(m_t)</m>. Alors <m>m-a_{s+1}m_{s+1}-\ldots-a_t m_t\in M\cap \ker p</m> et donc il existe <m>(a_1,\ldots,a_s)\in A^s</m> tel que
+                        <md>
+                            m-a_{s+1}m_{s+1}-\ldots-a_t m_t = a_1 m_1 + \cdots + a_s m_s.
+                        </md>
+                        Donc <m>m=a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} + \cdots + a_t m_t</m>.
+                    </p>
+                </li>
+            </ol>
+        -->
         </solution>
     </exercise>
 
@@ -311,6 +456,12 @@
                         Notons que si <m>i,j</m> sont deux éléments de <m>I</m>, alors ils sont linéairement dépendants sur <m>A</m> : on a la relation <m>ij-ji=0</m>. En particulier, si <m>I</m> est libre, il est nécessairement de rang <m>\leq 1</m>. Mais les idéaux libres de rang <m>\leq 1</m> sur <m>A</m> sont exactement les idéaux principaux de <m>A</m>. Donc <m>I</m> n'est pas libre comme <m>A</m>-module.
                     </p>
                 </li>
+                <!--
+                <li>
+                    <p> 
+                        La composition des deux morphismes proposés est l'identité sur <m>I</m>. Si <m>Q</m> désigne le noyau du morphisme <m>A^2\to I</m>, alors on trouve aisément que <m>A^2 \cong I\oplus Q</m>. 
+                    </p>
+                -->
             </ol>
         </solution>
     </exercise>
