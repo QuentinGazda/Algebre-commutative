@@ -46,6 +46,71 @@
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
+<ol class="decimal" id="exercice-sans-torsion-inclus-dans-libre-3-1">
+<li>
+<div class="para">Soit <span class="process-math">\((m_1,\ldots,m_r)\)</span> une famille génératrice de <span class="process-math">\(M\text{.}\)</span> Supposons qu’il n’existe pas de famille finie maximale linéairement indépendante; alors il existe une famille linéairement indépendante infinite et en particulier une de cardinal <span class="process-math">\(r+1\text{.}\)</span> Soit <span class="process-math">\((n_1,\ldots,n_{r+1})\)</span> une telle famille. Alors il existe une matrice <span class="process-math">\(A\in \mathrm{Mat}_{r+1,r}(A)\)</span> exprimant <span class="process-math">\((n_1,\ldots,n_{r+1})\)</span> comme combinaison linéaire de <span class="process-math">\((m_1,\ldots,m_r)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">La matrice <span class="process-math">\(A\text{,}\)</span> de par sa taille, admet un noyau non nul à gauche. On peut le voir par exemple en passant au corps des fractions de <span class="process-math">\(A\)</span> et en appliquant le résultat bien connu pour les matrices sur des corps (même si ce résultat reste valable sans l’hypothèse d’intégrité). Si <span class="process-math">\((b_1,\ldots,b_{r+1})\)</span> désigne un élement non nul du noyau à gauche dans <span class="process-math">\(A\text{,}\)</span> on en déduit que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_1 n_1 + \cdots + b_r n_r + b_{r+1} n_{r+1} = 0. 
+\end{equation*}
+</div>
+<div class="para">Cela contredit l’indépendance linéaire de <span class="process-math">\((n_1,\ldots,n_{r+1})\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.3.1"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-1" title="Copy heading and permalink for Point 2.2.3.1" aria-label="Copy heading and permalink for Point 2.2.3.1">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Soit <span class="process-math">\((m_1,\ldots,m_g)\)</span> une famille maximale linéairement indépendante de <span class="process-math">\(M\text{.}\)</span> Soit <span class="process-math">\(m\in M\text{.}\)</span> Par maximalité, la famille <span class="process-math">\((m,m_1,\ldots,m_g)\)</span> est liée et donc il existe <span class="process-math">\(a\in A\)</span> non nul ainsi que <span class="process-math">\((a_1,\ldots,a_g)\in A^g\)</span> tels que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+am = a_1 m_1 + \cdots + a_g m_g. 
+\end{equation*}
+</div>
+<div class="para">On peut alors considérer le morphisme de <span class="process-math">\(A\)</span>-modules</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iota:M \to K^g, m \mapsto (a_1/a, \ldots, a_g/a).
+\end{equation*}
+</div>
+<div class="para">Pour montrer que cette application est bien définie, il suffit de vérifier que si <span class="process-math">\(bm=b_1m_1+\ldots+b_gm_g\text{,}\)</span> alors <span class="process-math">\(b_i/b=a_i/a\)</span> pour <span class="process-math">\(i=1,\ldots,g\text{.}\)</span> Mais cela découle de</div>
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp = bam-abm \\
+\amp = (ba_1-ab_1)m_1+\ldots+(ba_g-ab_g)m_g 
+\end{align*}
+</div>
+<div class="para">qui donne <span class="process-math">\(b_i/b=a_i/a\)</span> pour <span class="process-math">\(i=1,\ldots,g\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para">Pour montrer son injectivité, soit <span class="process-math">\(m\in M\)</span> tel que <span class="process-math">\(\iota(m)=0\text{.}\)</span> Alors <span class="process-math">\(am=0\)</span> pour <span class="process-math">\(a\in A\)</span> non nul et donc <span class="process-math">\(m=0\)</span> d’après l’hypothèse de sans torsion.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.3.2"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-2" title="Copy heading and permalink for Point 2.2.3.2" aria-label="Copy heading and permalink for Point 2.2.3.2">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Écrivons <span class="process-math">\(\iota(m_1)=(a_1/d_1,\ldots,a_g/d_g)\)</span> pour <span class="process-math">\(a_i,d_j\in A\text{,}\)</span> <span class="process-math">\(d_j\neq 0\text{.}\)</span> Alors on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iota(m_1)=(d_1\cdots d_g)^{-1}\cdot (d_2\cdots d_g \cdot a_1,\ldots, d_1\cdots d_{g-1} \cdot a_g)
+\end{equation*}
+</div>
+<div class="para">et donc <span class="process-math">\(\iota(m_1)\)</span> est bien dans <span class="process-math">\(\delta_1^{-1}\cdot A^g\)</span> où l’on a posé <span class="process-math">\(\delta_1:=d_1\cdots d_g\in A\setminus \{0\}\text{.}\)</span> Par le même argument, il existe <span class="process-math">\(\delta_i\in A\setminus \{0\}\)</span> tel que <span class="process-math">\(\iota(m_i)\in \delta_i^{-1}\cdot A^g\)</span> pour <span class="process-math">\(i=1,\ldots,g\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para">Le même argument donne encore <span class="process-math">\(\iota(m_1),\ldots,\iota(m_g)\in (\delta_1\cdots\delta_g)^{-1}\cdot A^g\text{,}\)</span> puis <span class="process-math">\(\iota(M)\subset (\delta_1\cdots\delta_g)^{-1}\cdot A^g\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-3-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para">Le morphisme <span class="process-math">\(\iota\)</span> se factorise alors par un morphisme injectif <span class="process-math">\(M\to \delta^{-1}\cdot A^g\)</span> où <span class="process-math">\(\delta=\delta_1\cdots\delta_g\text{.}\)</span> Mais <span class="process-math">\(\delta^{-1}\cdot A^g\)</span> est un <span class="process-math">\(A\)</span>-module libre de base <span class="process-math">\((\delta^{-1}\cdot e_1,\ldots,\delta^{-1}\cdot e_g)\)</span> où <span class="process-math">\((e_1,\ldots,e_g)\)</span> est la base canonique de <span class="process-math">\(A^g\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-3-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.2.3.3"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3-1-3" title="Copy heading and permalink for Point 2.2.3.3" aria-label="Copy heading and permalink for Point 2.2.3.3">🔗</a></div>
+</li>
+</ol>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 2.2.3.1"><a tabindex="-1" href="#exercice-sans-torsion-inclus-dans-libre-3" title="Copy heading and permalink for Solution 2.2.3.1" aria-label="Copy heading and permalink for Solution 2.2.3.1">🔗</a></div>
 </div></details>
 </div>
