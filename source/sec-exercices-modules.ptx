@@ -201,7 +201,6 @@
             </ol>
         </statement>
         <solution>
-            <!--
             <ol>
                 <li>
                     <p>
@@ -248,7 +247,6 @@
                     </p>
                 </li>
             </ol>
-            -->
         </solution>
     </exercise>
 
@@ -280,7 +278,6 @@
             </ol>
         </statement>
         <solution>
-        <!--
             <ol>
                 <li>
                     <p>
@@ -316,7 +313,6 @@
                     </p>
                 </li>
             </ol>
-        -->
         </solution>
     </exercise>
 
@@ -422,7 +418,7 @@
                     <p>
                         En considérant les morphismes <m>A^2\to I</m>, <m>(u,v)\mapsto 2u+(1+i\sqrt{5})v</m>, et 
                         <me>
-                            I\longrightarrow A^2,~a\longmapsto \left(-a,\frac{1-i\sqrt{5}}{2}a\right),
+                            \iota:I\longrightarrow A^2,~a\longmapsto \left(-a,\frac{1-i\sqrt{5}}{2}a\right),
                         </me>
                         montrer que <m>I</m> est projectif.
                     </p>
@@ -456,12 +452,14 @@
                         Notons que si <m>i,j</m> sont deux éléments de <m>I</m>, alors ils sont linéairement dépendants sur <m>A</m> : on a la relation <m>ij-ji=0</m>. En particulier, si <m>I</m> est libre, il est nécessairement de rang <m>\leq 1</m>. Mais les idéaux libres de rang <m>\leq 1</m> sur <m>A</m> sont exactement les idéaux principaux de <m>A</m>. Donc <m>I</m> n'est pas libre comme <m>A</m>-module.
                     </p>
                 </li>
-                <!--
                 <li>
                     <p> 
-                        La composition des deux morphismes proposés est l'identité sur <m>I</m>. Si <m>Q</m> désigne le noyau du morphisme <m>A^2\to I</m>, alors on trouve aisément que <m>A^2 \cong I\oplus Q</m>. 
+                        La composition des deux morphismes proposés est l'identité sur <m>I</m>. Si <m>Q</m> désigne le noyau du morphisme <m>s:A^2\to I</m>, alors on trouve aisément que <m>A^2 = \iota(I)\oplus Q</m>.
                     </p>
-                -->
+                    <p>
+                        En effet, si <m>x\in \iota(I)\cap Q</m>, il existe <m>i\in I</m> tel que <m>x=\iota(i)</m> et alors en appliquant <m>s</m> on trouve <m>i=s(\iota(i))=0</m>, et donc <m>x=0</m>. De plus, pour tout <m>x\in A^2</m>, on a <m>x-\iota(s(x))\in Q</m> et donc <m>x=\iota(s(x))+(x-\iota(s(x)))\in \iota(I)+Q</m>. On a donc bien la décomposition directe <m>A^2 = \iota(I)\oplus Q</m>. Le module <m>I</m> est donc projectif d'après le <xref ref="note-projectif-1"/>.  
+                    </p>
+                </li>
             </ol>
         </solution>
     </exercise>
