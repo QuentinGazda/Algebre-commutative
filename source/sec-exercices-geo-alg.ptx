@@ -184,7 +184,7 @@
           </li>
           <li>
             <p>
-              Montrer que<fn>C'est en fait une égalité, mais la réciproque demande le Nullstelensatz.</fn> <m>I(X)+I(Y)\subset I(X\cap Y)</m>.
+              Montrer que <m>I(X)+I(Y)\subset I(X\cap Y)</m>.
             </p>
           </li>
         </ol>

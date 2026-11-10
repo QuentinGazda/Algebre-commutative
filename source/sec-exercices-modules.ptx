@@ -457,7 +457,7 @@
                         La composition des deux morphismes proposés est l'identité sur <m>I</m>. Si <m>Q</m> désigne le noyau du morphisme <m>s:A^2\to I</m>, alors on trouve aisément que <m>A^2 = \iota(I)\oplus Q</m>.
                     </p>
                     <p>
-                        En effet, si <m>x\in \iota(I)\cap Q</m>, il existe <m>i\in I</m> tel que <m>x=\iota(i)</m> et alors en appliquant <m>s</m> on trouve <m>i=s(\iota(i))=0</m>, et donc <m>x=0</m>. De plus, pour tout <m>x\in A^2</m>, on a <m>x-\iota(s(x))\in Q</m> et donc <m>x=\iota(s(x))+(x-\iota(s(x)))\in \iota(I)+Q</m>. On a donc bien la décomposition directe <m>A^2 = \iota(I)\oplus Q</m>. Le module <m>I</m> est donc projectif d'après le <xref ref="note-projectif-1"/>.  
+                        En effet, si <m>x\in \iota(I)\cap Q</m>, il existe <m>i\in I</m> tel que <m>x=\iota(i)</m> et alors en appliquant <m>s</m> on trouve <m>i=s(\iota(i))=0</m>, et donc <m>x=0</m>. De plus, pour tout <m>x\in A^2</m>, on a <m>x-\iota(s(x))\in Q</m> et donc <m>x=\iota(s(x))+(x-\iota(s(x)))\in \iota(I)+Q</m>. On a donc bien la décomposition directe <m>A^2 = \iota(I)\oplus Q</m>. Le module <m>\iota(I)</m> est donc projectif d'après le <xref ref="note-projectif-1"/>. Comme <m>I\cong \iota(I)</m> via la restriction de <m>\iota</m> à <m>I</m>, on en déduit que <m>I</m> est projectif.
                     </p>
                 </li>
             </ol>
