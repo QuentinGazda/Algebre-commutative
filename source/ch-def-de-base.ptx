@@ -9,4 +9,6 @@
 
   <xi:include href="sec-exercices-modules.ptx" />
 
+  <xi:include href="sec-exercices-ann-noeth.ptx" /> 
+
 </chapter>

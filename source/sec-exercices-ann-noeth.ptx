@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<section xml:id="sec-exercices-anneaux-noetheriens">
+    <title>Anneaux et modules noethériens</title>
+
+<exercise>
+    <title>Mes premiers anneaux (non-)noethériens</title>
+    <statement>
+        <p>Parmi les anneaux suivants, lesquels sont noethériens ?</p>
+        <ol>
+            <li>
+                <p>
+                    L'anneau <m>\mathbb{Z}[X_1,X_2,\ldots,X_n,\ldots]</m> des polynômes en une infinité de variables.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>k[X,Y]</m> où <m>k</m> est un corps.
+                </p>
+            </li>
+            <li>
+                <p>
+                    L'anneau des séries formelles <m>k[[X]]</m> où <m>k</m> est un corps.
+                </p>
+            </li>
+            <li>
+                <p>
+                    L'anneau des entiers de Gauss <m>\mathbb{Z}[i]</m>.
+                </p>
+            </li>
+        </ol>
+    </statement>
+    <solution>
+    </solution>
+</exercise>
+
+
+
+<exercise>
+    <title>Lorsque toute puissance de <m>Y</m> divise <m>X</m></title>
+    <statement>
+        <p>
+            Dans le corps <m>\mathbb{C}(X,Y)</m> des fractions rationnelles, on considère le sous-anneau <m>A</m> engendré par les élements de <m>\mathbb{C}[X,Y]</m> et les fractions <m>X/Y^n</m> pour <m>n\geq 1</m>.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Montrer que <m>A</m> n'est pas noethérien.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Montrer que l'idéal <m>I=(X)</m> est maximal. 
+                </p>
+            </li>
+        </ol>
+        <p>En particulier, on a trouvé un anneau <m>A</m> non noethérien et un idéal <m>I</m> engendré un nombre fini d'éléments tel que <m>A/I</m> est noethérien.</p>
+    </statement>
+    <solution>
+    </solution>
+</exercise>
+
+<exercise>
+    <title>Radical d'un idéal d'un anneau noethérien</title>
+    <statement>
+    <p>
+        Soit <m>I\subset A</m> un idéal d'un anneau noethérien <m>A</m>. Montrer qu'il existe un entier <m>n\geq 1</m> tel que
+        <md>\sqrt{I}^n\subset I.</md>
+    </p>
+    </statement>
+    <solution>
+    </solution>
+</exercise>
+
+<exercise>
+    <title>Dimension de Krull</title>
+    <statement>
+        <p>
+            Soit <m>A</m> un anneau; une <em>chaîne de longueur <m>n</m></em> est une suite strictement croissante d'idéaux premiers de <m>A</m> :
+            <md>\mathfrak{p}_0\subsetneq \mathfrak{p}_1\subsetneq \cdots \subsetneq \mathfrak{p}_n.</md>
+            On appelle <em>dimension de Krull</em> de <m>A</m> le supremum des longueurs des chaînes de <m>A</m> (pouvant être infinie).
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Montrer que <m>\mathbb{Z}</m> est de dimensions <m>1</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Montrer qu'un anneau intègre est un corps si et seulement si <m>\mathrm{dim}(A)=0</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Montrer que <m>k[X_1,\ldots,X_n]</m> est de dimension <m>n</m> pour tout corps <m>k</m>. En déduire un anneau de dimension de Krull infinie.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Montrer que pour tout idéal <m>I</m> de <m>A</m>, on a <m>\mathrm{dim}(A/I)\leq \mathrm{dim}(A)</m>.
+                </p>
+            </li>
+        </ol>
+    </statement>
+    <solution>
+    </solution>
+</exercise>
+
+</section>
