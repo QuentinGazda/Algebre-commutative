@@ -172,7 +172,7 @@
         et on vérifie que ces opérations sont bien définies. Alors <m>A</m> s'identifie à un sous-anneau de <m>K</m> par l'application <m>a\mapsto a/1</m>.
      </p>
      <p>
-        Le corps des fractions vérifie la propriété universelle suivante : pour tout morphisme d'anneaux <m>A\to B</m> avec <m>B</m> un corps, il existe un unique morphisme de corps <m>K\to B</m> qui prolonge <m>A\to B</m>.
+        Le corps des fractions vérifie la propriété universelle suivante : pour tout morphisme d'anneaux injectif <m>A\to B</m> avec <m>B</m> un corps, il existe un unique morphisme de corps <m>K\to B</m> qui prolonge <m>A\to B</m>.
     </p>
 </note>
 
