@@ -493,7 +493,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Anneaux et modules noethériens",
-  "body": " Anneaux et modules noethériens   Mes premiers anneaux (non-)noethériens   Parmi les anneaux suivants, lesquels sont noethériens ?    L'anneau des polynômes en une infinité de variables.     où est un corps.    L'anneau des séries formelles où est un corps.    L'anneau des entiers de Gauss .         Lorsque toute puissance de divise   Dans le corps des fractions rationnelles, on considère le sous-anneau engendré par les élements de et les fractions pour .    Montrer que n'est pas noethérien.    Montrer que l'idéal est maximal.    En particulier, on a trouvé un anneau non noethérien et un idéal engendré un nombre fini d'éléments tel que est noethérien.       Radical d'un idéal d'un anneau noethérien   Soit un idéal d'un anneau noethérien . Montrer qu'il existe un entier tel que        Dimension de Krull   Soit un anneau; une chaîne de longueur est une suite strictement croissante d'idéaux premiers de : On appelle dimension de Krull de le supremum des longueurs des chaînes de (pouvant être infinie).    Montrer que est de dimensions .    Montrer qu'un anneau intègre est un corps si et seulement si .    Montrer que est de dimension pour tout corps . En déduire un anneau de dimension de Krull infinie.    Montrer que pour tout idéal de , on a .        "
+  "body": " Anneaux et modules noethériens   Mes premiers anneaux (non-)noethériens   Soit un corps. Parmi les anneaux suivants, lesquels sont noethériens ?    L'anneau des polynômes en un nombre fini de variables.    L'anneau en une infinité de variables.    L'anneau des suites à coefficients entiers.    L'anneau .          Lorsque toute puissance de divise   Dans le corps des fractions rationnelles, on considère le sous-anneau engendré par les élements de et les fractions pour .    Montrer que n'est pas noethérien.    Montrer que l'idéal est maximal.    En particulier, on a trouvé un anneau non noethérien et un idéal engendré un nombre fini d'éléments tel que est noethérien.        Radical d'un idéal d'un anneau noethérien   Soit un idéal d'un anneau noethérien . Montrer qu'il existe un entier tel que         Dimension de Krull   Soit un anneau; une chaîne de longueur est une suite strictement croissante d'idéaux premiers de : On appelle dimension de Krull de le supremum des longueurs des chaînes de (pouvant être infinie).    Montrer que est de dimensions .    Montrer qu'un anneau intègre est un corps si et seulement si .    Montrer que est de dimension pour tout corps . En déduire un anneau de dimension de Krull infinie.    Montrer que pour tout idéal de , on a .        "
 },
 {
   "id": "sec-exercices-anneaux-noetheriens-2",
@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.3.1",
   "title": "Mes premiers anneaux (non-)noethériens.",
-  "body": " Mes premiers anneaux (non-)noethériens   Parmi les anneaux suivants, lesquels sont noethériens ?    L'anneau des polynômes en une infinité de variables.     où est un corps.    L'anneau des séries formelles où est un corps.    L'anneau des entiers de Gauss .       "
+  "body": " Mes premiers anneaux (non-)noethériens   Soit un corps. Parmi les anneaux suivants, lesquels sont noethériens ?    L'anneau des polynômes en un nombre fini de variables.    L'anneau en une infinité de variables.    L'anneau des suites à coefficients entiers.    L'anneau .        "
 },
 {
   "id": "sec-exercices-anneaux-noetheriens-3",
@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.3.2",
   "title": "Lorsque toute puissance de <span class=\"process-math\">\\(Y\\)<\/span> divise <span class=\"process-math\">\\(X\\)<\/span>.",
-  "body": " Lorsque toute puissance de divise   Dans le corps des fractions rationnelles, on considère le sous-anneau engendré par les élements de et les fractions pour .    Montrer que n'est pas noethérien.    Montrer que l'idéal est maximal.    En particulier, on a trouvé un anneau non noethérien et un idéal engendré un nombre fini d'éléments tel que est noethérien.     "
+  "body": " Lorsque toute puissance de divise   Dans le corps des fractions rationnelles, on considère le sous-anneau engendré par les élements de et les fractions pour .    Montrer que n'est pas noethérien.    Montrer que l'idéal est maximal.    En particulier, on a trouvé un anneau non noethérien et un idéal engendré un nombre fini d'éléments tel que est noethérien.      "
 },
 {
   "id": "sec-exercices-anneaux-noetheriens-4",
@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.3.3",
   "title": "Radical d’un idéal d’un anneau noethérien.",
-  "body": " Radical d'un idéal d'un anneau noethérien   Soit un idéal d'un anneau noethérien . Montrer qu'il existe un entier tel que      "
+  "body": " Radical d'un idéal d'un anneau noethérien   Soit un idéal d'un anneau noethérien . Montrer qu'il existe un entier tel que       "
 },
 {
   "id": "sec-exercices-anneaux-noetheriens-5",
