@@ -495,16 +495,16 @@ am = a_1 m_1 + \cdots + a_g m_g.
 <div class="autopermalink" aria-hidden="true" data-description="Point 2.2.4.2"><a tabindex="-1" href="#sec-exercices-modules-8-3-1-2" title="Copy heading and permalink for Point 2.2.4.2" aria-label="Copy heading and permalink for Point 2.2.4.2">🔗</a></div>
 </li>
 <li id="sec-exercices-modules-8-3-1-3">
-<div class="para" id="sec-exercices-modules-8-3-1-3-1">Soit <span class="process-math">\((m_1,\ldots,m_s)\)</span> une base de <span class="process-math">\(M\cap \ker p\)</span> et <span class="process-math">\((m_{s+1},\ldots,m_t)\)</span> un relevé à <span class="process-math">\(M\)</span> d’une base de <span class="process-math">\(p(M)\text{.}\)</span> Considérons la concaténation <span class="process-math">\((m_1,\ldots,m_s,m_{s+1},\ldots,m_t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-8-3-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-modules-8-3-1-3-1">Si <span class="process-math">\(p(M)=0\)</span> c’est clair; on suppose donc que <span class="process-math">\(p(M)\)</span> est non nul, donc un module de libre de rang <span class="process-math">\(1\text{.}\)</span> Soit <span class="process-math">\((m_1,\ldots,m_s)\)</span> une base de <span class="process-math">\(M\cap \ker p\)</span> et <span class="process-math">\((m_{s+1})\)</span> un relevé à <span class="process-math">\(M\)</span> d’une base de <span class="process-math">\(p(M)\text{.}\)</span> Considérons la concaténation <span class="process-math">\((m_1,\ldots,m_s,m_{s+1})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-8-3-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="para logical" id="sec-exercices-modules-8-3-1-3-2">
-<div class="para">Montrons qu’elle est libre. Soit <span class="process-math">\((a_1,\ldots,a_t)\in A^t\)</span> tel que</div>
+<div class="para">Montrons qu’elle est libre. Soit <span class="process-math">\((a_1,\ldots,a_{s+1})\in A^{s+1}\)</span> tel que</div>
 <div class="displaymath process-math" id="sec-exercices-modules-8-3-1-3-2-2">
 \begin{equation*}
-a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} + \cdots + a_t m_t = 0.
+a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} = 0.
 \end{equation*}
 </div>
-<div class="para">En appliquant <span class="process-math">\(p\)</span> on trouve <span class="process-math">\(a_{s+1}p(m_{s+1})+\ldots+a_t p(m_t)=0\text{;}\)</span> mais comme <span class="process-math">\((p(m_{s+1}),\ldots,p(m_t))\)</span> est une base de <span class="process-math">\(p(M)\text{,}\)</span> on en déduit que <span class="process-math">\(a_{s+1}=\ldots=a_t=0\text{.}\)</span> Puis</div>
+<div class="para">En appliquant <span class="process-math">\(p\)</span> on trouve <span class="process-math">\(a_{s+1}p(m_{s+1})=0\text{;}\)</span> mais comme <span class="process-math">\((p(m_{s+1}))\)</span> est une base de <span class="process-math">\(p(M)\text{,}\)</span> on en déduit que <span class="process-math">\(a_{s+1}=0\text{.}\)</span> Puis</div>
 <div class="displaymath process-math" id="sec-exercices-modules-8-3-1-3-2-8">
 \begin{equation*}
 a_1 m_1 + \cdots + a_s m_s = 0.
@@ -515,13 +515,13 @@ a_1 m_1 + \cdots + a_s m_s = 0.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-8-3-1-3-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="para logical" id="sec-exercices-modules-8-3-1-3-3">
-<div class="para">Montrons qu’elle est génératrice. Soit <span class="process-math">\(m\in M\)</span> et <span class="process-math">\(p(m)=a_{s+1}p(m_{s+1})+\ldots+a_t p(m_t)\text{.}\)</span> Alors <span class="process-math">\(m-a_{s+1}m_{s+1}-\ldots-a_t m_t\in M\cap \ker p\)</span> et donc il existe <span class="process-math">\((a_1,\ldots,a_s)\in A^s\)</span> tel que</div>
+<div class="para">Montrons qu’elle est génératrice. Soit <span class="process-math">\(m\in M\)</span> et <span class="process-math">\(p(m)=a_{s+1}p(m_{s+1})\text{.}\)</span> Alors <span class="process-math">\(m-a_{s+1}m_{s+1}\in M\cap \ker p\)</span> et donc il existe <span class="process-math">\((a_1,\ldots,a_s)\in A^s\)</span> tel que</div>
 <div class="displaymath process-math" id="sec-exercices-modules-8-3-1-3-3-5">
 \begin{equation*}
-m-a_{s+1}m_{s+1}-\ldots-a_t m_t = a_1 m_1 + \cdots + a_s m_s.
+m-a_{s+1}m_{s+1} = a_1 m_1 + \cdots + a_s m_s.
 \end{equation*}
 </div>
-<div class="para">Donc <span class="process-math">\(m=a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} + \cdots + a_t m_t\text{.}\)</span>
+<div class="para">Donc <span class="process-math">\(m=a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1}\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-modules-8-3-1-3-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
