@@ -291,25 +291,25 @@
                 </li>
                 <li>
                     <p>
-                        Soit <m>(m_1,\ldots,m_s)</m> une base de <m>M\cap \ker p</m> et <m>(m_{s+1},\ldots,m_t)</m> un relevé à <m>M</m> d'une base de <m>p(M)</m>. Considérons la concaténation <m>(m_1,\ldots,m_s,m_{s+1},\ldots,m_t)</m>.
+                        Si <m>p(M)=0</m> c'est clair; on suppose donc que <m>p(M)</m> est non nul, donc un module de libre de rang <m>1</m>. Soit <m>(m_1,\ldots,m_s)</m> une base de <m>M\cap \ker p</m> et <m>(m_{s+1})</m> un relevé à <m>M</m> d'une base de <m>p(M)</m>. Considérons la concaténation <m>(m_1,\ldots,m_s,m_{s+1})</m>.
                     </p>
                     <p>
-                        Montrons qu'elle est libre. Soit <m>(a_1,\ldots,a_t)\in A^t</m> tel que
+                        Montrons qu'elle est libre. Soit <m>(a_1,\ldots,a_{s+1})\in A^{s+1}</m> tel que
                         <md>
-                            a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} + \cdots + a_t m_t = 0.
+                            a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} = 0.
                         </md>
-                        En appliquant <m>p</m> on trouve <m>a_{s+1}p(m_{s+1})+\ldots+a_t p(m_t)=0</m>; mais comme <m>(p(m_{s+1}),\ldots,p(m_t))</m> est une base de <m>p(M)</m>, on en déduit que <m>a_{s+1}=\ldots=a_t=0</m>. Puis 
+                        En appliquant <m>p</m> on trouve <m>a_{s+1}p(m_{s+1})=0</m>; mais comme <m>(p(m_{s+1}))</m> est une base de <m>p(M)</m>, on en déduit que <m>a_{s+1}=0</m>. Puis 
                         <md>
                             a_1 m_1 + \cdots + a_s m_s = 0.
                         </md>
                         et comme <m>(m_1,\ldots,m_s)</m> est libre, on en déduit que <m>a_1=\ldots=a_s=0</m>.
                     </p>
                     <p>
-                        Montrons qu'elle est génératrice. Soit <m>m\in M</m> et <m>p(m)=a_{s+1}p(m_{s+1})+\ldots+a_t p(m_t)</m>. Alors <m>m-a_{s+1}m_{s+1}-\ldots-a_t m_t\in M\cap \ker p</m> et donc il existe <m>(a_1,\ldots,a_s)\in A^s</m> tel que
+                        Montrons qu'elle est génératrice. Soit <m>m\in M</m> et <m>p(m)=a_{s+1}p(m_{s+1})</m>. Alors <m>m-a_{s+1}m_{s+1}\in M\cap \ker p</m> et donc il existe <m>(a_1,\ldots,a_s)\in A^s</m> tel que
                         <md>
-                            m-a_{s+1}m_{s+1}-\ldots-a_t m_t = a_1 m_1 + \cdots + a_s m_s.
+                            m-a_{s+1}m_{s+1} = a_1 m_1 + \cdots + a_s m_s.
                         </md>
-                        Donc <m>m=a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1} + \cdots + a_t m_t</m>.
+                        Donc <m>m=a_1 m_1 + \cdots + a_s m_s + a_{s+1} m_{s+1}</m>.
                     </p>
                 </li>
             </ol>

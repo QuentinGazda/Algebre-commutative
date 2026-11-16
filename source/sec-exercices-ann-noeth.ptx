@@ -31,7 +31,6 @@
         </ol>
     </statement>
     <solution>
-        <!--
         <ol>
             <li>
                 <p>
@@ -40,7 +39,12 @@
             </li>
             <li>
                 <p> 
-                    Non noethérien. Considérons l'idéal des polynômes de terme constant nul et, par l'absurde, soit <m>(f_1,\ldots,f_s)</m> une famille finie génératrice de cet idéal. Pour <m>i\in \{1,\ldots,s\}</m>, il existe un sous-ensemble fini <m>S_i\subset \mathbb{N}_{\gt 0}</m> tel que <m>f_i</m> soit contenu dans l'idéal <m>(X_s)_{s\in S_i}</m>. L'union <m>S=\cup_{i=1}^s S_i</m> est finie, et <m>I</m> est inclus dans l'idéal <m>(X_s)_{s\in S}</m>. Soit <m>n\notin S</m>. Alors <m>X_n\in I</m> mais <m>X_n\notin (X_s)_{s\in S}</m>, ce qui est absurde.
+                    Non noethérien. Considérons l'idéal des polynômes de terme constant nul et, par l'absurde, soit <m>(f_1,\ldots,f_s)</m> une famille finie génératrice de cet idéal. Pour <m>i\in \{1,\ldots,s\}</m>, il existe un sous-ensemble fini <m>S_i\subset \mathbb{N}_{\gt 0}</m> tel que <m>f_i</m> soit contenu dans l'idéal <m>(X_s)_{s\in S_i}</m>. L'union <m>S=\cup_{i=1}^s S_i</m> est finie, et <m>I</m> est inclus dans l'idéal <m>(X_s)_{s\in S}</m>. Soit <m>n\notin S</m>.
+                </p>
+                <p>
+                   Si <m>X_n\in I</m>, alors on peut trouver une famille de polynômes <m>(a_s)_{s\in S}</m> tels que
+                   <md>X_n=\sum_{s\in S} a_s X_s</md>.
+                   En l'évaluant en <m>X_s=0</m> pour <m>s\in S</m>, on trouve <m>X_n=0</m>, ce qui est absurde.
                 </p>
                 <p>
                     On notera, par contre, que cet anneau est factoriel (pourquoi ?). 
@@ -53,11 +57,10 @@
             </li>
             <li>
                 <p>
-                    Noethérien. Il est isomorphe au quotient de l'anneau noethérien <m>\mathbb{Z}[X]</m> par l'idéal <m>(X^2+5)</m>.
+                    Noethérien. Il est isomorphe au quotient de l'anneau noethérien <m>\mathbb{Z}[X]</m> par l'idéal <m>(X^2+5)</m>, et tout quotient d'un anneau noethérien est noethérien.
                 </p>
             </li>
         </ol>
-        -->
     </solution>
 </exercise>
 
@@ -75,18 +78,25 @@
             </li>
             <li>
                 <p>
-                    Montrer que l'idéal <m>I=(X)</m> est maximal. 
+                    Montrer que l'idéal <m>I=(Y)</m> est maximal. 
                 </p>
             </li>
         </ol>
         <p>En particulier, on a trouvé un anneau <m>A</m> non noethérien et un idéal <m>I</m> engendré un nombre fini d'éléments tel que <m>A/I</m> est noethérien.</p>
     </statement>
     <solution>
-        <!--
         <ol>
             <li>
                 <p>
-                    La suite d'idéaux principaux <m>(X/Y^n)_{n\geq 1}</m> est strictement croissante, mais n'est pas stationnaire. 
+                    La suite d'idéaux principaux <m>(X/Y^n)_{n\geq 1}</m> est strictement croissante, mais n'est pas stationnaire. Si elle l'était, alors il existerait un entier <m>n</m> pour lequel <m>X/Y^{n+1}</m> est un élément de <m>(X/Y^n)</m>, et donc il existerait <m>a\in A</m> tel que 
+                    <md>\frac{X}{Y^{n+1}}=a\frac{X}{Y^n}.</md>
+                    Comme <m>A</m> est intègre, on peut simplifier par <m>X/Y^n</m> pour obtenir
+                    <md>aY=1.</md>
+                    Aussi, comme tout élément de <m>A</m>, <m>a</m> s'écrit sous la forme <m>P(X,Y,X/Y,\ldots,X/Y^k)</m> pour un polynôme <m>P(X_1,\ldots,X_{k+2})\in \mathbb{C}[X_1,\ldots,X_{k+2}]</m>. En évaluant en <m>X=0</m> la relation
+                    <md>P(X,Y,X/Y,\ldots,X/Y^k)Y=1,</md>
+                    on trouve
+                    <md>P(0,Y,0,\ldots,0)Y=1</md>
+                    ce qui impossible car <m>P(0,Y,0,\ldots,0)</m> est un polynôme en <m>Y</m> (différent, donc, de l'inverse de <m>Y</m>). 
                 </p>
             </li>
             <li>
@@ -95,7 +105,6 @@
                 </p>
             </li>
         </ol>
-        -->
     </solution>
 </exercise>
 
@@ -108,9 +117,8 @@
     </p>
     </statement>
     <solution>
-        <!--
         <p>
-            Soit <m>I\subset A</m> un idéal d'un anneau noethérien <m>A</m>. Puisque <m>A</m> est noethérien, l'idéal <m>\sqrt{I}</m> est finement engendré. Soit <m>\sqrt{I}=(f_1,\ldots,f_k)</m>. On fixe un entier <m>g</m> assez grand pour lequel <m>f_i^g\in I</m> pour tout <m>i\in \{1,\ldots,k\}</m>.
+            Soit <m>I\subset A</m> un idéal d'un anneau noethérien <m>A</m>. Puisque <m>A</m> est noethérien, l'idéal <m>\sqrt{I}</m> est de type fini. Soit <m>\sqrt{I}=(f_1,\ldots,f_k)</m>. On fixe un entier <m>g</m> assez grand pour lequel <m>f_i^g\in I</m> pour tout <m>i\in \{1,\ldots,k\}</m>.
         </p>
         <p>
             Soit <m>n</m> un entier et <m>h_1,\ldots,h_n\in \sqrt{I}</m>. Pour <m>i\in \{1,\ldots,n\}</m>, on peut écrire 
@@ -121,7 +129,6 @@
         <p>
             Comme <m>\sqrt{I}</m> est engendré par les produits <m>h_1\cdots h_n</m>, on a donc démontré que si <m>n=(g-1)k+1</m>, alors <m>\sqrt{I}^n\subset I</m>.
         </p>
-        -->
     </solution>
 </exercise>
 
