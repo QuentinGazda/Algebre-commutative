@@ -11,7 +11,6 @@
             </p>
         </statement>
         <solution>
-            <!--
             <p>
                 Soit <m>a/s\in S^{-1}A</m> un élément nilpotent. Il existe un entier <m>n\geq 1</m> tel que <m>a^n/s^n=0</m>. Par définition de la localisation, il existe donc <m>t\in S</m> tel que <m>ta^n=0</m>.
                 On en déduit que <m>(ta)^n=t^{n-1}(ta^n)=0</m>.
@@ -19,7 +18,6 @@
             <p>
                 Comme <m>A</m> est réduit, on a <m>ta=0</m>. Puisque <m>t\in S</m>, cela signifie que <m>a/s=0</m> dans <m>S^{-1}A</m>. Ainsi, <m>S^{-1}A</m> est réduit.
             </p>
-            -->
         </solution>
     </exercise>
 
@@ -29,19 +27,18 @@
             <ol>
                 <li>
                     <p>
-                        Soit <m>A</m> un anneau commutatif unitaire et <m>f\in A</m> un élément. Montrer que le noyau de l'application <m>A\to A[f^{-1}]</m> est l'idéal
+                        Soit <m>A</m> un anneau commutatif unitaire et <m>f\in A</m> un élément régulier. Montrer que le noyau de l'application <m>A\to A[f^{-1}]</m> est l'idéal
                         <md>\{a\in A\mid \exists n\geq 0,\ f^na=0\}.</md>
                     </p>
                 </li>
                 <li>
                     <p>
-                        Soit <m>A=\mathbb{C}[X,Y]/(X^2Y)</m> et <m>f=X</m>. En déduire que <m>A[X^{-1}]\cong\mathbb{C}[X^{\pm 1}]</m>.
+                        Soit<fn>On notera encore par <m>X,Y</m> leur image dans <m>A</m>.</fn> <m>A=\mathbb{C}[X,Y]/(X^2Y)</m> et <m>f=X</m>. Montrer que le noyau de <m>A\to A[X^{-1}]</m> est l'idéal <m>(Y)</m>. En déduire que <m>A[X^{-1}]\cong\mathbb{C}[X^{\pm 1}]</m>.
                     </p>
                 </li>
             </ol>
         </statement>
         <solution>
-            <!--
             <ol>
                 <li>
                     <p>
@@ -69,7 +66,6 @@
                     </p>
                 </li>
             </ol>
-            -->
         </solution>
     </exercise>
 
@@ -97,7 +93,6 @@
             </ol>
         </statement>
         <solution>
-            <!--
             <p>
                 On pose <m>B=A[f^{-1}]</m> et on note encore <m>X</m> et <m>Y</m> les images des indéterminées dans les anneaux considérés.
             </p>
@@ -107,6 +102,7 @@
                         Comme <m>XY=0</m>, on a <m>e^2-e= \frac{X^2-X(X+Y)}{(X+Y)^2} =-\frac{XY}{(X+Y)^2}=0</m>. L'élément <m>e</m> est donc idempotent.
                     </p>
                 </li>
+                <!--
                 <li>
                     <p>
                         Tout idempotent d'un anneau commutatif donne une décomposition en produit : l'application <m>B\to eB\times(1-e)B</m>, définie par <m>b\mapsto(eb,(1-e)b)</m>, est un isomorphisme d'anneaux, d'inverse <m>(u,v)\mapsto u+v</m>.
@@ -141,8 +137,8 @@
                         Enfin, dans un produit de deux anneaux intègres <m>D_1\times D_2</m>, les éléments réguliers sont exactement les couples dont les deux composantes sont non nulles. Leur localisation est donc <m>\operatorname{Frac}(D_1)\times \operatorname{Frac}(D_2)</m> : tout couple de fractions <m>(a_1/s_1,a_2/s_2)</m> est l'image de la fraction <m>(a_1,a_2)/(s_1,s_2)</m>. On conclut que <m>Q(A)\cong\mathbb{C}(X)\times\mathbb{C}(Y)</m>.
                     </p>
                 </li>
-            </ol>
             -->
+            </ol>
         </solution>
     </exercise>
 

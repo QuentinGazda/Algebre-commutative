@@ -143,12 +143,13 @@
         <ol>
             <li>
                 <p>
-                    Montrer que <m>\mathbb{Z}</m> est de dimensions <m>1</m>.
+                    Montrer que tout anneau intègre principal qui n'est pas un corps est de dimension <m>1</m>.
                 </p>
             </li>
             <li>
                 <p>
-                    Montrer qu'un anneau intègre est un corps si et seulement si <m>\mathrm{dim}(A)=0</m>.
+                    Montrer qu'un anneau intègre est un corps si et seulement si
+                    <md>\mathrm{dim}(A)=0.</md>
                 </p>
             </li>
             <li>
@@ -164,6 +165,40 @@
         </ol>
     </statement>
     <solution>
+        <ol>
+            <li>
+                <p>
+                    Si <m>A</m> n'est pas un corps, il admet un idéal maximal non nul <m>\mathfrak{p}</m> et la chaîne <m>(0)\subsetneq \mathfrak{p}</m> est de longueur <m>1</m>. Ainsi <m>\mathrm{dim}(A)\geq 1</m>. 
+                </p>
+                <p>
+                    Si <m>(0)\subsetneq \mathfrak{p}_1\subset \mathfrak{p}_2</m> sont deux idéaux premiers non nuls de <m>A</m>, si <m>\pi_1</m> et <m>\pi_2</m> sont les irréductibles tels que <m>\mathfrak{p}_1=(\pi_1)</m> et <m>\mathfrak{p}_2=(\pi_2)</m>, alors <m>\pi_2\mid \pi_1</m> et sont donc associés. Donc <m>\mathfrak{p}_1=\mathfrak{p}_2</m> et <m>\mathrm{dim}(A)\leq 1</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Si <m>A</m> est un corps, <m>(0)</m> est l'unique idéal premier. En particulier, toute chaîne a longueur zéro.
+                </p>
+                <p>
+                    Réciproquement, si <m>\mathrm{dim}(A)=0</m>, alors l'idéal <m>(0)</m> est maximal et donc <m>A</m> est un corps.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Soit <m>n</m> la dimension de <m>A/I</m> et <m>\mathfrak{p}_0\subsetneq \mathfrak{p}_1\subsetneq \cdots \subsetneq \mathfrak{p}_n</m> une chaîne d'idéaux premiers de <m>A/I</m>. En notant <m>\pi:A\to A/I</m> la projection canonique, alors
+                    <md>
+                        \pi^{-1}(\mathfrak{p}_1)\subsetneq \cdots \subsetneq \pi^{-1}(\mathfrak{p}_{n})
+                    </md>
+                    est encore une chaîne d'idéaux premiers de <m>A</m> de longueur <m>n</m>. En effet, <m>\pi^{-1}(\mathfrak{p}_i)</m> est un idéal premier de <m>A</m> et <m>\pi^{-1}(\mathfrak{p}_i)\subsetneq \pi^{-1}(\mathfrak{p}_{i+1})</m> car <m>\pi</m> est surjective. Donc <m>\mathrm{dim}(A)\geq n</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Soit <m>n</m> la dimension de <m>A</m> et <m>\mathfrak{p}_0\subsetneq \mathfrak{p}_1\subsetneq \cdots \subsetneq \mathfrak{p}_n</m> une chaîne d'idéaux premiers de <m>A</m>. Alors
+                    <md>\mathfrak{p}_0[X]\subsetneq \mathfrak{p}_1[X]\subsetneq \cdots \subsetneq \mathfrak{p}_n[X]\subsetneq (\mathfrak{p}_n[X],X)</md>
+                    est une chaîne d'idéaux premiers de <m>A[X]</m> de longueur <m>n+1</m>. Donc <m>\mathrm{dim}(A[X])\geq \mathrm{dim}(A)+1</m>.
+                </p>
+            </li>
+        </ol>
     </solution>
 </exercise>
 
