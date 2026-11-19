@@ -493,7 +493,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Anneaux et modules noethériens",
-  "body": " Anneaux et modules noethériens   Mes premiers anneaux (non-)noethériens   Soit un corps. Parmi les anneaux suivants, lesquels sont noethériens ?    L'anneau des polynômes en un nombre fini de variables.    L'anneau en une infinité de variables.    L'anneau des suites à coefficients entiers.    L'anneau .        Noethérien. C'est le théorème de Hilbert.    Non noethérien. Considérons l'idéal des polynômes de terme constant nul et, par l'absurde, soit une famille finie génératrice de cet idéal. Pour , il existe un sous-ensemble fini tel que soit contenu dans l'idéal . L'union est finie, et est inclus dans l'idéal . Soit .  Si , alors on peut trouver une famille de polynômes tels que . En l'évaluant en pour , on trouve , ce qui est absurde.  On notera, par contre, que cet anneau est factoriel (pourquoi ?).    Non noethérien. Considérons l'idéal des suites dont les termes sont presque tous nuls. Si cet idéal était engendré par une famille finie, on trouverait un entier assez grand tel que n'importe quelle suite dont les termes sont presque tous nuls vérifie pour , ce qui est absurde.    Noethérien. Il est isomorphe au quotient de l'anneau noethérien par l'idéal , et tout quotient d'un anneau noethérien est noethérien.       Lorsque toute puissance de divise   Dans le corps des fractions rationnelles, on considère le sous-anneau engendré par les élements de et les fractions pour .    Montrer que n'est pas noethérien.    Montrer que l'idéal est maximal.    En particulier, on a trouvé un anneau non noethérien et un idéal engendré un nombre fini d'éléments tel que est noethérien.      La suite d'idéaux principaux est strictement croissante, mais n'est pas stationnaire. Si elle l'était, alors il existerait un entier pour lequel est un élément de , et donc il existerait tel que Comme est intègre, on peut simplifier par pour obtenir Aussi, comme tout élément de , s'écrit sous la forme pour un polynôme . En évaluant en la relation on trouve ce qui impossible car est un polynôme en (différent, donc, de l'inverse de ).    Les générateurs de sont tous dans , mais . Donc et est maximal.       Radical d'un idéal d'un anneau noethérien   Soit un idéal d'un anneau noethérien . Montrer qu'il existe un entier tel que     Soit un idéal d'un anneau noethérien . Puisque est noethérien, l'idéal est de type fini. Soit . On fixe un entier assez grand pour lequel pour tout .  Soit un entier et . Pour , on peut écrire avec . En faisant le produit, on trouve On veut choisir assez grand pour que chaque monôme contienne (au moins) un facteur . Pour cela, il suffit de prendre (la pire des situations étant lorsque contient -fois chaque élément ).  Comme est engendré par les produits , on a donc démontré que si , alors .     Dimension de Krull   Soit un anneau; une chaîne de longueur est une suite strictement croissante d'idéaux premiers de : On appelle dimension de Krull de le supremum des longueurs des chaînes de (pouvant être infinie).    Montrer que est de dimensions .    Montrer qu'un anneau intègre est un corps si et seulement si .    Montrer que est de dimension pour tout corps . En déduire un anneau de dimension de Krull infinie.    Montrer que pour tout idéal de , on a .        "
+  "body": " Anneaux et modules noethériens   Mes premiers anneaux (non-)noethériens   Soit un corps. Parmi les anneaux suivants, lesquels sont noethériens ?    L'anneau des polynômes en un nombre fini de variables.    L'anneau en une infinité de variables.    L'anneau des suites à coefficients entiers.    L'anneau .        Noethérien. C'est le théorème de Hilbert.    Non noethérien. Considérons l'idéal des polynômes de terme constant nul et, par l'absurde, soit une famille finie génératrice de cet idéal. Pour , il existe un sous-ensemble fini tel que soit contenu dans l'idéal . L'union est finie, et est inclus dans l'idéal . Soit .  Si , alors on peut trouver une famille de polynômes tels que . En l'évaluant en pour , on trouve , ce qui est absurde.  On notera, par contre, que cet anneau est factoriel (pourquoi ?).    Non noethérien. Considérons l'idéal des suites dont les termes sont presque tous nuls. Si cet idéal était engendré par une famille finie, on trouverait un entier assez grand tel que n'importe quelle suite dont les termes sont presque tous nuls vérifie pour , ce qui est absurde.    Noethérien. Il est isomorphe au quotient de l'anneau noethérien par l'idéal , et tout quotient d'un anneau noethérien est noethérien.       Lorsque toute puissance de divise   Dans le corps des fractions rationnelles, on considère le sous-anneau engendré par les élements de et les fractions pour .    Montrer que n'est pas noethérien.    Montrer que l'idéal est maximal.    En particulier, on a trouvé un anneau non noethérien et un idéal engendré un nombre fini d'éléments tel que est noethérien.      La suite d'idéaux principaux est strictement croissante, mais n'est pas stationnaire. Si elle l'était, alors il existerait un entier pour lequel est un élément de , et donc il existerait tel que Comme est intègre, on peut simplifier par pour obtenir Aussi, comme tout élément de , s'écrit sous la forme pour un polynôme . En évaluant en la relation on trouve ce qui impossible car est un polynôme en (différent, donc, de l'inverse de ).    Les générateurs de sont tous dans , mais . Donc et est maximal.       Radical d'un idéal d'un anneau noethérien   Soit un idéal d'un anneau noethérien . Montrer qu'il existe un entier tel que     Soit un idéal d'un anneau noethérien . Puisque est noethérien, l'idéal est de type fini. Soit . On fixe un entier assez grand pour lequel pour tout .  Soit un entier et . Pour , on peut écrire avec . En faisant le produit, on trouve On veut choisir assez grand pour que chaque monôme contienne (au moins) un facteur . Pour cela, il suffit de prendre (la pire des situations étant lorsque contient -fois chaque élément ).  Comme est engendré par les produits , on a donc démontré que si , alors .     Dimension de Krull   Soit un anneau; une chaîne de longueur est une suite strictement croissante d'idéaux premiers de : On appelle dimension de Krull de le supremum des longueurs des chaînes de (pouvant être infinie).    Montrer que est de dimensions .    Montrer qu'un anneau intègre est un corps si et seulement si .    Montrer que pour tout idéal de , on a .    Montrer que Si est noethérien, c'est une égalité.  .        "
 },
 {
   "id": "sec-exercices-anneaux-noetheriens-2",
@@ -529,7 +529,43 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.3.4",
   "title": "Dimension de Krull.",
-  "body": " Dimension de Krull   Soit un anneau; une chaîne de longueur est une suite strictement croissante d'idéaux premiers de : On appelle dimension de Krull de le supremum des longueurs des chaînes de (pouvant être infinie).    Montrer que est de dimensions .    Montrer qu'un anneau intègre est un corps si et seulement si .    Montrer que est de dimension pour tout corps . En déduire un anneau de dimension de Krull infinie.    Montrer que pour tout idéal de , on a .       "
+  "body": " Dimension de Krull   Soit un anneau; une chaîne de longueur est une suite strictement croissante d'idéaux premiers de : On appelle dimension de Krull de le supremum des longueurs des chaînes de (pouvant être infinie).    Montrer que est de dimensions .    Montrer qu'un anneau intègre est un corps si et seulement si .    Montrer que pour tout idéal de , on a .    Montrer que Si est noethérien, c'est une égalité.  .       "
+},
+{
+  "id": "sec-exercices-localisation",
+  "level": "1",
+  "url": "sec-exercices-localisation.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Localisation",
+  "body": " Localisation   Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.        Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément. Montrer que le noyau de l'application est l'idéal .    Soit et . En déduire que .           Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.         "
+},
+{
+  "id": "sec-exercices-localisation-2",
+  "level": "2",
+  "url": "sec-exercices-localisation.html#sec-exercices-localisation-2",
+  "type": "Exercice",
+  "number": "2.4.1",
+  "title": "Localisation d’un anneau réduit.",
+  "body": " Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.      "
+},
+{
+  "id": "sec-exercices-localisation-3",
+  "level": "2",
+  "url": "sec-exercices-localisation.html#sec-exercices-localisation-3",
+  "type": "Exercice",
+  "number": "2.4.2",
+  "title": "Localisation d’anneaux avec diviseurs de zéro.",
+  "body": " Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément. Montrer que le noyau de l'application est l'idéal .    Soit et . En déduire que .        "
+},
+{
+  "id": "sec-exercices-localisation-4",
+  "level": "2",
+  "url": "sec-exercices-localisation.html#sec-exercices-localisation-4",
+  "type": "Exercice",
+  "number": "2.4.3",
+  "title": "",
+  "body": "  Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.        "
 },
 {
   "id": "references",
