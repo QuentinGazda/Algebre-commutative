@@ -538,7 +538,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Localisation",
-  "body": " Localisation   Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.        Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément. Montrer que le noyau de l'application est l'idéal .    Soit et . En déduire que .           Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.         "
+  "body": " Localisation   Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.        Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément. Montrer que le noyau de l'application est l'idéal     Soit et . En déduire que .           Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.         "
 },
 {
   "id": "sec-exercices-localisation-2",
@@ -556,7 +556,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.4.2",
   "title": "Localisation d’anneaux avec diviseurs de zéro.",
-  "body": " Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément. Montrer que le noyau de l'application est l'idéal .    Soit et . En déduire que .        "
+  "body": " Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément. Montrer que le noyau de l'application est l'idéal     Soit et . En déduire que .        "
 },
 {
   "id": "sec-exercices-localisation-4",
