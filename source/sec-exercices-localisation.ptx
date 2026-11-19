@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<section xml:id="sec-exercices-localisation">
+    <title>Localisation</title>
+
+    <exercise>
+        <title>Localisation d'un anneau réduit</title>
+        <statement>
+            <p>
+                Soit <m>A</m> un anneau réduit et <m>S\subset A</m> un sous-ensemble multiplicatif. Montrer que l'anneau localisé <m>S^{-1}A</m> est réduit.
+            </p>
+        </statement>
+        <solution>
+            <!--
+            <p>
+                Soit <m>a/s\in S^{-1}A</m> un élément nilpotent. Il existe un entier <m>n\geq 1</m> tel que <m>a^n/s^n=0</m>. Par définition de la localisation, il existe donc <m>t\in S</m> tel que <m>ta^n=0</m>.
+                On en déduit que <m>(ta)^n=t^{n-1}(ta^n)=0</m>.
+            </p>
+            <p>
+                Comme <m>A</m> est réduit, on a <m>ta=0</m>. Puisque <m>t\in S</m>, cela signifie que <m>a/s=0</m> dans <m>S^{-1}A</m>. Ainsi, <m>S^{-1}A</m> est réduit.
+            </p>
+            -->
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Localisation d'anneaux avec diviseurs de zéro</title>
+        <statement>
+            <ol>
+                <li>
+                    <p>
+                        Soit <m>A</m> un anneau commutatif unitaire et <m>f\in A</m> un élément. Montrer que le noyau de l'application <m>A\to A[f^{-1}]</m> est l'idéal <m>\{a\in A\mid \exists n\geq 0,\ f^na=0\}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>A=\mathbb{C}[X,Y]/(X^2Y)</m> et <m>f=X</m>. En déduire que <m>A[X^{-1}]\cong\mathbb{C}[X^{\pm 1}]</m>.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+            <!--
+            <ol>
+                <li>
+                    <p>
+                        L'anneau <m>A[f^{-1}]</m> est la localisation de <m>A</m> par rapport à l'ensemble multiplicatif <m>S=\{f^n\mid n\geq 0\}</m>.
+                        Pour <m>a\in A</m>, l'égalité <m>a/1=0/1</m> dans cette localisation équivaut à l'existence de <m>s\in S</m> tel que <m>sa=0</m>,
+                        c'est-à-dire à l'existence de <m>n\geq 0</m> tel que <m>f^na=0</m>. On obtient donc exactement le noyau annoncé.
+                    </p>
+                    <p>
+                        En particulier, si <m>f</m> est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        On note encore <m>X</m> et <m>Y</m> leurs classes dans <m>A</m>. Puisque <m>X^2Y=0</m>, l'idéal <m>(Y)</m> est contenu dans le noyau
+                        de <m>A\to A[X^{-1}]</m>. Réciproquement, si <m>a</m> appartient à ce noyau, il existe <m>n\geq 0</m> tel que
+                        <m>X^na=0</m>. Dans <m>A/(Y)\cong\mathbb{C}[X]</m>, cette égalité impose que l'image de <m>a</m> soit nulle, car <m>\mathbb{C}[X]</m> est intègre.
+                        Ainsi, le noyau est exactement <m>(Y)</m>.
+                    </p>
+                    <p>
+                        Le morphisme induit <m>\mathbb{C}[X]\to A[X^{-1}]</m> est donc injectif et envoie <m>X</m> sur un élément inversible.
+                        Il se prolonge en un morphisme <m>\varphi:\mathbb{C}[X^{\pm 1}]\to A[X^{-1}]</m>.
+                        Ce morphisme est injectif : si <m>\varphi(P/X^n)=0</m>, alors <m>\varphi(P)=0</m>, donc <m>P=0</m>.
+                        Il est aussi surjectif : l'image de <m>Y</m> est nulle, donc toute fraction <m>P(X,Y)/X^n</m> est égale à <m>P(X,0)/X^n</m>.
+                        On obtient l'isomorphisme voulu.
+                    </p>
+                </li>
+            </ol>
+            -->
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                Soit <m>A=\mathbb{C}[X,Y]/(XY)</m> et <m>f=X+Y</m>.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Montrer que l'élément <m>e=\frac{X}{X+Y}</m> de <m>A[f^{-1}]</m> est idempotent.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire que <m>A[f^{-1}]\cong \mathbb{C}[X^{\pm 1}]\times \mathbb{C}[Y^{\pm 1}]</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire que <m>Q(\mathbb{C}[X,Y]/(XY)])\cong \mathbb{C}(X)\times \mathbb{C}(Y)</m>, où <m>Q(A)</m> désigne la localisation de <m>A</m> par rapport à l'ensemble des éléments réguliers.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+            <!--
+            <p>
+                On pose <m>B=A[f^{-1}]</m> et on note encore <m>X</m> et <m>Y</m> les images des indéterminées dans les anneaux considérés.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Comme <m>XY=0</m>, on a <m>e^2-e= \frac{X^2-X(X+Y)}{(X+Y)^2} =-\frac{XY}{(X+Y)^2}=0</m>. L'élément <m>e</m> est donc idempotent.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Tout idempotent d'un anneau commutatif donne une décomposition en produit : l'application <m>B\to eB\times(1-e)B</m>, définie par <m>b\mapsto(eb,(1-e)b)</m>, est un isomorphisme d'anneaux, d'inverse <m>(u,v)\mapsto u+v</m>.
+                        En effet, <m>e(1-e)=0</m> et <m>e+(1-e)=1</m>. Les unités des deux facteurs sont respectivement <m>e</m> et <m>1-e</m>.
+                    </p>
+                    <p>
+                        La projection <m>B\to eB</m>, <m>b\mapsto eb</m>, a pour noyau <m>(1-e)B</m>. Or <m>1-e=Y/f</m> et <m>f</m> est inversible dans <m>B</m>, donc <m>(1-e)B=YB</m>.
+                        Par conséquent,
+                        <md>eB\cong B/YB \cong(A/(Y))[X^{-1}] \cong\mathbb{C}[X^{\pm 1}].</md>
+                        Ici, on utilise le fait que quotienter puis localiser revient à localiser puis quotienter, et que l'image de <m>f=X+Y</m> modulo <m>Y</m> est <m>X</m>.
+                    </p>
+                    <p>
+                        De même, <m>eB=XB</m>, d'où
+                        <md>(1-e)B\cong B/XB \cong(A/(X))[Y^{-1}] \cong\mathbb{C}[Y^{\pm 1}].</md>
+                        On obtient ainsi <m>B\cong\mathbb{C}[X^{\pm 1}] \times\mathbb{C}[Y^{\pm 1}]</m>.
+                    </p>
+                    <p>
+                        Explicitement, cet isomorphisme est donné par <m>\frac{P(X,Y)}{(X+Y)^n}\longmapsto \left(\frac{P(X,0)}{X^n}, \frac{P(0,Y)}{Y^n}\right)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Posons <m>A=\mathbb{C}[X,Y]/(XY)</m> et <m>B=A[(X+Y)^{-1}]</m>. Vérifions d'abord que <m>X+Y</m> est régulier dans <m>A</m>. L'application <m>A\to\mathbb{C}[X]\times\mathbb{C}[Y]</m>, <m>P\mapsto(P(X,0),P(0,Y))</m>, est injective : un polynôme dont les deux images sont nulles est divisible par <m>X</m> et par <m>Y</m>, donc par <m>XY</m>. L'image de <m>X+Y</m> est <m>(X,Y)</m>, qui est régulière puisque les deux anneaux <m>\mathbb{C}[X]</m> et <m>\mathbb{C}[Y]</m> sont intègres. Ainsi, <m>X+Y</m> est régulier dans <m>A</m>.
+                    </p>
+                    <p>
+                        Plus généralement, si <m>f</m> est régulier dans un anneau <m>R</m>, alors <m>R\to R[f^{-1}]</m> est injectif et un élément <m>a/f^n</m> est régulier dans <m>R[f^{-1}]</m> si et seulement si <m>a</m> est régulier dans <m>R</m>. En effet, si <m>a</m> est régulier et <m>(a/f^n)(b/f^m)=0</m>, il existe <m>k\geq 0</m> tel que <m>f^kab=0</m>, d'où <m>b=0</m>. Réciproquement, si <m>ab=0</m> avec <m>b\neq 0</m>, alors <m>b/1\neq 0</m> et <m>(a/f^n)(b/1)=0</m>.
+                    </p>
+                    <p>
+                        Localiser d'abord en <m>f</m>, puis en tous les éléments réguliers, revient donc à localiser directement en tous les éléments réguliers : <m>Q(R[f^{-1}])\cong Q(R)</m>. En l'appliquant à <m>f=X+Y</m> et en utilisant la question précédente, on obtient <m>Q(A)\cong Q(B)\cong Q(\mathbb{C}[X^{\pm 1}]\times \mathbb{C}[Y^{\pm 1}])</m>.
+                    </p>
+                    <p>
+                        Enfin, dans un produit de deux anneaux intègres <m>D_1\times D_2</m>, les éléments réguliers sont exactement les couples dont les deux composantes sont non nulles. Leur localisation est donc <m>\operatorname{Frac}(D_1)\times \operatorname{Frac}(D_2)</m> : tout couple de fractions <m>(a_1/s_1,a_2/s_2)</m> est l'image de la fraction <m>(a_1,a_2)/(s_1,s_2)</m>. On conclut que <m>Q(A)\cong\mathbb{C}(X)\times\mathbb{C}(Y)</m>.
+                    </p>
+                </li>
+            </ol>
+            -->
+        </solution>
+    </exercise>
+
+</section>

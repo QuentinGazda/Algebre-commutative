@@ -153,12 +153,12 @@
             </li>
             <li>
                 <p>
-                    Montrer que <m>k[X_1,\ldots,X_n]</m> est de dimension <m>n</m> pour tout corps <m>k</m>. En déduire un anneau de dimension de Krull infinie.
+                    Montrer que pour tout idéal <m>I</m> de <m>A</m>, on a <m>\mathrm{dim}(A/I)\leq \mathrm{dim}(A)</m>.
                 </p>
             </li>
             <li>
                 <p>
-                    Montrer que pour tout idéal <m>I</m> de <m>A</m>, on a <m>\mathrm{dim}(A/I)\leq \mathrm{dim}(A)</m>.
+                    Montrer que<fn>Si <m>A</m> est noethérien, c'est une égalité.</fn> <m>\mathrm{dim}(A[X])\geq \mathrm{dim}(A)+1</m>.
                 </p>
             </li>
         </ol>
