@@ -90,7 +90,7 @@
                 </li>
                 <li>
                     <p>
-                        En déduire que <m>Q(\mathbb{C}[X,Y]/(XY)])\cong \mathbb{C}(X)\times \mathbb{C}(Y)</m>, où <m>Q(A)</m> désigne la localisation de <m>A</m> par rapport à l'ensemble des éléments réguliers.
+                        En déduire que <m>Q(\mathbb{C}[X,Y]/(XY))\cong \mathbb{C}(X)\times \mathbb{C}(Y)</m>, où <m>Q(A)</m> désigne la localisation de <m>A</m> par rapport à l'ensemble des éléments réguliers.
                     </p>
                 </li>
             </ol>
