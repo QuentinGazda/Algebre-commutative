@@ -29,7 +29,8 @@
             <ol>
                 <li>
                     <p>
-                        Soit <m>A</m> un anneau commutatif unitaire et <m>f\in A</m> un élément. Montrer que le noyau de l'application <m>A\to A[f^{-1}]</m> est l'idéal <m>\{a\in A\mid \exists n\geq 0,\ f^na=0\}</m>.
+                        Soit <m>A</m> un anneau commutatif unitaire et <m>f\in A</m> un élément. Montrer que le noyau de l'application <m>A\to A[f^{-1}]</m> est l'idéal
+                        <md>\{a\in A\mid \exists n\geq 0,\ f^na=0\}.</md>
                     </p>
                 </li>
                 <li>
