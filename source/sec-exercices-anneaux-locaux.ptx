@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<section xml:id="sec-exercices-anneaux-locaux">
+    <title>Anneaux locaux</title>
+
+    <note>
+        <title>Anneau local</title>
+        <p>
+            Un anneau <m>R</m> est dit <em>local</em> si l'une des propriétés équivalentes suivantes est vérifiée.
+        </p>
+        <ol>
+            <li xml:id="local-1">
+                <p>
+                    <m>R</m> possède un unique idéal maximal.
+                </p>
+            </li>
+            <li xml:id="local-2">
+                <p>
+                    L'ensemble des éléments non inversibles de <m>R</m> est un idéal.
+                </p>
+            </li>
+            <li xml:id="local-3">
+                <p>
+                    Pour tout <m>r\in R</m>, soit <m>r</m> est inversible, soit <m>1-r</m> est inversible.
+                </p>
+            </li>
+            <li xml:id="local-4">
+                <p>
+                    La somme de deux idéaux propres de <m>R</m> est toujours propre.
+                </p>
+            </li>
+        </ol>
+        <p>
+            Si <m>\mathfrak{m}</m> désigne l'unique idéal maximal de <m>R</m>, on appelle <m>\kappa:=R/\mathfrak{m}</m> le <em>corps résiduel</em> de <m>R</m>.
+        </p>
+    </note>
+
+    <exercise>
+        <title>Équivalence des définitions</title>
+        <statement>
+            <ol>
+                <li>
+                    <p>
+                        Vérifier que les points <xref ref="local-1"/>, <xref ref="local-2"/>, <xref ref="local-3"/> et <xref ref="local-4"/> sont équivalents.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Lorsque <m>R</m> est local d'unique idéal maximal <m>\mathfrak{m}</m>, montrer que <m>\mathfrak{m}=R\setminus R^{\times}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que <m>0</m> et <m>1</m> sont les seuls idempotents de <m>R</m> 
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Mes premiers anneaux locaux</title>
+        <statement>
+            <p>
+                Parmi les anneaux suivants, lesquels sont des anneaux locaux ? Dans le cas où ils le sont, préciser l'idéal maximal et le corps résiduel.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        L'anneau des entiers <m>\mathbb{Z}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Pour <m>n\geq 1</m> un entier, l'anneau <m>\mathbb{Z}/n\mathbb{Z}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        L'anneau des séries formelles <m>k[\![X]\!]</m> sur un corps <m>k</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        L'anneau dit <em>des nombres duaux</em> <m>k[\varepsilon]/(\varepsilon^2)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        L'anneau <m>k\times k</m>.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <title>Fabriquer des anneaux locaux</title>
+            <statement>
+            <p>
+                Soit <m>A</m> un anneau et <m>\mathfrak{p}</m> un idéal premier. Soit<fn>C'est un sous-ensemble multiplicatif. Pourquoi?</fn> <m>S:=A\setminus\mathfrak{p}</m> et <m>A_{\mathfrak{p}}</m> l'anneau localisé <m>S^{-1}A</m>.
+            </p>
+            <p>
+                Montrer que <m>A_{\mathfrak{p}}</m> est un aneau local d'idéal maximal <m>S^{-1}\mathfrak{p}</m> et de corps résiduel <m>\mathrm{Frac}(A/\mathfrak{p})</m>.
+            </p>
+            </statement>
+            <solution>
+            </solution>
+    </exercise>
+
+    <exercise>
+        <title>Dimension locale à globale</title>
+            <statement>
+                <p>
+                    Montrer la formule suivante pour un anneau commutatif <m>A</m> quelconque:
+                </p>
+                <md>
+                    \mathrm{dim}(A) = \max_{\mathfrak{m}~\text{maximal}} \{\mathrm{dim}(A_{\mathfrak{m}})\}. 
+                </md>
+            </statement>
+            <solution>
+            </solution>
+    </exercise>
+
+    <exercise>
+        <title>Lemme de Nakayama local</title>
+        <statement>
+            <p>
+                Soit <m>R</m> un anneau local d'idéal maximal <m>\mathfrak{m}</m>. Soit <m>M</m> un <m>R</m>-module de type fini vérifiant <m>M=\mathfrak{m}M</m>. En déduire que <m>M=(0)</m>. 
+            </p>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Majorer la dimension locale</title>
+        <statement>
+        <p>
+            Soit <m>R</m> un anneau local noethérien d'idéal maximal <m>\mathfrak{m}</m> et de corps résiduel <m>\kappa</m>.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Montrer que <m>\mathfrak{m}/\mathfrak{m}^2</m> admet une structure de <m>\kappa</m>-espace vectoriel de dimension finie.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Montrer que la dimension de <m>\mathfrak{m}/\mathfrak{m}^2</m> sur <m>\kappa</m> est égal au nombre minimal de générateurs de l'idéal <m>\mathfrak{m}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    En déduire que <m>\mathrm{dim}(R)\leq \mathrm{dim}_{\kappa}(\mathfrak{m}/\mathfrak{m}^2)</m>. Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.
+                </p>
+            </li>
+        </ol>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+</section>

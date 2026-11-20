@@ -4,6 +4,17 @@
     <title>Localisation</title>
 
     <exercise>
+        <title>Localiser en des unités ne change rien</title>
+        <statement>
+            <p>
+                Soit <m>A</m> un anneau et <m>S\subset A^{\times}</m> un sous-ensemble multiplicatif des unités de <m>A</m>. Montrer que le morphisme canonique <m>A\to S^{-1}A</m> est un isomorphisme.
+            </p>
+        </statement>
+        <solution>
+        </solution>
+    </exercise>
+
+    <exercise>
         <title>Localisation d'un anneau réduit</title>
         <statement>
             <p>
@@ -18,6 +29,21 @@
             <p>
                 Comme <m>A</m> est réduit, on a <m>ta=0</m>. Puisque <m>t\in S</m>, cela signifie que <m>a/s=0</m> dans <m>S^{-1}A</m>. Ainsi, <m>S^{-1}A</m> est réduit.
             </p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <title>Dimension et localisation</title>
+        <statement>
+            <p>
+                Soit <m>A</m> un anneau et <m>S</m> un sous-ensemble multiplicatif de <m>A</m>. Montrer que
+                <md>
+                    \mathrm{dim}(S^{-1}A)\leq \mathrm{dim}(A).
+                </md>
+                Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.
+            </p>
+        </statement>
+        <solution>
         </solution>
     </exercise>
 

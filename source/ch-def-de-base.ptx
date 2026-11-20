@@ -13,4 +13,6 @@
 
   <xi:include href="sec-exercices-localisation.ptx" /> 
 
+  <xi:include href="sec-exercices-anneaux-locaux.ptx" /> 
+
 </chapter>

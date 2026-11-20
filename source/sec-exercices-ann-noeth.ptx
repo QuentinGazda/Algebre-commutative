@@ -127,7 +127,7 @@
             On veut choisir <m>n</m> assez grand pour que chaque monôme <m>f_{j_1}\cdots f_{j_n}</m> contienne (au moins) un facteur <m>f_i^g</m>. Pour cela, il suffit de prendre <m>n\gt (g-1)k</m> (la pire des situations étant lorsque <m>\{j_1,\ldots,j_n\}</m> contient <m>g-1</m>-fois chaque élément <m>1,2,\ldots,k</m>).
         </p>
         <p>
-            Comme <m>\sqrt{I}</m> est engendré par les produits <m>h_1\cdots h_n</m>, on a donc démontré que si <m>n=(g-1)k+1</m>, alors <m>\sqrt{I}^n\subset I</m>.
+            Comme <m>\sqrt{I}^n</m> est engendré par les produits <m>h_1\cdots h_n</m>, on a donc démontré que si <m>n=(g-1)k+1</m>, alors <m>\sqrt{I}^n\subset I</m>.
         </p>
     </solution>
 </exercise>
