@@ -538,7 +538,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Localisation",
-  "body": " Localisation   Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.    Soit un élément nilpotent. Il existe un entier tel que . Par définition de la localisation, il existe donc tel que . On en déduit que .  Comme est réduit, on a . Puisque , cela signifie que dans . Ainsi, est réduit.     Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément régulier. Montrer que le noyau de l'application est l'idéal     Soit On notera encore par leur image dans .  et . Montrer que le noyau de est l'idéal . En déduire que .        L'anneau est la localisation de par rapport à l'ensemble multiplicatif . Pour , l'égalité dans cette localisation équivaut à l'existence de tel que , c'est-à-dire à l'existence de tel que . On obtient donc exactement le noyau annoncé.  En particulier, si est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.    On note encore et leurs classes dans . Puisque , l'idéal est contenu dans le noyau de . Réciproquement, si appartient à ce noyau, il existe tel que . Dans , cette égalité impose que l'image de soit nulle, car est intègre. Ainsi, le noyau est exactement .  Le morphisme induit est donc injectif et envoie sur un élément inversible. Il se prolonge en un morphisme . Ce morphisme est injectif : si , alors , donc . Il est aussi surjectif : l'image de est nulle, donc toute fraction est égale à . On obtient l'isomorphisme voulu.        Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.      On pose et on note encore et les images des indéterminées dans les anneaux considérés.    Comme , on a . L'élément est donc idempotent.       "
+  "body": " Localisation   Localiser en des unités ne change rien   Soit un anneau et un sous-ensemble multiplicatif des unités de . Montrer que le morphisme canonique est un isomorphisme.       Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.    Soit un élément nilpotent. Il existe un entier tel que . Par définition de la localisation, il existe donc tel que . On en déduit que .  Comme est réduit, on a . Puisque , cela signifie que dans . Ainsi, est réduit.     Dimension et localisation   Soit un anneau et un sous-ensemble multiplicatif de . Montrer que Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.       Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément régulier. Montrer que le noyau de l'application est l'idéal     Soit On notera encore par leur image dans .  et . Montrer que le noyau de est l'idéal . En déduire que .        L'anneau est la localisation de par rapport à l'ensemble multiplicatif . Pour , l'égalité dans cette localisation équivaut à l'existence de tel que , c'est-à-dire à l'existence de tel que . On obtient donc exactement le noyau annoncé.  En particulier, si est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.    On note encore et leurs classes dans . Puisque , l'idéal est contenu dans le noyau de . Réciproquement, si appartient à ce noyau, il existe tel que . Dans , cette égalité impose que l'image de soit nulle, car est intègre. Ainsi, le noyau est exactement .  Le morphisme induit est donc injectif et envoie sur un élément inversible. Il se prolonge en un morphisme . Ce morphisme est injectif : si , alors , donc . Il est aussi surjectif : l'image de est nulle, donc toute fraction est égale à . On obtient l'isomorphisme voulu.        Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.      On pose et on note encore et les images des indéterminées dans les anneaux considérés.    Comme , on a . L'élément est donc idempotent.       "
 },
 {
   "id": "sec-exercices-localisation-2",
@@ -546,8 +546,8 @@ var ptx_lunr_docs = [
   "url": "sec-exercices-localisation.html#sec-exercices-localisation-2",
   "type": "Exercice",
   "number": "2.4.1",
-  "title": "Localisation d’un anneau réduit.",
-  "body": " Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.    Soit un élément nilpotent. Il existe un entier tel que . Par définition de la localisation, il existe donc tel que . On en déduit que .  Comme est réduit, on a . Puisque , cela signifie que dans . Ainsi, est réduit.   "
+  "title": "Localiser en des unités ne change rien.",
+  "body": " Localiser en des unités ne change rien   Soit un anneau et un sous-ensemble multiplicatif des unités de . Montrer que le morphisme canonique est un isomorphisme.     "
 },
 {
   "id": "sec-exercices-localisation-3",
@@ -555,8 +555,8 @@ var ptx_lunr_docs = [
   "url": "sec-exercices-localisation.html#sec-exercices-localisation-3",
   "type": "Exercice",
   "number": "2.4.2",
-  "title": "Localisation d’anneaux avec diviseurs de zéro.",
-  "body": " Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément régulier. Montrer que le noyau de l'application est l'idéal     Soit On notera encore par leur image dans .  et . Montrer que le noyau de est l'idéal . En déduire que .        L'anneau est la localisation de par rapport à l'ensemble multiplicatif . Pour , l'égalité dans cette localisation équivaut à l'existence de tel que , c'est-à-dire à l'existence de tel que . On obtient donc exactement le noyau annoncé.  En particulier, si est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.    On note encore et leurs classes dans . Puisque , l'idéal est contenu dans le noyau de . Réciproquement, si appartient à ce noyau, il existe tel que . Dans , cette égalité impose que l'image de soit nulle, car est intègre. Ainsi, le noyau est exactement .  Le morphisme induit est donc injectif et envoie sur un élément inversible. Il se prolonge en un morphisme . Ce morphisme est injectif : si , alors , donc . Il est aussi surjectif : l'image de est nulle, donc toute fraction est égale à . On obtient l'isomorphisme voulu.     "
+  "title": "Localisation d’un anneau réduit.",
+  "body": " Localisation d'un anneau réduit   Soit un anneau réduit et un sous-ensemble multiplicatif. Montrer que l'anneau localisé est réduit.    Soit un élément nilpotent. Il existe un entier tel que . Par définition de la localisation, il existe donc tel que . On en déduit que .  Comme est réduit, on a . Puisque , cela signifie que dans . Ainsi, est réduit.   "
 },
 {
   "id": "sec-exercices-localisation-4",
@@ -564,8 +564,98 @@ var ptx_lunr_docs = [
   "url": "sec-exercices-localisation.html#sec-exercices-localisation-4",
   "type": "Exercice",
   "number": "2.4.3",
+  "title": "Dimension et localisation.",
+  "body": " Dimension et localisation   Soit un anneau et un sous-ensemble multiplicatif de . Montrer que Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.     "
+},
+{
+  "id": "sec-exercices-localisation-5",
+  "level": "2",
+  "url": "sec-exercices-localisation.html#sec-exercices-localisation-5",
+  "type": "Exercice",
+  "number": "2.4.4",
+  "title": "Localisation d’anneaux avec diviseurs de zéro.",
+  "body": " Localisation d'anneaux avec diviseurs de zéro     Soit un anneau commutatif unitaire et un élément régulier. Montrer que le noyau de l'application est l'idéal     Soit On notera encore par leur image dans .  et . Montrer que le noyau de est l'idéal . En déduire que .        L'anneau est la localisation de par rapport à l'ensemble multiplicatif . Pour , l'égalité dans cette localisation équivaut à l'existence de tel que , c'est-à-dire à l'existence de tel que . On obtient donc exactement le noyau annoncé.  En particulier, si est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.    On note encore et leurs classes dans . Puisque , l'idéal est contenu dans le noyau de . Réciproquement, si appartient à ce noyau, il existe tel que . Dans , cette égalité impose que l'image de soit nulle, car est intègre. Ainsi, le noyau est exactement .  Le morphisme induit est donc injectif et envoie sur un élément inversible. Il se prolonge en un morphisme . Ce morphisme est injectif : si , alors , donc . Il est aussi surjectif : l'image de est nulle, donc toute fraction est égale à . On obtient l'isomorphisme voulu.     "
+},
+{
+  "id": "sec-exercices-localisation-6",
+  "level": "2",
+  "url": "sec-exercices-localisation.html#sec-exercices-localisation-6",
+  "type": "Exercice",
+  "number": "2.4.5",
   "title": "",
   "body": "  Soit et .    Montrer que l'élément de est idempotent.    En déduire que .    En déduire que , où désigne la localisation de par rapport à l'ensemble des éléments réguliers.      On pose et on note encore et les images des indéterminées dans les anneaux considérés.    Comme , on a . L'élément est donc idempotent.      "
+},
+{
+  "id": "sec-exercices-anneaux-locaux",
+  "level": "1",
+  "url": "sec-exercices-anneaux-locaux.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Anneaux locaux",
+  "body": " Anneaux locaux   Anneau local  Un anneau est dit local si l'une des propriétés équivalentes suivantes est vérifiée.     possède un unique idéal maximal.    L'ensemble des éléments non inversibles de est un idéal.    Pour tout , soit est inversible, soit est inversible.    La somme de deux idéaux propres de est toujours propre.    Si désigne l'unique idéal maximal de , on appelle le corps résiduel de .    Équivalence des définitions     Vérifier que les points , , et sont équivalents.    Lorsque est local d'unique idéal maximal , montrer que .    Montrer que et sont les seuls idempotents de          Mes premiers anneaux locaux   Parmi les anneaux suivants, lesquels sont des anneaux locaux ? Dans le cas où ils le sont, préciser l'idéal maximal et le corps résiduel.    L'anneau des entiers .    Pour un entier, l'anneau .    L'anneau des séries formelles sur un corps .    L'anneau dit des nombres duaux  .    L'anneau .       Fabriquer des anneaux locaux   Soit un anneau et un idéal premier. Soit C'est un sous-ensemble multiplicatif. Pourquoi?  et l'anneau localisé .  Montrer que est un aneau local d'idéal maximal et de corps résiduel .       Dimension locale à globale   Montrer la formule suivante pour un anneau commutatif quelconque:        Lemme de Nakayama local   Soit un anneau local d'idéal maximal . Soit un -module de type fini vérifiant . En déduire que .       Majorer la dimension locale   Soit un anneau local noethérien d'idéal maximal et de corps résiduel .    Montrer que admet une structure de -espace vectoriel de dimension finie.    Montrer que la dimension de sur est égal au nombre minimal de générateurs de l'idéal .    En déduire que . Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.        "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-2",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-2",
+  "type": "Rappel",
+  "number": "2.5.1",
+  "title": "Anneau local.",
+  "body": " Anneau local  Un anneau est dit local si l'une des propriétés équivalentes suivantes est vérifiée.     possède un unique idéal maximal.    L'ensemble des éléments non inversibles de est un idéal.    Pour tout , soit est inversible, soit est inversible.    La somme de deux idéaux propres de est toujours propre.    Si désigne l'unique idéal maximal de , on appelle le corps résiduel de .  "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-3",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-3",
+  "type": "Exercice",
+  "number": "2.5.1",
+  "title": "Équivalence des définitions.",
+  "body": " Équivalence des définitions     Vérifier que les points , , et sont équivalents.    Lorsque est local d'unique idéal maximal , montrer que .    Montrer que et sont les seuls idempotents de        "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-4",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-4",
+  "type": "Exercice",
+  "number": "2.5.2",
+  "title": "Mes premiers anneaux locaux.",
+  "body": " Mes premiers anneaux locaux   Parmi les anneaux suivants, lesquels sont des anneaux locaux ? Dans le cas où ils le sont, préciser l'idéal maximal et le corps résiduel.    L'anneau des entiers .    Pour un entier, l'anneau .    L'anneau des séries formelles sur un corps .    L'anneau dit des nombres duaux  .    L'anneau .     "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-5",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-5",
+  "type": "Exercice",
+  "number": "2.5.3",
+  "title": "Fabriquer des anneaux locaux.",
+  "body": " Fabriquer des anneaux locaux   Soit un anneau et un idéal premier. Soit C'est un sous-ensemble multiplicatif. Pourquoi?  et l'anneau localisé .  Montrer que est un aneau local d'idéal maximal et de corps résiduel .     "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-6",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-6",
+  "type": "Exercice",
+  "number": "2.5.4",
+  "title": "Dimension locale à globale.",
+  "body": " Dimension locale à globale   Montrer la formule suivante pour un anneau commutatif quelconque:      "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-7",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-7",
+  "type": "Exercice",
+  "number": "2.5.5",
+  "title": "Lemme de Nakayama local.",
+  "body": " Lemme de Nakayama local   Soit un anneau local d'idéal maximal . Soit un -module de type fini vérifiant . En déduire que .     "
+},
+{
+  "id": "sec-exercices-anneaux-locaux-8",
+  "level": "2",
+  "url": "sec-exercices-anneaux-locaux.html#sec-exercices-anneaux-locaux-8",
+  "type": "Exercice",
+  "number": "2.5.6",
+  "title": "Majorer la dimension locale.",
+  "body": " Majorer la dimension locale   Soit un anneau local noethérien d'idéal maximal et de corps résiduel .    Montrer que admet une structure de -espace vectoriel de dimension finie.    Montrer que la dimension de sur est égal au nombre minimal de générateurs de l'idéal .    En déduire que . Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.       "
 },
 {
   "id": "references",

@@ -115,7 +115,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Technologies d'assistance</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Exposer les permaliens</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Options par défaut</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-exercices-anneaux-noetheriens.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-def-de-base.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="backmatter.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Options par défaut</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-exercices-anneaux-noetheriens.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-def-de-base.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="sec-exercices-anneaux-locaux.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -147,6 +147,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exercices-modules.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Généralités sur les modules</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exercices-anneaux-noetheriens.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Anneaux et modules noethériens</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-exercices-localisation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Localisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exercices-anneaux-locaux.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Anneaux locaux</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -163,119 +164,153 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localisation</span>
 </h1>
 <article class="exercise exercise-like" id="sec-exercices-localisation-2"><h2 class="heading">
-<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localisation d’un anneau réduit.</span>
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localiser en des unités ne change rien.</span>
 </h2>
-<div class="para" id="sec-exercices-localisation-2-2-1">Soit <span class="process-math">\(A\)</span> un anneau réduit et <span class="process-math">\(S\subset A\)</span> un sous-ensemble multiplicatif. Montrer que l’anneau localisé <span class="process-math">\(S^{-1}A\)</span> est réduit.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-localisation-2-2-1">Soit <span class="process-math">\(A\)</span> un anneau et <span class="process-math">\(S\subset A^{\times}\)</span> un sous-ensemble multiplicatif des unités de <span class="process-math">\(A\text{.}\)</span> Montrer que le morphisme canonique <span class="process-math">\(A\to S^{-1}A\)</span> est un isomorphisme.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
 <details id="sec-exercices-localisation-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para" id="sec-exercices-localisation-2-3-1">Soit <span class="process-math">\(a/s\in S^{-1}A\)</span> un élément nilpotent. Il existe un entier <span class="process-math">\(n\geq 1\)</span> tel que <span class="process-math">\(a^n/s^n=0\text{.}\)</span> Par définition de la localisation, il existe donc <span class="process-math">\(t\in S\)</span> tel que <span class="process-math">\(ta^n=0\text{.}\)</span> On en déduit que <span class="process-math">\((ta)^n=t^{n-1}(ta^n)=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-2-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="para" id="sec-exercices-localisation-2-3-2">Comme <span class="process-math">\(A\)</span> est réduit, on a <span class="process-math">\(ta=0\text{.}\)</span> Puisque <span class="process-math">\(t\in S\text{,}\)</span> cela signifie que <span class="process-math">\(a/s=0\)</span> dans <span class="process-math">\(S^{-1}A\text{.}\)</span> Ainsi, <span class="process-math">\(S^{-1}A\)</span> est réduit.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-2-3-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 2.4.1.1"><a tabindex="-1" href="#sec-exercices-localisation-2-3" title="Copy heading and permalink for Solution 2.4.1.1" aria-label="Copy heading and permalink for Solution 2.4.1.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.1: Localisation d’un anneau réduit"><a tabindex="-1" href="#sec-exercices-localisation-2" title="Copy heading and permalink for Exercice 2.4.1: Localisation d’un anneau réduit" aria-label="Copy heading and permalink for Exercice 2.4.1: Localisation d’un anneau réduit">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.1: Localiser en des unités ne change rien"><a tabindex="-1" href="#sec-exercices-localisation-2" title="Copy heading and permalink for Exercice 2.4.1: Localiser en des unités ne change rien" aria-label="Copy heading and permalink for Exercice 2.4.1: Localiser en des unités ne change rien">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="sec-exercices-localisation-3"><h2 class="heading">
-<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localisation d’anneaux avec diviseurs de zéro.</span>
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localisation d’un anneau réduit.</span>
 </h2>
-<div class="para logical" id="sec-exercices-localisation-3-2-1">
-<ol class="decimal" id="sec-exercices-localisation-3-2-1-1">
-<li id="sec-exercices-localisation-3-2-1-1-1">
-<div class="para logical" id="sec-exercices-localisation-3-2-1-1-1-1">
-<div class="para">Soit <span class="process-math">\(A\)</span> un anneau commutatif unitaire et <span class="process-math">\(f\in A\)</span> un élément régulier. Montrer que le noyau de l’application <span class="process-math">\(A\to A[f^{-1}]\)</span> est l’idéal</div>
-<div class="displaymath process-math" id="sec-exercices-localisation-3-2-1-1-1-1-4">
-\begin{equation*}
-\{a\in A\mid \exists n\geq 0,\ f^na=0\}.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-2-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.2.1"><a tabindex="-1" href="#sec-exercices-localisation-3-2-1-1-1" title="Copy heading and permalink for Point 2.4.2.1" aria-label="Copy heading and permalink for Point 2.4.2.1">🔗</a></div>
-</li>
-<li id="sec-exercices-localisation-3-2-1-1-2">
-<div class="para" id="sec-exercices-localisation-3-2-1-1-2-1">Soit<details class="ptx-footnote" aria-live="polite" id="sec-exercices-localisation-3-2-1-1-2-1-1"><summary class="ptx-footnote__number" title="Note de bas de page 2.4.1"><sup> 1 </sup></summary>
-<div class="ptx-footnote__contents" id="sec-exercices-localisation-3-2-1-1-2-1-1">On notera encore par <span class="process-math">\(X,Y\)</span> leur image dans <span class="process-math">\(A\text{.}\)</span>
-</div></details> <span class="process-math">\(A=\mathbb{C}[X,Y]/(X^2Y)\)</span> et <span class="process-math">\(f=X\text{.}\)</span> Montrer que le noyau de <span class="process-math">\(A\to A[X^{-1}]\)</span> est l’idéal <span class="process-math">\((Y)\text{.}\)</span> En déduire que <span class="process-math">\(A[X^{-1}]\cong\mathbb{C}[X^{\pm 1}]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-2-1-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.2.2"><a tabindex="-1" href="#sec-exercices-localisation-3-2-1-1-2" title="Copy heading and permalink for Point 2.4.2.2" aria-label="Copy heading and permalink for Point 2.4.2.2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-localisation-3-2-1">Soit <span class="process-math">\(A\)</span> un anneau réduit et <span class="process-math">\(S\subset A\)</span> un sous-ensemble multiplicatif. Montrer que l’anneau localisé <span class="process-math">\(S^{-1}A\)</span> est réduit.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
 <details id="sec-exercices-localisation-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<ol class="decimal" id="sec-exercices-localisation-3-3-1">
-<li id="sec-exercices-localisation-3-3-1-1">
-<div class="para" id="sec-exercices-localisation-3-3-1-1-1">L’anneau <span class="process-math">\(A[f^{-1}]\)</span> est la localisation de <span class="process-math">\(A\)</span> par rapport à l’ensemble multiplicatif <span class="process-math">\(S=\{f^n\mid n\geq 0\}\text{.}\)</span> Pour <span class="process-math">\(a\in A\text{,}\)</span> l’égalité <span class="process-math">\(a/1=0/1\)</span> dans cette localisation équivaut à l’existence de <span class="process-math">\(s\in S\)</span> tel que <span class="process-math">\(sa=0\text{,}\)</span> c’est-à-dire à l’existence de <span class="process-math">\(n\geq 0\)</span> tel que <span class="process-math">\(f^na=0\text{.}\)</span> On obtient donc exactement le noyau annoncé.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-localisation-3-3-1">Soit <span class="process-math">\(a/s\in S^{-1}A\)</span> un élément nilpotent. Il existe un entier <span class="process-math">\(n\geq 1\)</span> tel que <span class="process-math">\(a^n/s^n=0\text{.}\)</span> Par définition de la localisation, il existe donc <span class="process-math">\(t\in S\)</span> tel que <span class="process-math">\(ta^n=0\text{.}\)</span> On en déduit que <span class="process-math">\((ta)^n=t^{n-1}(ta^n)=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="sec-exercices-localisation-3-3-1-1-2">En particulier, si <span class="process-math">\(f\)</span> est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-exercices-localisation-3-3-2">Comme <span class="process-math">\(A\)</span> est réduit, on a <span class="process-math">\(ta=0\text{.}\)</span> Puisque <span class="process-math">\(t\in S\text{,}\)</span> cela signifie que <span class="process-math">\(a/s=0\)</span> dans <span class="process-math">\(S^{-1}A\text{.}\)</span> Ainsi, <span class="process-math">\(S^{-1}A\)</span> est réduit.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-3-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.2.1"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1-1" title="Copy heading and permalink for Point 2.4.2.1" aria-label="Copy heading and permalink for Point 2.4.2.1">🔗</a></div>
-</li>
-<li id="sec-exercices-localisation-3-3-1-2">
-<div class="para" id="sec-exercices-localisation-3-3-1-2-1">On note encore <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> leurs classes dans <span class="process-math">\(A\text{.}\)</span> Puisque <span class="process-math">\(X^2Y=0\text{,}\)</span> l’idéal <span class="process-math">\((Y)\)</span> est contenu dans le noyau de <span class="process-math">\(A\to A[X^{-1}]\text{.}\)</span> Réciproquement, si <span class="process-math">\(a\)</span> appartient à ce noyau, il existe <span class="process-math">\(n\geq 0\)</span> tel que <span class="process-math">\(X^na=0\text{.}\)</span> Dans <span class="process-math">\(A/(Y)\cong\mathbb{C}[X]\text{,}\)</span> cette égalité impose que l’image de <span class="process-math">\(a\)</span> soit nulle, car <span class="process-math">\(\mathbb{C}[X]\)</span> est intègre. Ainsi, le noyau est exactement <span class="process-math">\((Y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="para" id="sec-exercices-localisation-3-3-1-2-2">Le morphisme induit <span class="process-math">\(\mathbb{C}[X]\to A[X^{-1}]\)</span> est donc injectif et envoie <span class="process-math">\(X\)</span> sur un élément inversible. Il se prolonge en un morphisme <span class="process-math">\(\varphi:\mathbb{C}[X^{\pm 1}]\to A[X^{-1}]\text{.}\)</span> Ce morphisme est injectif : si <span class="process-math">\(\varphi(P/X^n)=0\text{,}\)</span> alors <span class="process-math">\(\varphi(P)=0\text{,}\)</span> donc <span class="process-math">\(P=0\text{.}\)</span> Il est aussi surjectif : l’image de <span class="process-math">\(Y\)</span> est nulle, donc toute fraction <span class="process-math">\(P(X,Y)/X^n\)</span> est égale à <span class="process-math">\(P(X,0)/X^n\text{.}\)</span> On obtient l’isomorphisme voulu.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.2.2"><a tabindex="-1" href="#sec-exercices-localisation-3-3-1-2" title="Copy heading and permalink for Point 2.4.2.2" aria-label="Copy heading and permalink for Point 2.4.2.2">🔗</a></div>
-</li>
-</ol>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 2.4.2.1"><a tabindex="-1" href="#sec-exercices-localisation-3-3" title="Copy heading and permalink for Solution 2.4.2.1" aria-label="Copy heading and permalink for Solution 2.4.2.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.2: Localisation d’anneaux avec diviseurs de zéro"><a tabindex="-1" href="#sec-exercices-localisation-3" title="Copy heading and permalink for Exercice 2.4.2: Localisation d’anneaux avec diviseurs de zéro" aria-label="Copy heading and permalink for Exercice 2.4.2: Localisation d’anneaux avec diviseurs de zéro">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.2: Localisation d’un anneau réduit"><a tabindex="-1" href="#sec-exercices-localisation-3" title="Copy heading and permalink for Exercice 2.4.2: Localisation d’un anneau réduit" aria-label="Copy heading and permalink for Exercice 2.4.2: Localisation d’un anneau réduit">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="sec-exercices-localisation-4"><h2 class="heading">
-<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimension et localisation.</span>
 </h2>
-<div class="para" id="sec-exercices-localisation-4-1-1">Soit <span class="process-math">\(A=\mathbb{C}[X,Y]/(XY)\)</span> et <span class="process-math">\(f=X+Y\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> 
-<div class="para logical" id="sec-exercices-localisation-4-1-2">
-<ol class="decimal" id="sec-exercices-localisation-4-1-2-1">
-<li id="sec-exercices-localisation-4-1-2-1-1">
-<div class="para" id="sec-exercices-localisation-4-1-2-1-1-1">Montrer que l’élément <span class="process-math">\(e=\frac{X}{X+Y}\)</span> de <span class="process-math">\(A[f^{-1}]\)</span> est idempotent.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para logical" id="sec-exercices-localisation-4-2-1">
+<div class="para">Soit <span class="process-math">\(A\)</span> un anneau et <span class="process-math">\(S\)</span> un sous-ensemble multiplicatif de <span class="process-math">\(A\text{.}\)</span> Montrer que</div>
+<div class="displaymath process-math" id="sec-exercices-localisation-4-2-1-4">
+\begin{equation*}
+\mathrm{dim}(S^{-1}A)\leq \mathrm{dim}(A).
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.3.1"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2-1-1" title="Copy heading and permalink for Point 2.4.3.1" aria-label="Copy heading and permalink for Point 2.4.3.1">🔗</a></div>
-</li>
-<li id="sec-exercices-localisation-4-1-2-1-2">
-<div class="para" id="sec-exercices-localisation-4-1-2-1-2-1">En déduire que <span class="process-math">\(A[f^{-1}]\cong \mathbb{C}[X^{\pm 1}]\times \mathbb{C}[Y^{\pm 1}]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.3.2"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2-1-2" title="Copy heading and permalink for Point 2.4.3.2" aria-label="Copy heading and permalink for Point 2.4.3.2">🔗</a></div>
-</li>
-<li id="sec-exercices-localisation-4-1-2-1-3">
-<div class="para" id="sec-exercices-localisation-4-1-2-1-3-1">En déduire que <span class="process-math">\(Q(\mathbb{C}[X,Y]/(XY))\cong \mathbb{C}(X)\times \mathbb{C}(Y)\text{,}\)</span> où <span class="process-math">\(Q(A)\)</span> désigne la localisation de <span class="process-math">\(A\)</span> par rapport à l’ensemble des éléments réguliers.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.3.3"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2-1-3" title="Copy heading and permalink for Point 2.4.3.3" aria-label="Copy heading and permalink for Point 2.4.3.3">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para">Trouver un cas d’égalité, ainsi qu’un cas d’inégalité.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-exercices-localisation-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-exercices-localisation-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para" id="sec-exercices-localisation-4-2-1">On pose <span class="process-math">\(B=A[f^{-1}]\)</span> et on note encore <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> les images des indéterminées dans les anneaux considérés.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<ol class="decimal" id="sec-exercices-localisation-4-2-2">
-<li id="sec-exercices-localisation-4-2-2-1">
-<div class="para" id="sec-exercices-localisation-4-2-2-1-1">Comme <span class="process-math">\(XY=0\text{,}\)</span> on a <span class="process-math">\(e^2-e= \frac{X^2-X(X+Y)}{(X+Y)^2} =-\frac{XY}{(X+Y)^2}=0\text{.}\)</span> L’élément <span class="process-math">\(e\)</span> est donc idempotent.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-4-2-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.3.1"><a tabindex="-1" href="#sec-exercices-localisation-4-2-2-1" title="Copy heading and permalink for Point 2.4.3.1" aria-label="Copy heading and permalink for Point 2.4.3.1">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.4.3.1"><a tabindex="-1" href="#sec-exercices-localisation-4-2" title="Copy heading and permalink for Solution 2.4.3.1" aria-label="Copy heading and permalink for Solution 2.4.3.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.4.3.1"><a tabindex="-1" href="#sec-exercices-localisation-4-3" title="Copy heading and permalink for Solution 2.4.3.1" aria-label="Copy heading and permalink for Solution 2.4.3.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.3"><a tabindex="-1" href="#sec-exercices-localisation-4" title="Copy heading and permalink for Exercice 2.4.3" aria-label="Copy heading and permalink for Exercice 2.4.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.3: Dimension et localisation"><a tabindex="-1" href="#sec-exercices-localisation-4" title="Copy heading and permalink for Exercice 2.4.3: Dimension et localisation" aria-label="Copy heading and permalink for Exercice 2.4.3: Dimension et localisation">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="sec-exercices-localisation-5"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localisation d’anneaux avec diviseurs de zéro.</span>
+</h2>
+<div class="para logical" id="sec-exercices-localisation-5-2-1">
+<ol class="decimal" id="sec-exercices-localisation-5-2-1-1">
+<li id="sec-exercices-localisation-5-2-1-1-1">
+<div class="para logical" id="sec-exercices-localisation-5-2-1-1-1-1">
+<div class="para">Soit <span class="process-math">\(A\)</span> un anneau commutatif unitaire et <span class="process-math">\(f\in A\)</span> un élément régulier. Montrer que le noyau de l’application <span class="process-math">\(A\to A[f^{-1}]\)</span> est l’idéal</div>
+<div class="displaymath process-math" id="sec-exercices-localisation-5-2-1-1-1-1-4">
+\begin{equation*}
+\{a\in A\mid \exists n\geq 0,\ f^na=0\}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-2-1-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.4.1"><a tabindex="-1" href="#sec-exercices-localisation-5-2-1-1-1" title="Copy heading and permalink for Point 2.4.4.1" aria-label="Copy heading and permalink for Point 2.4.4.1">🔗</a></div>
+</li>
+<li id="sec-exercices-localisation-5-2-1-1-2">
+<div class="para" id="sec-exercices-localisation-5-2-1-1-2-1">Soit<details class="ptx-footnote" aria-live="polite" id="sec-exercices-localisation-5-2-1-1-2-1-1"><summary class="ptx-footnote__number" title="Note de bas de page 2.4.1"><sup> 1 </sup></summary>
+<div class="ptx-footnote__contents" id="sec-exercices-localisation-5-2-1-1-2-1-1">On notera encore par <span class="process-math">\(X,Y\)</span> leur image dans <span class="process-math">\(A\text{.}\)</span>
+</div></details> <span class="process-math">\(A=\mathbb{C}[X,Y]/(X^2Y)\)</span> et <span class="process-math">\(f=X\text{.}\)</span> Montrer que le noyau de <span class="process-math">\(A\to A[X^{-1}]\)</span> est l’idéal <span class="process-math">\((Y)\text{.}\)</span> En déduire que <span class="process-math">\(A[X^{-1}]\cong\mathbb{C}[X^{\pm 1}]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-2-1-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.4.2"><a tabindex="-1" href="#sec-exercices-localisation-5-2-1-1-2" title="Copy heading and permalink for Point 2.4.4.2" aria-label="Copy heading and permalink for Point 2.4.4.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-exercices-localisation-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<ol class="decimal" id="sec-exercices-localisation-5-3-1">
+<li id="sec-exercices-localisation-5-3-1-1">
+<div class="para" id="sec-exercices-localisation-5-3-1-1-1">L’anneau <span class="process-math">\(A[f^{-1}]\)</span> est la localisation de <span class="process-math">\(A\)</span> par rapport à l’ensemble multiplicatif <span class="process-math">\(S=\{f^n\mid n\geq 0\}\text{.}\)</span> Pour <span class="process-math">\(a\in A\text{,}\)</span> l’égalité <span class="process-math">\(a/1=0/1\)</span> dans cette localisation équivaut à l’existence de <span class="process-math">\(s\in S\)</span> tel que <span class="process-math">\(sa=0\text{,}\)</span> c’est-à-dire à l’existence de <span class="process-math">\(n\geq 0\)</span> tel que <span class="process-math">\(f^na=0\text{.}\)</span> On obtient donc exactement le noyau annoncé.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="sec-exercices-localisation-5-3-1-1-2">En particulier, si <span class="process-math">\(f\)</span> est régulier (non diviseur de zéro), toutes ses puissances sont régulières et ce noyau est nul.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-3-1-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.4.1"><a tabindex="-1" href="#sec-exercices-localisation-5-3-1-1" title="Copy heading and permalink for Point 2.4.4.1" aria-label="Copy heading and permalink for Point 2.4.4.1">🔗</a></div>
+</li>
+<li id="sec-exercices-localisation-5-3-1-2">
+<div class="para" id="sec-exercices-localisation-5-3-1-2-1">On note encore <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> leurs classes dans <span class="process-math">\(A\text{.}\)</span> Puisque <span class="process-math">\(X^2Y=0\text{,}\)</span> l’idéal <span class="process-math">\((Y)\)</span> est contenu dans le noyau de <span class="process-math">\(A\to A[X^{-1}]\text{.}\)</span> Réciproquement, si <span class="process-math">\(a\)</span> appartient à ce noyau, il existe <span class="process-math">\(n\geq 0\)</span> tel que <span class="process-math">\(X^na=0\text{.}\)</span> Dans <span class="process-math">\(A/(Y)\cong\mathbb{C}[X]\text{,}\)</span> cette égalité impose que l’image de <span class="process-math">\(a\)</span> soit nulle, car <span class="process-math">\(\mathbb{C}[X]\)</span> est intègre. Ainsi, le noyau est exactement <span class="process-math">\((Y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="sec-exercices-localisation-5-3-1-2-2">Le morphisme induit <span class="process-math">\(\mathbb{C}[X]\to A[X^{-1}]\)</span> est donc injectif et envoie <span class="process-math">\(X\)</span> sur un élément inversible. Il se prolonge en un morphisme <span class="process-math">\(\varphi:\mathbb{C}[X^{\pm 1}]\to A[X^{-1}]\text{.}\)</span> Ce morphisme est injectif : si <span class="process-math">\(\varphi(P/X^n)=0\text{,}\)</span> alors <span class="process-math">\(\varphi(P)=0\text{,}\)</span> donc <span class="process-math">\(P=0\text{.}\)</span> Il est aussi surjectif : l’image de <span class="process-math">\(Y\)</span> est nulle, donc toute fraction <span class="process-math">\(P(X,Y)/X^n\)</span> est égale à <span class="process-math">\(P(X,0)/X^n\text{.}\)</span> On obtient l’isomorphisme voulu.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-5-3-1-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.4.2"><a tabindex="-1" href="#sec-exercices-localisation-5-3-1-2" title="Copy heading and permalink for Point 2.4.4.2" aria-label="Copy heading and permalink for Point 2.4.4.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.4.4.1"><a tabindex="-1" href="#sec-exercices-localisation-5-3" title="Copy heading and permalink for Solution 2.4.4.1" aria-label="Copy heading and permalink for Solution 2.4.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.4: Localisation d’anneaux avec diviseurs de zéro"><a tabindex="-1" href="#sec-exercices-localisation-5" title="Copy heading and permalink for Exercice 2.4.4: Localisation d’anneaux avec diviseurs de zéro" aria-label="Copy heading and permalink for Exercice 2.4.4: Localisation d’anneaux avec diviseurs de zéro">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="sec-exercices-localisation-6"><h2 class="heading">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="sec-exercices-localisation-6-1-1">Soit <span class="process-math">\(A=\mathbb{C}[X,Y]/(XY)\)</span> et <span class="process-math">\(f=X+Y\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div> 
+<div class="para logical" id="sec-exercices-localisation-6-1-2">
+<ol class="decimal" id="sec-exercices-localisation-6-1-2-1">
+<li id="sec-exercices-localisation-6-1-2-1-1">
+<div class="para" id="sec-exercices-localisation-6-1-2-1-1-1">Montrer que l’élément <span class="process-math">\(e=\frac{X}{X+Y}\)</span> de <span class="process-math">\(A[f^{-1}]\)</span> est idempotent.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.5.1"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2-1-1" title="Copy heading and permalink for Point 2.4.5.1" aria-label="Copy heading and permalink for Point 2.4.5.1">🔗</a></div>
+</li>
+<li id="sec-exercices-localisation-6-1-2-1-2">
+<div class="para" id="sec-exercices-localisation-6-1-2-1-2-1">En déduire que <span class="process-math">\(A[f^{-1}]\cong \mathbb{C}[X^{\pm 1}]\times \mathbb{C}[Y^{\pm 1}]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.5.2"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2-1-2" title="Copy heading and permalink for Point 2.4.5.2" aria-label="Copy heading and permalink for Point 2.4.5.2">🔗</a></div>
+</li>
+<li id="sec-exercices-localisation-6-1-2-1-3">
+<div class="para" id="sec-exercices-localisation-6-1-2-1-3-1">En déduire que <span class="process-math">\(Q(\mathbb{C}[X,Y]/(XY))\cong \mathbb{C}(X)\times \mathbb{C}(Y)\text{,}\)</span> où <span class="process-math">\(Q(A)\)</span> désigne la localisation de <span class="process-math">\(A\)</span> par rapport à l’ensemble des éléments réguliers.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.5.3"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2-1-3" title="Copy heading and permalink for Point 2.4.5.3" aria-label="Copy heading and permalink for Point 2.4.5.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-exercices-localisation-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec-exercices-localisation-6-2-1">On pose <span class="process-math">\(B=A[f^{-1}]\)</span> et on note encore <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> les images des indéterminées dans les anneaux considérés.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-exercices-localisation-6-2-2">
+<li id="sec-exercices-localisation-6-2-2-1">
+<div class="para" id="sec-exercices-localisation-6-2-2-1-1">Comme <span class="process-math">\(XY=0\text{,}\)</span> on a <span class="process-math">\(e^2-e= \frac{X^2-X(X+Y)}{(X+Y)^2} =-\frac{XY}{(X+Y)^2}=0\text{.}\)</span> L’élément <span class="process-math">\(e\)</span> est donc idempotent.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#sec-exercices-localisation-6-2-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point 2.4.5.1"><a tabindex="-1" href="#sec-exercices-localisation-6-2-2-1" title="Copy heading and permalink for Point 2.4.5.1" aria-label="Copy heading and permalink for Point 2.4.5.1">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.4.5.1"><a tabindex="-1" href="#sec-exercices-localisation-6-2" title="Copy heading and permalink for Solution 2.4.5.1" aria-label="Copy heading and permalink for Solution 2.4.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 2.4.5"><a tabindex="-1" href="#sec-exercices-localisation-6" title="Copy heading and permalink for Exercice 2.4.5" aria-label="Copy heading and permalink for Exercice 2.4.5">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 2.4: Localisation"><a tabindex="-1" href="#sec-exercices-localisation" title="Copy heading and permalink for Section 2.4: Localisation" aria-label="Copy heading and permalink for Section 2.4: Localisation">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-exercices-anneaux-noetheriens.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="backmatter.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-exercices-anneaux-noetheriens.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="sec-exercices-anneaux-locaux.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
