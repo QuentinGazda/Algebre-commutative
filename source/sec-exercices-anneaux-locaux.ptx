@@ -6,7 +6,7 @@
     <note>
         <title>Anneau local</title>
         <p>
-            Un anneau <m>R</m> est dit <em>local</em> si l'une des propriétés équivalentes suivantes est vérifiée.
+            Un anneau <m>R</m> non nul est dit <em>local</em> si l'une des propriétés équivalentes suivantes est vérifiée.
         </p>
         <ol>
             <li xml:id="local-1">
@@ -57,6 +57,53 @@
             </ol>
         </statement>
         <solution>
+            <!--
+            <ol>
+                <li>
+                    <p>
+                        Montrons que <xref ref="local-1"/> implique <xref ref="local-2"/>. L'idéal maximal
+                        <m>\mathfrak{m}</m> est distinct de <m>R</m> par définition et ne contient donc aucun élément inversible.
+                        Réciproquement, si <m>x</m> n'est pas inversible,
+                        l'idéal <m>(x)</m> est propre ; il est donc contenu
+                        dans un idéal maximal, nécessairement égal à
+                        <m>\mathfrak{m}</m>. Ainsi,
+                        <m>R\setminus R^{\times}=\mathfrak{m}</m>.
+                    </p>
+                    <p>
+                        Montrons que <xref ref="local-2"/> implique <xref ref="local-3"/>. Si <m>I=R\setminus R^{\times}</m> est
+                        un idéal, les éléments <m>r</m> et <m>1-r</m>
+                        ne peuvent pas appartenir tous deux à cet idéal,
+                        puisque leur somme vaut <m>1\in I</m> et que <m>I\neq R</m>.
+                    </p>
+                    <p>
+                        Montrons que <xref ref="local-3"/> implique <xref ref="local-4"/>. Soient
+                        <m>I,J</m> deux idéaux propres. Si <m>I+J=R</m>,
+                        on peut écrire <m>1=a+b</m> avec <m>a\in I</m>
+                        et <m>b\in J</m>. Ni <m>a</m> ni <m>b=1-a</m>
+                        ne sont inversibles, ce qui est une contradiction.
+                    </p>
+                    <p>
+                        Enfin, montrons que <xref ref="local-4"/> implique <xref ref="local-1"/>. Puisque <m>R\neq(0)</m>, il possède au moins
+                        un idéal maximal. Si <m>\mathfrak{m}</m> et
+                        <m>\mathfrak{n}</m> étaient deux idéaux maximaux
+                        distincts, la maximalité de <m>\mathfrak{m}</m>
+                        donnerait <m>\mathfrak{m}+\mathfrak{n}=R</m>,
+                        ce qui contredirait <xref ref="local-4"/>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        L'égalité <m>\mathfrak{m}=R\setminus R^{\times}</m> a été établie au début de la première question.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Soit <m>e\in R</m> un idempotent. L'égalité <m>e^2=e</m> se réécrit <m>e(1-e)=0</m>. Si <m>e</m> est inversible, on obtient <m>1-e=0</m>, donc <m>e=1</m>.
+                        Sinon, <m>1-e</m> est inversible, et l'on obtient <m>e=0</m>. Réciproquement, <m>0</m> et <m>1</m> sont des idempotents.
+                    </p>
+                </li>
+            </ol>
+            -->
         </solution>
     </exercise>
 
@@ -94,6 +141,91 @@
                 </li>
             </ol>
         </statement>
+        <solution>
+            <!--
+            <ol>
+                <li>
+                    <p>
+                        L'anneau <m>\mathbb{Z}</m> n'est pas local :
+                        les idéaux <m>(2)</m> et <m>(3)</m> sont deux
+                        idéaux maximaux distincts.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Si <m>n=1</m>, on obtient l'anneau nul, qui
+                        n'est pas local puisqu'il ne possède aucun
+                        idéal maximal.
+                    </p>
+                    <p>
+                        Supposons <m>n\geq 2</m>.
+                        Par la correspondance des idéaux pour le quotient
+                        <m>\mathbb{Z}\to\mathbb{Z}/n\mathbb{Z}</m>,
+                        les idéaux maximaux de
+                        <m>\mathbb{Z}/n\mathbb{Z}</m> sont les
+                        <m>p\mathbb{Z}/n\mathbb{Z}</m>,
+                        où <m>p</m> parcourt les nombres premiers divisant
+                        <m>n</m>.
+                        Cet anneau est donc local si et seulement si
+                        <m>n=p^a</m> pour un nombre premier <m>p</m>
+                        et un entier <m>a\geq 1</m>.
+                        Dans ce cas, son idéal maximal est
+                        <m>p\mathbb{Z}/p^a\mathbb{Z}</m>
+                        et son corps résiduel est <m>\mathbb{F}_p</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Une série <m>f=\sum_{i\geq 0}a_iX^i</m>
+                        est inversible si et seulement si <m>a_0\neq 0</m>.
+                        En effet, si <m>fg=1</m>, le produit des termes
+                        constants de <m>f</m> et <m>g</m> vaut <m>1</m>.
+                        Réciproquement, si <m>a_0\neq 0</m>, on écrit
+                        <m>f=a_0(1+h)</m> avec
+                        <m>h\in Xk[\![X]\!]</m>, et la série formelle
+                        <m>a_0^{-1}\sum_{j\geq 0}(-h)^j</m>
+                        est un inverse de <m>f</m> ; chaque coefficient
+                        de cette somme ne fait intervenir qu'un nombre
+                        fini de termes.
+                    </p>
+                    <p>
+                        Les éléments non inversibles forment donc l'idéal
+                        <m>(X)</m>. Ainsi, <m>k[\![X]\!]</m> est local,
+                        d'idéal maximal <m>(X)</m> et de corps résiduel
+                        <m>k</m>, l'isomorphisme étant induit par
+                        l'application qui associe à une série son terme
+                        constant.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Notons encore <m>\varepsilon</m> la classe
+                        de l'indéterminée dans
+                        <m>k[\varepsilon]/(\varepsilon^2)</m>.
+                        Tout élément s'écrit de manière unique
+                        <m>a+b\varepsilon</m>, avec <m>a,b\in k</m>.
+                        Si <m>a\neq 0</m>, son inverse est
+                        <m>a^{-1}-a^{-2}b\varepsilon</m>.
+                        Si <m>a=0</m>, il est de carré nul et ne peut
+                        donc pas être inversible.
+                        Les non-inversibles forment ainsi l'idéal
+                        <m>(\varepsilon)</m>. L'anneau est local,
+                        d'idéal maximal <m>(\varepsilon)</m>
+                        et de corps résiduel <m>k</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        L'anneau <m>k\times k</m> n'est pas local :
+                        les idéaux <m>k\times(0)</m> et
+                        <m>(0)\times k</m> sont deux idéaux maximaux
+                        distincts, puisque les deux quotients
+                        correspondants sont isomorphes à <m>k</m>.
+                    </p>
+                </li>
+            </ol>
+            -->
+        </solution>
     </exercise>
 
     <exercise>
@@ -107,6 +239,46 @@
             </p>
             </statement>
             <solution>
+                <!--
+                <p>
+                        Puisque <m>\mathfrak{p}</m> est un idéal premier,
+                        on a <m>1\notin\mathfrak{p}</m> et le produit de deux
+                        éléments extérieurs à <m>\mathfrak{p}</m> est encore
+                        extérieur à <m>\mathfrak{p}</m>.
+                        Ainsi, <m>S=A\setminus\mathfrak{p}</m>
+                        est un sous-ensemble multiplicatif.
+                </p>
+                <p>
+                        Le morphisme
+                        <m>A\to\mathrm{Frac}(A/\mathfrak{p})</m>
+                        envoie tout élément de <m>S</m> sur un élément inversible.
+                        Il induit donc un morphisme
+                        <m>\varphi:A_{\mathfrak{p}}\to\mathrm{Frac}(A/\mathfrak{p})</m>,
+                        donné par <m>\varphi(a/s)=\overline{a}/\overline{s}</m>.
+                        Ce morphisme est surjectif : tout élément du corps
+                        des fractions s'écrit
+                        <m>\overline{a}/\overline{s}</m> avec
+                        <m>\overline{s}\neq 0</m>, c'est-à-dire <m>s\in S</m>.
+                </p>
+                <p>
+                        De plus, <m>\varphi(a/s)=0</m> si et seulement si
+                        <m>a\in\mathfrak{p}</m>. Son noyau est donc
+                        <m>S^{-1}\mathfrak{p}</m>, et l'on obtient
+                        <m>A_{\mathfrak{p}}/S^{-1}\mathfrak{p}\cong\mathrm{Frac}(A/\mathfrak{p})</m>.
+                        En particulier, <m>S^{-1}\mathfrak{p}</m>
+                        est un idéal maximal.
+                </p>
+                <p>
+                        Enfin, un élément <m>a/s</m> n'appartenant pas à
+                        <m>S^{-1}\mathfrak{p}</m> vérifie
+                        <m>a\notin\mathfrak{p}</m> et admet donc pour inverse
+                        <m>s/a</m>, un élement de <m>A_{\mathfrak{p}}</m>.
+                        Un idéal propre de <m>A_{\mathfrak{p}}</m> ne contenant
+                        aucun élément inversible, il est nécessairement contenu
+                        dans <m>S^{-1}\mathfrak{p}</m>.
+                        Ce dernier est donc l'unique idéal maximal.
+                </p>
+                -->
             </solution>
     </exercise>
 
@@ -117,10 +289,46 @@
                     Montrer la formule suivante pour un anneau commutatif <m>A</m> quelconque:
                 </p>
                 <md>
-                    \mathrm{dim}(A) = \max_{\mathfrak{m}~\text{maximal}} \{\mathrm{dim}(A_{\mathfrak{m}})\}. 
+                    \mathrm{dim}(A) = \sup_{\mathfrak{m}~\text{maximal}} \{\mathrm{dim}(A_{\mathfrak{m}})\}. 
                 </md>
             </statement>
             <solution>
+                <!--
+                <p>
+                    Pour tout idéal maximal <m>\mathfrak{m}</m> de <m>A</m>,
+                    la correspondance des idéaux premiers par localisation
+                    donne une bijection, respectant les inclusions strictes,
+                    entre les idéaux premiers de <m>A_{\mathfrak{m}}</m>
+                    et les idéaux premiers de <m>A</m> contenus dans
+                    <m>\mathfrak{m}</m>.
+                    Toute chaîne d'idéaux premiers de
+                    <m>A_{\mathfrak{m}}</m> fournit donc une chaîne de même
+                    longueur dans <m>A</m>. Ainsi,
+                    <m>\mathrm{dim}(A_{\mathfrak{m}})\leq\mathrm{dim}(A)</m>.
+                </p>
+                <p>
+                    Réciproquement, soit
+                    <m>\mathfrak{p}_0\subsetneq\cdots\subsetneq\mathfrak{p}_r</m>
+                    une chaîne d'idéaux premiers de <m>A</m>.
+                    Il existe un idéal maximal <m>\mathfrak{m}</m>
+                    contenant <m>\mathfrak{p}_r</m>.
+                    La même correspondance donne une chaîne
+                    <m>\mathfrak{p}_0A_{\mathfrak{m}}\subsetneq\cdots\subsetneq\mathfrak{p}_rA_{\mathfrak{m}}</m>,
+                    d'où <m>r\leq\mathrm{dim}(A_{\mathfrak{m}})</m>.
+                    En prenant la borne supérieure des longueurs de toutes
+                    les chaînes, on obtient
+                    <m>\mathrm{dim}(A)\leq\sup_{\mathfrak{m}\text{ maximal}}\mathrm{dim}(A_{\mathfrak{m}})</m>.
+                    Les deux inégalités donnent le résultat.
+                </p>
+                <p>
+                    Si <m>\mathrm{dim}(A)=d</m> est finie, il existe une chaîne
+                    de longueur <m>d</m>. En choisissant un idéal maximal
+                    contenant son dernier terme, l'argument précédent donne
+                    <m>\mathrm{dim}(A_{\mathfrak{m}})=d</m>.
+                    Dans ce cas, la borne supérieure est bien un maximum.
+                    En dimension infinie, ce maximum n'existe pas nécessairement.
+                </p>
+                -->
             </solution>
     </exercise>
 
@@ -132,6 +340,29 @@
             </p>
         </statement>
         <solution>
+            <!--
+            <p>
+                Choisissons une famille génératrice
+                <m>(m_1,\ldots,m_r)</m> de <m>M</m>
+                dont le cardinal <m>r</m> est minimal.
+                Supposons <m>r\geq 1</m>.
+                Comme <m>M=\mathfrak{m}M</m>, il existe
+                <m>a_1,\ldots,a_r\in\mathfrak{m}</m> tels que
+                <m>m_r=\sum_{i=1}^r a_i m_i</m>.
+                Ainsi,
+                <m>(1-a_r)m_r=\sum_{i=1}^{r-1}a_i m_i</m>.
+            </p>
+            <p>
+                L'élément <m>1-a_r</m> est inversible :
+                sinon il appartiendrait à <m>\mathfrak{m}</m>,
+                d'où <m>1=(1-a_r)+a_r\in\mathfrak{m}</m>.
+                On en déduit que <m>m_r</m> appartient au sous-module
+                engendré par <m>m_1,\ldots,m_{r-1}</m>.
+                Cette famille engendre donc <m>M</m>, contrairement
+                à la minimalité de <m>r</m>.
+                Par conséquent <m>r=0</m>, donc <m>M=(0)</m>.
+            </p>
+            -->
         </solution>
     </exercise>
 
@@ -154,12 +385,104 @@
             </li>
             <li>
                 <p>
-                    En déduire que <m>\mathrm{dim}(R)\leq \mathrm{dim}_{\kappa}(\mathfrak{m}/\mathfrak{m}^2)</m>. Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.
+                    Il s'avère que l'on a l'inégalité <m>\mathrm{dim}(R)\leq \mathrm{dim}_{\kappa}(\mathfrak{m}/\mathfrak{m}^2)</m>. Trouver un cas d'égalité, ainsi qu'un cas d'inégalité.
                 </p>
             </li>
         </ol>
         </statement>
         <solution>
+            <!--
+            <ol>
+                <li>
+                    <p>
+                        Pour <m>a\in R</m> et <m>x\in\mathfrak{m}</m>,
+                        posons
+                        <m>(a+\mathfrak{m})(x+\mathfrak{m}^2)=ax+\mathfrak{m}^2</m>.
+                        Cette opération est bien définie :
+                        modifier <m>a</m> par un élément de
+                        <m>\mathfrak{m}</m> ou <m>x</m> par un élément
+                        de <m>\mathfrak{m}^2</m> ne modifie pas
+                        <m>ax</m> modulo <m>\mathfrak{m}^2</m>.
+                        Elle fait de <m>\mathfrak{m}/\mathfrak{m}^2</m>
+                        un espace vectoriel sur
+                        <m>\kappa=R/\mathfrak{m}</m>.
+                    </p>
+                    <p>
+                        Comme <m>R</m> est noethérien, il existe
+                        <m>y_1,\ldots,y_s\in\mathfrak{m}</m> tels que
+                        <m>\mathfrak{m}=(y_1,\ldots,y_s)</m>.
+                        Leurs images engendrent
+                        <m>\mathfrak{m}/\mathfrak{m}^2</m>
+                        sur <m>\kappa</m>, donc cet espace vectoriel
+                        est de dimension finie.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Posons
+                        <m>d=\mathrm{dim}_{\kappa}(\mathfrak{m}/\mathfrak{m}^2)</m>.
+                        Toute famille de générateurs de
+                        <m>\mathfrak{m}</m> a des images qui engendrent
+                        <m>\mathfrak{m}/\mathfrak{m}^2</m> ;
+                        elle possède donc au moins <m>d</m> éléments.
+                    </p>
+                    <p>
+                        Réciproquement, choisissons
+                        <m>x_1,\ldots,x_d\in\mathfrak{m}</m>
+                        dont les images forment une base de
+                        <m>\mathfrak{m}/\mathfrak{m}^2</m>,
+                        et posons <m>I=(x_1,\ldots,x_d)</m>.
+                        Le fait que ces images engendrent le quotient
+                        donne <m>\mathfrak{m}=I+\mathfrak{m}^2</m>.
+                        Le <m>R</m>-module <m>N=\mathfrak{m}/I</m>
+                        est de type fini et vérifie
+                        <m>\mathfrak{m}N=(\mathfrak{m}^2+I)/I=\mathfrak{m}/I=N</m>.
+                        Le lemme de Nakayama donne <m>N=(0)</m>,
+                        donc <m>\mathfrak{m}=I</m>.
+                        Ainsi <m>d</m> est exactement le nombre minimal
+                        de générateurs de <m>\mathfrak{m}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Pour un cas d'égalité, considérons
+                        <m>R=k[\![X]\!]</m>.
+                        Cet anneau est local noethérien d'idéal maximal
+                        <m>\mathfrak{m}=(X)</m> et de corps résiduel
+                        <m>k</m>.
+                        Ses seuls idéaux premiers sont <m>(0)</m>
+                        et <m>(X)</m>.
+                        Ainsi <m>\mathrm{dim}(R)=1</m>.
+                        De plus, la classe de <m>X</m> forme une base de
+                        <m>\mathfrak{m}/\mathfrak{m}^2</m> :
+                        elle engendre ce quotient et n'est pas nulle,
+                        car <m>X\in(X^2)</m> entraînerait, par intégrité,
+                        <m>1\in(X)</m>.
+                        On a donc
+                        <m>\mathrm{dim}(R)=\mathrm{dim}_k(\mathfrak{m}/\mathfrak{m}^2)=1</m>.
+                    </p>
+                    <p>
+                        Pour un cas d'inégalité stricte, prenons
+                        <m>R=k[\varepsilon]/(\varepsilon^2)</m>,
+                        où l'on note encore <m>\varepsilon</m>
+                        la classe de l'indéterminée.
+                        Cet anneau est noethérien, car c'est un espace
+                        vectoriel de dimension finie sur <m>k</m>.
+                        Son unique idéal premier est
+                        <m>\mathfrak{m}=(\varepsilon)</m> :
+                        tout idéal premier contient l'élément nilpotent
+                        <m>\varepsilon</m>, et
+                        <m>R/(\varepsilon)=k</m> est un corps.
+                        Ainsi <m>\mathrm{dim}(R)=0</m>, tandis que
+                        <m>\mathfrak{m}^2=(0)</m> et
+                        <m>\mathfrak{m}</m> est de dimension <m>1</m>
+                        sur <m>k</m>.
+                        Par conséquent,
+                        <m>\mathrm{dim}(R)=0&lt;1=\mathrm{dim}_k(\mathfrak{m}/\mathfrak{m}^2)</m>.
+                    </p>
+                </li>
+            </ol>
+            -->
         </solution>
     </exercise>
 

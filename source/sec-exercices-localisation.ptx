@@ -95,6 +95,130 @@
         </solution>
     </exercise>
 
+
+    <note xml:id="note-localisation-supprimer-composante">
+    <title>Interprétation géométrique : supprimer une composante</title>
+
+    <p>
+        La relation
+        <md>
+        \operatorname{Spec}(A[f^{-1}]) = \{\mathfrak{p}\in\operatorname{Spec}(A)\mid f\notin\mathfrak{p}\}
+        </md>
+        montre qu'inverser un élément <m>f</m> d'un anneau <m>A</m> revient
+        géométriquement à se restreindre le spectre.
+    </p>
+
+    <p>
+        L'anneau <m>A=\mathbb{C}[X,Y]/(X^2Y)</m> correspond à l'anneau des fonctions algébriques sur l'ensemble algébrique <m>V=\{(x,y)~|~x^2y=0\}</m> de <m>\mathbb{C}^2</m>. L'ensemble <m>V</m>
+        est la réunion des deux axes de coordonnées, à savoir <m>\{(x,y)~|~xy=0\}</m>. L'anneau <m>A</m> porte toutefois une information
+        supplémentaire : l'axe horizontal <m>Y=0</m> est simple,
+        tandis que l'axe vertical <m>X=0</m> apparaît avec multiplicité
+        deux. La droite double a le même ensemble de points que la droite
+        simple, mais possède une structure nilpotente que le dessin
+        ne peut représenter que symboliquement.
+    </p>
+
+    <figure xml:id="figure-localisation-supprimer-composante">
+        <caption>
+            Inverser <m>X</m> supprime la droite verticale double
+            et l'origine.
+        </caption>
+        <image width="100%">
+            <description>
+                <p>
+                    À gauche, les deux axes se rencontrent à l'origine.
+                    L'axe vertical est épaissi pour indiquer sa
+                    multiplicité deux. À droite, après inversion de
+                    X, il ne reste que l'axe horizontal privé de
+                    l'origine, marquée par un cercle vide.
+                </p>
+            </description>
+            <latex-image label="tikz-localisation-supprimer-composante"><![CDATA[
+        \begin{tikzpicture}[
+            x=0.9cm,y=0.9cm,
+            font=\small,
+            line cap=round,
+            line join=round
+        ]
+        \definecolor{locHorizontal}{RGB}{179,78,31}
+        \definecolor{locVertical}{RGB}{38,83,128}
+        \definecolor{locNeutral}{RGB}{67,72,79}
+
+        % Titres des deux panneaux.
+        \node[font=\bfseries] at (-3.15,3.05)
+            {Avant la localisation};
+        \node at (-3.15,2.55)
+            {$\operatorname{Spec}\bigl(\mathbb{C}[X,Y]/(X^2Y)\bigr)$};
+        \node[font=\bfseries] at (3.15,3.05)
+            {Apr\`es la localisation};
+        \node at (3.15,2.55) {$X\text{ inversible}$};
+
+        % Le ruban represente l'epaississement de la composante verticale.
+        \fill[locVertical!12]
+            (-3.28,-1.65) rectangle (-3.02,1.65);
+        \draw[locVertical,line width=0.6pt]
+            (-3.28,-1.65) -- (-3.28,1.65);
+        \draw[locVertical,line width=0.6pt]
+            (-3.02,-1.65) -- (-3.02,1.65);
+        \draw[locVertical,densely dashed,line width=0.45pt]
+            (-3.15,-1.65) -- (-3.15,1.65);
+
+        % La composante horizontale est simple.
+        \draw[locHorizontal,line width=1pt,<->]
+            (-5.10,0) -- (-1.20,0);
+        \fill[locNeutral] (-3.15,0) circle[radius=1.6pt];
+        \node[anchor=north east] at (-3.32,-0.13) {$O$};
+        \node[locVertical,anchor=south,font=\footnotesize]
+            at (-3.15,1.70) {droite double $X^2=0$};
+        \node[locHorizontal,anchor=north,font=\footnotesize]
+            at (-1.97,-0.16) {$Y=0$};
+
+        % Passage a l'ouvert principal.
+        \draw[locNeutral,line width=0.8pt,->]
+            (-0.65,0) -- (0.65,0);
+        \node[locNeutral,font=\footnotesize]
+            at (0,0.40) {inverser $X$};
+
+        % Apres localisation, seule subsiste la droite horizontale ponctuee.
+        \draw[locHorizontal,line width=1pt,<->]
+            (1.20,0) -- (5.10,0);
+        \draw[locHorizontal,fill=white,line width=0.9pt]
+            (3.15,0) circle[radius=2.8pt];
+        \node[locHorizontal,anchor=north,font=\footnotesize]
+            at (4.30,-0.16) {$Y=0$};
+
+        \draw[locNeutral,line width=0.45pt]
+            (3.15,-0.16) -- (3.15,-0.57);
+        \node[locNeutral,anchor=north,font=\footnotesize]
+            at (3.15,-0.64) {origine retir\'ee};
+
+        \node[align=center,text width=4.2cm,font=\footnotesize]
+            at (-3.15,-2.20)
+            {Une droite double et une droite simple.};
+        \node[align=center,text width=4.2cm,font=\footnotesize]
+            at (3.15,-2.20)
+            {Il reste la droite $Y=0$ priv\'ee de l'origine :
+            $\operatorname{Spec}\mathbb{C}[X,X^{-1}]$.};
+        \end{tikzpicture}
+        ]]></latex-image>
+                </image>
+            </figure>
+
+        <p>
+            Inverser <m>X</m> consiste à ne conserver que les points
+            où <m>X</m> ne s'annule pas. Toute la composante verticale
+            disparaît, ainsi que l'origine de la composante horizontale.
+            Puisque <m>X</m> est désormais inversible, la relation
+            <m>X^2Y=0</m> impose <m>Y=0</m>. Il reste donc une droite
+            privée de l'origine :
+            <m>A[X^{-1}]\cong\mathbb{C}[X^{\pm1}]</m>.
+            La droite complexe poncturée
+            est connexe, malgré les deux demi-droites visibles sur
+            cette représentation réelle.
+        </p>
+    </note>
+
+
     <exercise>
         <statement>
             <p>
@@ -128,25 +252,23 @@
                         Comme <m>XY=0</m>, on a <m>e^2-e= \frac{X^2-X(X+Y)}{(X+Y)^2} =-\frac{XY}{(X+Y)^2}=0</m>. L'élément <m>e</m> est donc idempotent.
                     </p>
                 </li>
-                <!--
                 <li>
                     <p>
                         Tout idempotent d'un anneau commutatif donne une décomposition en produit : l'application <m>B\to eB\times(1-e)B</m>, définie par <m>b\mapsto(eb,(1-e)b)</m>, est un isomorphisme d'anneaux, d'inverse <m>(u,v)\mapsto u+v</m>.
                         En effet, <m>e(1-e)=0</m> et <m>e+(1-e)=1</m>. Les unités des deux facteurs sont respectivement <m>e</m> et <m>1-e</m>.
                     </p>
                     <p>
-                        La projection <m>B\to eB</m>, <m>b\mapsto eb</m>, a pour noyau <m>(1-e)B</m>. Or <m>1-e=Y/f</m> et <m>f</m> est inversible dans <m>B</m>, donc <m>(1-e)B=YB</m>.
-                        Par conséquent,
-                        <md>eB\cong B/YB \cong(A/(Y))[X^{-1}] \cong\mathbb{C}[X^{\pm 1}].</md>
-                        Ici, on utilise le fait que quotienter puis localiser revient à localiser puis quotienter, et que l'image de <m>f=X+Y</m> modulo <m>Y</m> est <m>X</m>.
-                    </p>
-                    <p>
-                        De même, <m>eB=XB</m>, d'où
-                        <md>(1-e)B\cong B/XB \cong(A/(X))[Y^{-1}] \cong\mathbb{C}[Y^{\pm 1}].</md>
-                        On obtient ainsi <m>B\cong\mathbb{C}[X^{\pm 1}] \times\mathbb{C}[Y^{\pm 1}]</m>.
-                    </p>
-                    <p>
-                        Explicitement, cet isomorphisme est donné par <m>\frac{P(X,Y)}{(X+Y)^n}\longmapsto \left(\frac{P(X,0)}{X^n}, \frac{P(0,Y)}{Y^n}\right)</m>.
+                        On considère le morphisme surjectif <m>\mathbb{C}[X,Y]\to \mathbb{C}[X]</m> d'évaluation en <m>Y=0</m>. Elle annule tout multiple de <m>Y</m>, en particulier de <m>XY</m>, et donc passe au quotient
+                        <men xml:id="morphisme-factorise"> A=\mathbb{C}[X,Y]/(XY)\longrightarrow \mathbb{C}[X].</men>
+                        L'élement <m>f=X+Y</m> est envoyé sur <m>X</m>. Le morphisme d'étend aux localisations par <m>f</m> dans l'anneau source et par <m>X</m> dans l'anneau cible, donnant ainsi un morphisme toujours surjectif
+                        <men xml:id="morphisme-localise"> A[f^{-1}]=(\mathbb{C}[X,Y]/(XY))[(X+Y)^{-1}]\longrightarrow \mathbb{C}[X^{\pm 1}].</men>
+                        Le noyau de <xref ref="morphisme-factorise"/> est l'idéal engendré par <m>Y</m> et donc il en est de même pour le noyau de <xref ref="morphisme-localise"/> dans <m>A[f^{-1}]</m>. Comme
+                        <md>YA[f^{-1}]=\frac{Y}{f}A[f^{-1}]=(1-e)A[f^{-1}],</md>
+                        Le théorème d'isomorphisme nous donne 
+                        <md>
+                        eA[f^{-1}]\cong A[f^{-1}]/(1-e)A[f^{-1}]\cong A[f^{-1}]/YA[f^{-1}] \cong \mathbb{C}[X^{\pm 1}].
+                        </md>
+                        On répète le même argument pour la composante <m>X=0</m>.
                     </p>
                 </li>
                 <li>
@@ -163,9 +285,142 @@
                         Enfin, dans un produit de deux anneaux intègres <m>D_1\times D_2</m>, les éléments réguliers sont exactement les couples dont les deux composantes sont non nulles. Leur localisation est donc <m>\operatorname{Frac}(D_1)\times \operatorname{Frac}(D_2)</m> : tout couple de fractions <m>(a_1/s_1,a_2/s_2)</m> est l'image de la fraction <m>(a_1,a_2)/(s_1,s_2)</m>. On conclut que <m>Q(A)\cong\mathbb{C}(X)\times\mathbb{C}(Y)</m>.
                     </p>
                 </li>
-            -->
             </ol>
         </solution>
     </exercise>
+
+    <note xml:id="note-localisation-separer-composantes">
+    <title>Interprétation géométrique : séparer les composantes</title>
+
+    <p>
+        Pour <m>A=\mathbb{C}[X,Y]/(XY)</m>, le schéma
+        <m>\operatorname{Spec}(A)</m> est la réunion de deux droites
+        réduites : l'axe horizontal <m>Y=0</m> et l'axe vertical
+        <m>X=0</m>. Ces deux composantes se rencontrent à l'origine.
+    </p>
+
+    <p>
+        La fonction <m>f=X+Y</m> se restreint à <m>X</m> sur
+        l'axe horizontal et à <m>Y</m> sur l'axe vertical.
+        Son lieu d'annulation a donc pour ensemble sous-jacent
+        la seule origine. Inverser <m>X+Y</m> revient à retirer
+        ce point : les deux droites deviennent disjointes.
+    </p>
+
+    <figure xml:id="figure-localisation-separer-composantes">
+        <caption>
+            Inverser <m>X+Y</m> retire le point de rencontre des
+            deux composantes. Chaque droite poncturée représente
+            une copie de <m>\mathbb{C}^{\times}</m>, qui est connexe :
+            il reste deux composantes connexes.
+        </caption>
+        <image width="100%">
+            <description>
+                <p>
+                    À gauche, les axes horizontal et vertical
+                    se rencontrent à l'origine. À droite, après
+                    inversion de X plus Y, l'origine est retirée.
+                    Les deux droites poncturées sont disjointes.
+                    La fonction idempotente e vaut un sur la
+                    composante horizontale et zéro sur la verticale.
+                </p>
+            </description>
+            <latex-image label="tikz-localisation-separer-composantes"><![CDATA[
+\begin{tikzpicture}[
+    x=0.9cm,y=0.9cm,
+    font=\small,
+    line cap=round,
+    line join=round
+]
+  \definecolor{locHorizontal}{RGB}{179,78,31}
+  \definecolor{locVertical}{RGB}{38,83,128}
+  \definecolor{locNeutral}{RGB}{67,72,79}
+
+  \node[font=\bfseries] at (-4.00,3.05)
+      {Avant la localisation};
+  \node at (-4.00,2.55)
+      {$\operatorname{Spec}\bigl(\mathbb{C}[X,Y]/(XY)\bigr)$};
+  \node[font=\bfseries] at (2.75,3.05)
+      {Apr\`es la localisation};
+  \node at (2.75,2.55) {$X+Y\text{ inversible}$};
+
+  % Avant localisation, les deux composantes se coupent en O.
+  \draw[locVertical,densely dashed,line width=0.95pt,<->]
+      (-4.00,-1.60) -- (-4.00,1.60);
+  \draw[locHorizontal,line width=1pt,<->]
+      (-5.85,0) -- (-2.15,0);
+  \fill[locNeutral] (-4.00,0) circle[radius=1.8pt];
+  \node[anchor=north east] at (-4.13,-0.13) {$O$};
+  \node[locVertical,anchor=south,font=\footnotesize]
+      at (-4.00,1.68) {$X=0$};
+  \node[locHorizontal,anchor=north,font=\footnotesize]
+      at (-2.83,-0.16) {$Y=0$};
+
+  % Passage a l'ouvert D(X+Y).
+  \draw[locNeutral,line width=0.8pt,->]
+      (-1.65,0) -- (-0.55,0);
+  \node[locNeutral,font=\footnotesize,align=center]
+      at (-1.10,0.52) {inverser\\$X+Y$};
+
+  % Premiere composante : la droite horizontale ponctuee.
+  \draw[locHorizontal,line width=1pt,<->]
+      (0.05,0) -- (2.65,0);
+  \draw[locHorizontal,fill=white,line width=0.9pt]
+      (1.35,0) circle[radius=2.8pt];
+  \node[locHorizontal,anchor=north,font=\footnotesize]
+      at (1.35,-0.25) {$0$};
+  \node[locHorizontal,align=center,font=\footnotesize]
+      at (1.35,-1.95) {$Y=0$, $X\neq 0$};
+  \node[locHorizontal,font=\footnotesize]
+      at (1.35,0.55) {$e=1$};
+
+  % Les deux composantes sont disjointes.
+  \node[locNeutral,font=\Large] at (3.35,0) {$\sqcup$};
+
+  % Seconde composante, deplacee pour rendre la disjonction visible.
+  \draw[locVertical,densely dashed,line width=0.95pt,<->]
+      (4.55,-1.60) -- (4.55,1.60);
+  \draw[locVertical,fill=white,line width=0.9pt]
+      (4.55,0) circle[radius=2.8pt];
+  \node[locVertical,anchor=west,font=\footnotesize]
+      at (4.72,0) {$0$};
+  \node[locVertical,align=center,font=\footnotesize]
+      at (4.55,-1.95) {$X=0$, $Y\neq 0$};
+  \node[locVertical,font=\footnotesize,anchor=west]
+      at (4.85,0.65) {$e=0$};
+
+  \node[align=center,text width=3.8cm,font=\footnotesize]
+      at (-4.00,-2.65)
+      {Les deux branches se rencontrent en $O$.};
+  \node[align=center,text width=5cm,font=\footnotesize]
+      at (2.95,-2.65)
+      {Deux copies disjointes de\\
+       $\operatorname{Spec}\mathbb{C}[T,T^{-1}]$.};
+\end{tikzpicture}
+]]></latex-image>
+        </image>
+    </figure>
+
+    <p>
+        Une fonction régulière sur une réunion disjointe est
+        la donnée indépendante d'une fonction régulière sur
+        chacune de ses composantes. C'est pourquoi l'anneau
+        des fonctions de l'ouvert obtenu est un produit :
+        <m>A[(X+Y)^{-1}]\cong\mathbb{C}[X^{\pm1}]\times\mathbb{C}[Y^{\pm1}]</m>.
+        Les deux facteurs correspondent respectivement aux
+        composantes horizontale et verticale.
+    </p>
+
+    <p>
+        L'élément <m>e=X/(X+Y)</m> vaut <m>1</m> sur la
+        composante horizontale, où <m>Y=0</m>, et <m>0</m>
+        sur la composante verticale, où <m>X=0</m>.
+        Il correspond donc à <m>(1,0)</m> dans le produit
+        précédent. Son idempotence <m>e^2=e</m> exprime qu'il
+        est la fonction caractéristique d'une composante
+        ouverte et fermée. De même, <m>1-e=Y/(X+Y)</m>
+        correspond à <m>(0,1)</m>.
+    </p>
+</note>
 
 </section>
